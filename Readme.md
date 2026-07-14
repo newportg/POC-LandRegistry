@@ -1,9 +1,3 @@
-[[_TOC_]]
-
-## List of Figures
-
-[[_TOF_]]
-
 # About
 
 The land registry, officially [HM Land Registry](https://www.gov.uk/government/organisations/land-registry), is the government department responsible for registering the ownership of land and property in England and Wales. It provides a public, guaranteed record of who owns what, which includes title registers, title plans, and details of mortgages, covenants, and other rights associated with a property. This process establishes government-guaranteed titles, protects against fraud, and offers clear proof of ownership and boundaries. 

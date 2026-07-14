@@ -1,7 +1,5 @@
 # 5, Building Block View
 
-[[_TOSP_]]
-
 ![image](.attachments/BuildingBlockView.png )
 
 This service will receive instructions via the service bus, and ad-hoc queries via a HTTP interface.

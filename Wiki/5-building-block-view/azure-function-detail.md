@@ -1,5 +1,4 @@
 # Azure Function Detail
- [[_TOC_]]
 
 ### Azure Function
 

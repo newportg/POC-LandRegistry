@@ -1,8 +1,4 @@
-# **NOT IN SCOPE**
-
-[[_TOC_]]
-
-# Service Handler
+# Land Registry Service Handler
 
 Land Registry is a Government department which administers the registration of Land within England and Wales.
 

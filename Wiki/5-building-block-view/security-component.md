@@ -1,6 +1,6 @@
 # Security Component
 
-![image](.attachments/SecurityComponent.png =750x)
+![image](.attachments/SecurityComponent.png)
 
 ## Managed Identity
 

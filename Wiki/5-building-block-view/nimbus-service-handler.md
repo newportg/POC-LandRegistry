@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # Nimbus Service Handler
 
 [Nimbus v1.0 API](.attachments/nimbus-service-handler/openapi-docs.yaml)
