@@ -1,0 +1,28 @@
+@startuml
+class ApplicationEnquiryFactory {
+    + ApplicationEnquiryFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class PollApplicationEnquiryFactory {
+    + PollApplicationEnquiryFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class ApplicationEnquiry {
+    + ApplicationEnquiry(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+class PollApplicationEnquiry {
+    + PollApplicationEnquiry(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+ServiceFactory <|-- ApplicationEnquiryFactory
+ServiceFactory <|-- PollApplicationEnquiryFactory
+LandRegistry <|-- ApplicationEnquiry
+LandRegistry <|-- PollApplicationEnquiry
+@enduml

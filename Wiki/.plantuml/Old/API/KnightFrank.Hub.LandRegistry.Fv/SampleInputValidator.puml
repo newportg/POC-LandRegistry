@@ -1,0 +1,8 @@
+@startuml
+class SampleInputValidator {
+    + SampleInputValidator()
+}
+class "AbstractValidator`1"<T> {
+}
+"AbstractValidator`1" "<SampleInput>" <|-- SampleInputValidator
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class FromEnquiryByPropertyDescription {
+    + FromEnquiryByPropertyDescription()
+}
+class MessageDetailConverter {
+    + Convert(source:Q1ResultsType3, destination:MessageDetails, context:ResolutionContext) : MessageDetails
+}
+class "ITypeConverter`2"<T1,T2> {
+}
+Profile <|-- FromEnquiryByPropertyDescription
+"ITypeConverter`2" "<Q1ResultsType3,MessageDetails>" <|-- MessageDetailConverter
+@enduml

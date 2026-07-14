@@ -1,0 +1,90 @@
+@startuml
+
+skinparam linetype ortho
+
+class Service {
+    + CreateRequest()
+    + CalculateExpirationTime()
+    + VerifyCertificate()
+    
+    - LoadCertificate()
+    - SaveCertificate()
+    - GetCertificate()
+    - KeyVault()
+}
+
+' abstract class AbstractFactory {
+'     + createProductA(): AbstractProduct
+'     + createProductB(): AbstractProduct
+' }
+
+' abstract class AbstractProduct {
+'     + someOperation(): void
+' }
+
+' interface ConcreteFactoryA extends AbstractFactory {
+'     - createProductA(): ConcreteProductA
+' }
+
+' interface ConcreteFactoryB extends AbstractFactory {
+'     - createProductB(): ConcreteProductA
+' }
+
+' class ConcreteProductA extends AbstractProduct {
+'     - concreteOperationA(): void
+' } 
+
+' class ConcreteProductB extends AbstractProduct {
+'     - concreteOperationB(): void
+' }
+
+' ConcreteFactoryA ..> ConcreteProductA : Creates
+' ConcreteFactoryB ..> ConcreteProductB : Creates
+' Client --> AbstractFactory : uses
+
+
+abstract class ServiceFactory {
+    - GetServiceFactory(request): ServiceFactory
+    + CreateService(): LandRegistry
+}
+Class ApplicationEnquiryFactory extends ServiceFactory{
+    + CreateService(): ApplicationEnquiry
+}
+'Class LCBankruptcySearchFactory extends ServiceFactory{
+'    + CreateService(): LCBankruptcySearch
+'}
+
+
+abstract class LandRegistry {
+    + Map()
+    + Validate()
+    + Request()
+    + Response()
+}
+
+class ApplicationEnquiry extends LandRegistry {
+    - Map()
+    - Validate()
+    - Request()
+    - Response()
+}
+
+'class LCBankruptcySearch extends LandRegistry {
+'    - Map()
+'    - Validate()
+'    - Request()
+'    - Response()
+'}
+
+ServiceFactory ..> ApplicationEnquiryFactory : Creates
+'ServiceFactory ..> LCBankruptcySearchFactory : Creates
+
+ApplicationEnquiryFactory .> ApplicationEnquiry : Creates
+'LCBankruptcySearchFactory ..> LCBankruptcySearch : Creates
+
+LandRegistry -left-> ServiceFactory : Uses
+
+Service -> ServiceFactory 
+
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class FromOfficialSearchWhole {
+    + FromOfficialSearchWhole()
+}
+class OfficialSearchWholeMessageDetailConverter {
+    + Convert(source:Q1ResultsType8, destination:MessageDetails, context:ResolutionContext) : MessageDetails
+}
+class "ITypeConverter`2"<T1,T2> {
+}
+Profile <|-- FromOfficialSearchWhole
+"ITypeConverter`2" "<Q1ResultsType8,MessageDetails>" <|-- OfficialSearchWholeMessageDetailConverter
+@enduml

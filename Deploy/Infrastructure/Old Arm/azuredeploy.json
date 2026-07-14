@@ -1,0 +1,475 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "para_acronym_region": {
+      "type": "string",
+      "allowedValues": [
+        "ne",
+        "we"
+      ],
+      "defaultValue": "ne"
+    },
+    // "para_acronym_resgrp": {
+    //   "type": "string",
+    //   "defaultValue": "rg"
+    // },
+    // "para_acronym_appsvc": {
+    //   "type": "string",
+    //   "defaultValue": "as"
+    // },
+    "para_acronym_svcpln": {
+      "type": "string",
+      "defaultValue": "sp"
+    },
+    "para_acronym_stract": {
+      "type": "string",
+      "defaultValue": "st"
+    },
+    "para_acronym_kv": {
+      "type": "string",
+      "defaultValue": "kv"
+    },
+    "para_acronym_azfunc": {
+      "type": "string",
+      "defaultValue": "fn"
+    },
+    // "para_acronym_azlogic": {
+    //   "type": "string",
+    //   "defaultValue": "la"
+    // },
+    "para_acronym_appin": {
+      "type": "string",
+      "defaultValue": "ai"
+    },
+    // "para_acronym_webapp": {
+    //   "type": "string",
+    //   "defaultValue": "wa"
+    // },
+    // "para_acronym_docdb": {
+    //   "type": "string",
+    //   "defaultValue": "dd"
+    // },
+    "para_target_env": {
+      "type": "string",
+      "allowedValues": [
+        "vse",
+        "dev",
+        "alp",
+        "bra",
+        "cha",
+        "pre",
+        "uat",
+        "prd"
+      ],
+      "defaultValue": "vse"
+    },
+
+    "para_application_name": {
+      "type": "string",
+      "maxLength": 12
+    },
+
+    // "para_vanity_name": {
+    //   "type": "string"
+    // },
+    "para_svcPlanSku": {
+      "type": "string",
+      "defaultValue": "Dynamic"
+    },
+    "para_svcPlanSize": {
+      "type": "string",
+      "defaultValue": "Y1"
+    },
+    "para_svcPlanFamily": {
+      "type": "string",
+      "defaultValue": "Y"
+    },
+    "para_svcPlanCapacity": {
+      "type": "string",
+      "defaultValue": "0"
+    },
+    // "para_str_tbl_connection_name": {
+    //   "defaultValue": "table",
+    //   "type": "String"
+    // },
+    // "para_str_que_connection_name": {
+    //   "type": "String",
+    //   "defaultValue": "queue"
+    // },
+    "para_kvSecretsObject": { "type": "object" }
+    // "para_vnet_name": {
+    //   "type": "string"
+    // },
+    // "para_vnet_resourcegroup": {
+    //   "type": "string"
+    // },
+    // "para_vnet_thumbprint": {
+    //   "type": "securestring"
+    // },
+    // "para_vnet_certblob": {
+    //   "type": "securestring"
+    // },
+    // "para_web_certblob": {
+    //   "type": "securestring"
+    // },
+    // "para_web_certpass": {
+    //   "type": "securestring"
+    // },
+    // "para_web_thumbprint": {
+    //   "type": "securestring"
+    // }
+  },
+  "variables": {
+    //"var_sub_id": "[subscription().subscriptionId]",
+    "var_ten_id": "[subscription().tenantId]",
+
+    "var_env_region": "[concat(parameters('para_target_env'), '-', parameters('para_acronym_region'))]",
+    //"var_public_url": "[concat(parameters('para_target_env'), '.', parameters('para_application_name'), '.', parameters('para_vanity_name'))]",
+    "var_str_name": "[concat( tolower(parameters('para_application_name')), parameters('para_acronym_stract'), parameters('para_target_env'), parameters('para_acronym_region'))]",
+
+    "var_str_resId": "[resourceId(resourceGroup().Name,'Microsoft.Storage/storageAccounts', variables('var_str_name'))]",
+    "var_kv_name": "[concat(parameters('para_application_name'), '-', parameters('para_acronym_kv'), '-', variables('var_env_region'))]",
+    "var_azf_name": "[concat(parameters('para_application_name'), '-', parameters('para_acronym_azfunc'),'-', variables('var_env_region'))]",
+    "var_appin_name": "[concat(parameters('para_application_name'), '-',parameters('para_acronym_appin'),'-', variables('var_env_region'))]",
+
+    //"var_svcpln_group": "[concat(parameters('para_application_name'), '-', parameters('para_acronym_resgrp'), '-', variables('var_env_region'))]",
+    //"var_svcpln_env": "[concat(parameters('para_application_name'), '-', parameters('para_acronym_appsvc'), '-', variables('var_env_region'))]",
+    "var_svcpln_name": "[concat(parameters('para_application_name'), '-', parameters('para_acronym_svcpln'), '-', variables('var_env_region'))]"
+
+  },
+  "resources": [
+    {
+      "apiVersion": "2016-01-01",
+      "dependsOn": [],
+      "kind": "Storage",
+      "location": "[resourceGroup().location]",
+      "name": "[variables('var_str_name')]",
+      "properties": {
+        "encryption": {
+          "keySource": "Microsoft.Storage",
+          "services": {
+            "blob": {
+              "enabled": true
+            }
+          }
+        }
+      },
+      "resources": [],
+      "sku": {
+        "name": "Standard_LRS",
+        "tier": "Standard"
+      },
+      "tags": {
+        "displayName": "StorageAcct"
+      },
+      "type": "Microsoft.Storage/storageAccounts"
+    },
+    {
+      "apiVersion": "2016-09-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('var_str_name'))]"
+        //        "[resourceId('Microsoft.Insights/components', variables('var_appin_name'))]"
+      ],
+      "kind": "app",
+      "location": "[resourceGroup().location]",
+      "name": "[variables('var_svcpln_name')]",
+      "properties": {
+        "adminSiteName": "",
+        "name": "[variables('var_svcpln_name')]",
+        "perSiteScaling": false,
+        "reserved": false,
+        "targetWorkerCount": 0,
+        "targetWorkerSizeId": 0,
+        "workerTierName": ""
+      },
+      "scale": null,
+      "sku": {
+        "name": "[parameters('para_svcPlanSize')]",
+        "tier": "[parameters('para_svcPlanSku')]",
+        "size": "[parameters('para_svcPlanSize')]",
+        "family": "[parameters('para_svcPlanFamily')]",
+        "capacity": "[parameters('para_svcPlanCapacity')]"
+      },
+      "tags": {
+        "displayName": "Service Plan/ Farm"
+      },
+      "type": "Microsoft.Web/serverfarms"
+    },
+    {
+      "apiVersion": "2015-05-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('var_str_name'))]"
+      ],
+      "kind": "app",
+      "location": "[resourceGroup().location]",
+      "name": "[variables('var_appin_name')]",
+      "properties": {
+        "Application_Type": "web",
+        "ApplicationId": "[variables('var_appin_name')]"
+      },
+      "tags": {
+        "displayName": "AppInsightsComponent"
+      },
+      "type": "Microsoft.Insights/components"
+    },
+    {
+      "apiVersion": "2016-08-01",
+      "dependsOn": [
+        "[concat('Microsoft.Web/serverfarms/', variables('var_svcpln_name'))]"
+      ],
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "kind": "functionapp",
+      "location": "[resourceGroup().location]",
+      "name": "[variables('var_azf_name')]",
+      "properties": {
+        "name": "[variables('var_azf_name')]",
+        "siteConfig": {
+          "alwaysOn": false
+        },
+        "clientAffinityEnabled": false,
+        "serverFarmId": "[variables('var_svcpln_name')]",
+        "hostNameSslStates": []
+      },
+      "resources": [
+      ],
+      "tags": {
+        "displayName": "Az Function"
+      },
+      "type": "Microsoft.Web/sites"
+    },
+    {
+      "apiVersion": "2016-10-01",
+      "dependsOn": [
+        //"[resourceId('Microsoft.Storage/storageAccounts', variables('var_str_name'))]"
+        //"[resourceId('Microsoft.Web/sites', variables('var_azf_name1'))]"
+      ],
+      "location": "[resourceGroup().location]",
+      "name": "[variables('var_kv_name')]",
+      "properties": {
+        "accessPolicies": [
+          // Add Me so I can view it.
+          {
+            "tenantId": "55a71488-bbff-4451-a18d-a1bfa479293b",
+            "objectId": "cb3baa6a-f545-4caf-bd91-ba457692cbb9",
+            "permissions": {
+              "certificates": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "ManageContacts",
+                "ManageIssuers",
+                "GetIssuers",
+                "ListIssuers",
+                "SetIssuers",
+                "DeleteIssuers"
+              ],
+              "keys": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore",
+                "Decrypt",
+                "Encrypt",
+                "UnwrapKey",
+                "WrapKey",
+                "Verify",
+                "Sign",
+                "Purge"
+              ],
+              "secrets": [
+                "Get",
+                "List",
+                "Set",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore",
+                "Purge"
+              ]
+            }
+          }
+        ],
+        "enabledForDeployment": false,
+        "enabledForDiskEncryption": false,
+        "enabledForTemplateDeployment": true,
+        "sku": {
+          "family": "A",
+          "name": "standard"
+        },
+        "tenantId": "[variables('var_ten_id')]"
+      },
+      "scale": null,
+      "tags": {
+        "displayName": "Key Vault"
+      },
+      "type": "Microsoft.KeyVault/vaults"
+    },
+    {
+      "apiVersion": "2015-06-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', variables('var_kv_name'))]",
+        "[resourceId('Microsoft.Storage/storageAccounts', variables('var_str_name'))]"
+      ],
+      "name": "[concat(variables('var_kv_name'), '/StorageConnectionString')]",
+      "properties": {
+        "contentType": "text/plain",
+        "value": "[concat('DefaultEndpointsProtocol=https;AccountName=', variables('var_str_name'),';AccountKey=', listKeys(resourceId('Microsoft.Storage/storageAccounts', variables('var_str_name')), providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]).keys[0].value, ';')]"
+      },
+      "tags": {
+        "displayName": "Key Vault Secret"
+      },
+      "type": "Microsoft.KeyVault/vaults/secrets"
+    },
+    {
+      "apiVersion": "2015-06-01",
+      "copy": {
+        "name": "secretsCopy",
+        "count": "[length(parameters('para_kvSecretsObject').secrets)]"
+      },
+      "dependsOn": [
+        "[concat('Microsoft.KeyVault/vaults/', variables('var_kv_name'))]"
+      ],
+      "name": "[concat(variables('var_kv_name'), '/', parameters('para_kvSecretsObject').secrets[copyIndex()].secretName)]",
+      "properties": {
+        "value": "[parameters('para_kvSecretsObject').secrets[copyIndex()].secretValue]"
+      },
+      "tags": {
+        "displayName": "Key Vault Secrets"
+      },
+      "type": "Microsoft.KeyVault/vaults/secrets"
+    },
+    {
+      "apiVersion": "2018-11-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', variables('var_azf_name'))]",
+        "[resourceId('Microsoft.KeyVault/vaults/', variables('var_kv_name'))]",
+        "secretsCopy"
+      ],
+      "location": "[resourceGroup().location]",
+      "name": "[concat(variables('var_azf_name'),'/appsettings')]",
+      "properties": {
+        "AzureWebJobsDashboard": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('var_str_name'),';AccountKey=',listKeys(variables('var_str_resId'),'2015-05-01-preview').key1) ]",
+        "AzureWebJobsStorage": "[concat('DefaultEndpointsProtocol=https;AccountName=',variables('var_str_name'),';AccountKey=',listKeys(variables('var_str_resId'),'2015-05-01-preview').key1) ]",
+        "APPINSIGHTS_INSTRUMENTATIONKEY": "[reference(concat('microsoft.insights/components/', variables('var_appin_name'))).InstrumentationKey]",
+        "WEBSITE_ENABLE_SYNC_UPDATE_SITE": "true",
+        "FUNCTIONS_EXTENSION_VERSION": "~4",
+        "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+
+        "StorageConnectionString": "[concat('@Microsoft.KeyVault(SecretUri=', reference('StorageConnectionString').secretUriWithVersion, ')')]",
+
+        "LandRegistryCertificates": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryCertificates').secretUriWithVersion, ')')]",
+        "LandRegistryUserId": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryUserId').secretUriWithVersion, ')')]",
+        "LandRegistryPassword": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPassword').secretUriWithVersion, ')')]",
+        "CertName": "[concat('@Microsoft.KeyVault(SecretUri=', reference('CertName').secretUriWithVersion, ')')]",
+        "KeyVaultUri": "[concat('@Microsoft.KeyVault(SecretUri=', reference('KeyVaultUri').secretUriWithVersion, ')')]",
+        "LandRegistryBaseAddress": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryBaseAddress').secretUriWithVersion, ')')]",
+        "LandRegistryApplicationEnquiry": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryApplicationEnquiry').secretUriWithVersion, ')')]",
+        "LandRegistryLCBankruptcySearch": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryLCBankruptcySearch').secretUriWithVersion, ')')]",
+        "LandRegistryDischargeActivity": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryDischargeActivity').secretUriWithVersion, ')')]",
+        "LandRegistryEnquiryByPropertyDescription": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryEnquiryByPropertyDescription').secretUriWithVersion, ')')]",
+        "LandRegistryLCFullSearch": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryLCFullSearch').secretUriWithVersion, ')')]",
+        "LandRegistryOfficialCopyTitleKnown": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryOfficialCopyTitleKnown').secretUriWithVersion, ')')]",
+        "LandRegistryOfficialSearchWhole": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryOfficialSearchWhole').secretUriWithVersion, ')')]",
+        "LandRegistryOfficialSearchPart": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryOfficialSearchPart').secretUriWithVersion, ')')]",
+        "LandRegistryPollApplicationEnquiry": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPollApplicationEnquiry').secretUriWithVersion, ')')]",
+        "LandRegistryPollLCBankruptcySearch": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPollLCBankruptcySearch').secretUriWithVersion, ')')]",
+        "LandRegistryPollDischargeActivity": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPollDischargeActivity').secretUriWithVersion, ')')]",
+        "LandRegistryPollEnquiryByPropertyDescription": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPollEnquiryByPropertyDescription').secretUriWithVersion, ')')]",
+        "LandRegistryPollLCFullSearch": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPollLCFullSearch').secretUriWithVersion, ')')]",
+        "LandRegistryPollOfficialSearchWhole": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPollOfficialSearchWhole').secretUriWithVersion, ')')]",
+        "LandRegistryPollOfficialSearchPart": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryPollOfficialSearchPart').secretUriWithVersion, ')')]",
+        "LandRegistryExpectedPrice": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryExpectedPrice').secretUriWithVersion, ')')]",
+        "LandRegistryContinueIfFeeExceedsExpectedPrice": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryContinueIfFeeExceedsExpectedPrice').secretUriWithVersion, ')')]",
+        "LandRegistryContactName": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryContactName').secretUriWithVersion, ')')]",
+        "LandRegistryContactPhone": "[concat('@Microsoft.KeyVault(SecretUri=', reference('LandRegistryContactPhone').secretUriWithVersion, ')')]"
+
+      },
+      "tags": {
+        "displayName": "AppSettings",
+        "environment": "parameters('para_target_env')",
+        "[concat('hidden-link:', resourceGroup().id, '/providers/Microsoft.Web/serverfarms/', variables('var_svcpln_name'))]": "Resource",
+        "project": "parameters('para_application_name')"
+      },
+      "type": "Microsoft.Web/sites/config"
+    },
+    {
+      "apiVersion": "2016-10-01",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', variables('var_kv_name'))]",
+        "[resourceId('Microsoft.Web/sites', variables('var_azf_name'))]"
+      ],
+      "name": "[concat(variables('var_kv_name'), '/add')]",
+      "properties": {
+        "accessPolicies": [
+          {
+            "objectId": "[reference(resourceId('Microsoft.Web/sites', variables('var_azf_name')),'2019-08-01', 'Full').identity.principalId]",
+            "tenantId": "[variables('var_ten_id')]",
+            "permissions": {
+              "certificates": [
+                "get",
+                "list",
+                "update",
+                "create",
+                "import",
+                "delete",
+                "recover",
+                "managecontacts",
+                "manageissuers",
+                "getissuers",
+                "listissuers",
+                "setissuers",
+                "deleteissuers"
+              ],
+              "keys": [
+                "get",
+                "list",
+                "update",
+                "create",
+                "import",
+                "delete",
+                "recover",
+                "backup",
+                "restore",
+                "decrypt",
+                "encrypt",
+                "unwrapKey",
+                "wrapKey",
+                "verify",
+                "sign",
+                "purge"
+              ],
+              "secrets": [
+                "get",
+                "list",
+                "set",
+                "delete",
+                "recover",
+                "backup",
+                "restore",
+                "purge"
+              ]
+            }
+          }
+        ]
+      },
+      "tags": {
+        "displayName": "KV Access Policies"
+      },
+      "type": "Microsoft.KeyVault/vaults/accessPolicies"
+    }
+  ],
+  "outputs": {}
+}
+

@@ -1,0 +1,10 @@
+@startuml
+class DayListEnquiryMessageDetails {
+    + Description : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class "EqualityComparer`1"<T> {
+}
+MessageDetails <|-- DayListEnquiryMessageDetails
+@enduml

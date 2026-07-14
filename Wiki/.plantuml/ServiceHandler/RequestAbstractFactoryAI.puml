@@ -1,0 +1,46 @@
+@startuml
+
+interface ILandRegistrySvc {
+    + FindProperty(criteria:SearchCriteria) : Task<LandTitleResponse>
+}
+
+class LandRegistrySvc {
+'    // Dependencies injected in constructor now
+    + FindProperty(criteria:SearchCriteria) : Task<LandTitleResponse>
+'    // Utility methods moved out
+}
+
+class CertificateValidationService {
+    + VerifyCertificate(certificateBytes:byte[]) : bool
+    + GetCertificateFromKeyVault(key:string) : X509Certificate2?
+}
+
+'// ... the rest of the Factory pattern remains similar but cleaner ...
+
+abstract class ServiceFactory {
+'    // Takes IServiceProvider or similar to resolve the LandRegistry instance
+    + {abstract} CreateService() : ILandRegistryServiceStep
+}
+
+interface ILandRegistryServiceStep {
+    + ExecuteAsync() : Task<LandTitleResponse>
+}
+
+class EnquiryByPropertyDescriptionFactory {
+    + <<override>> CreateService() : ILandRegistryServiceStep
+}
+
+class EnquiryByPropertyDescription {
+'    // Injected mapper/logger here
+    + ExecuteAsync() : Task<LandTitleResponse>
+}
+'// ... other factories and services ...
+
+ILandRegistrySvc <|-- LandRegistrySvc
+LandRegistrySvc .right.> ServiceFactory : uses
+LandRegistrySvc .up.> CertificateValidationService : uses
+ServiceFactory <|-- EnquiryByPropertyDescriptionFactory
+ILandRegistryServiceStep <|-down- EnquiryByPropertyDescription
+EnquiryByPropertyDescriptionFactory ..> EnquiryByPropertyDescription : creates
+
+@enduml

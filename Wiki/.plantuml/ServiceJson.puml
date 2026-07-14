@@ -1,0 +1,49 @@
+@startjson 
+
+#highlight due_date
+
+{
+    "id": "string<GUID>",
+    "fixflo_id" : "string",
+    "property": {
+        "id": "string<GUID>",
+        "furnished": "string",
+        "branch_name": "string",
+        "no_of_bedrooms": "integer",
+        "address": {
+        "name": "string",
+        "line1": "string",
+        "line2": "string",
+        "town": "string",
+        "county": "string",
+        "postcode": "string<postcode>",
+        "country": "string"
+        }
+    },
+    "tenants": [
+        {
+        "name": "string",
+        "email": [ "string<email>" ],
+        "mobiles": [ "string<telephone>" ]
+        }
+    ],
+    "landlords": [
+        {
+        "name": "string",
+        "email": [ "string<email>" ],
+        "mobiles": [ "string<telephone>" ]
+        }
+    ],
+    "property_manager": {
+        "name": "string",
+        "email": [ "string<email>" ],
+        "department": ["Prime","Resi","ILM"]
+    },
+    "start_date": "string<date>",
+    "end_date": "string<date>",
+    "due_date": "string<date>",
+    "branch_name": "string",
+    "additional_comments": "string"
+}
+
+@endjson

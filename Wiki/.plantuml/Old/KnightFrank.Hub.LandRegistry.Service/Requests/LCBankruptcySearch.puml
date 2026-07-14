@@ -1,0 +1,28 @@
+@startuml
+class LLCBankruptySearchFactory {
+    + LLCBankruptySearchFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class PollLLCBankruptySearchFactory {
+    + PollLLCBankruptySearchFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class LCBankruptcySearch {
+    + LCBankruptcySearch(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+class PollLLCBankruptySearch {
+    + PollLLCBankruptySearch(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+ServiceFactory <|-- LLCBankruptySearchFactory
+ServiceFactory <|-- PollLLCBankruptySearchFactory
+LandRegistry <|-- LCBankruptcySearch
+LandRegistry <|-- PollLLCBankruptySearch
+@enduml

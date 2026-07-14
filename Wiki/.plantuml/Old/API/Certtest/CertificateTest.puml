@@ -1,0 +1,6 @@
+@startuml
+class CertificateTest {
+    + CertificateTest(logger:ILogger<CertificateTest>)
+    + <<async>> Run(req:HttpRequestData) : Task<HttpResponseData>
+}
+@enduml

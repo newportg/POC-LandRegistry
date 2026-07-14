@@ -1,0 +1,11 @@
+@startuml
+abstract class ServiceFactory {
+    + {abstract} GetService() : LandRegistry
+}
+abstract class LandRegistry {
+    + {abstract} Map(landRegistryDto:LandRegistryDto) : void
+    + {abstract} Validate() : void
+    + {abstract} Request() : Task
+    + {abstract} Response() : LandRegistryDto
+}
+@enduml

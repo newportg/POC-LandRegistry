@@ -1,0 +1,28 @@
+@startuml
+class OfficialSearchWholeFactory {
+    + OfficialSearchWholeFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class PollOfficialSearchWholeFactory {
+    + PollOfficialSearchWholeFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class OfficialSeacrhWhole {
+    + OfficialSeacrhWhole(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+class PollOfficialSearchWhole {
+    + PollOfficialSearchWhole(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+ServiceFactory <|-- OfficialSearchWholeFactory
+ServiceFactory <|-- PollOfficialSearchWholeFactory
+LandRegistry <|-- OfficialSeacrhWhole
+LandRegistry <|-- PollOfficialSearchWhole
+@enduml

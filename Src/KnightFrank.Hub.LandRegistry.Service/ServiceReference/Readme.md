@@ -1,0 +1,79 @@
+﻿# Generate Service Reference.
+
+Make sure the config file, dotnet-svcutil -u ServiceReference, is upto date
+
+# From the project directory run to regenerate the service reference.
+dotnet-svcutil -u ServiceReference
+
+# Important
+Any change to the order of the wsdls in the config will result in the names of the types to change, which will force you to re-map youre mappings
+e.g. Q3TextType there are 13 of these numbered Q3TextType -> Q3TextType12 each attached to a different request.
+
+# Current Config File (22/04/2024)
+```
+{
+  "providerId": "Microsoft.Tools.ServiceModel.Svcutil",
+  "version": "2.1.0",
+  "options": {
+    "inputs": [
+      "../WSDL/ApplicationEnquiryV1_0PollRequestWebService.wsdl",
+      "../WSDL/ApplicationEnquiryV1_0WebService.wsdl",
+      "../WSDL/BankruptcySearchV2_0PollRequestWebService.wsdl",
+      "../WSDL/BankruptcySearchV2_0WebService.wsdl",
+      "../WSDL/BankruptcySearchV2_1PollRequestWebService.wsdl",
+      "../WSDL/BankruptcySearchV2_1WebService.wsdl",
+      "../WSDL/DischargeActivityV1_0PollRequestWebService.wsdl",
+      "../WSDL/DischargeActivityV1_0WebService.wsdl",
+      "../WSDL/EnquiryByPropertyDescriptionV2_0PollWebService.wsdl",
+      "../WSDL/EnquiryByPropertyDescriptionV2_0WebService.wsdl",
+      "../WSDL/FullSearchV2_0PollRequestWebService.wsdl",
+      "../WSDL/FullSearchV2_0WebService.wsdl",
+      "../WSDL/FullSearchV2_1PollRequestWebService.wsdl",
+      "../WSDL/FullSearchV2_1WebService.wsdl",
+      "../WSDL/OfficialCopyTitleKnownV2_1WebService.wsdl",
+      "../WSDL/OfficialCopyWithSummaryV2_1WebService.wsdl",
+      "../WSDL/OfficialSearchOfPartV2_0PollRequestWebService.wsdl",
+      "../WSDL/OfficialSearchOfPartV2_0WebService.wsdl",
+      "../WSDL/OfficialSearchOfPartV2_1PollRequestWebService.wsdl",
+      "../WSDL/OfficialSearchOfPartV2_1WebService.wsdl",
+      "../WSDL/OfficialSearchV2_0PollRequestWebService.wsdl",
+      "../WSDL/OfficialSearchV2_0WebService.wsdl",
+      "../WSDL/OfficialSearchV2_1WebService.wsdl",
+      "../WSDL/SearchOfIndexMapV2_0PollRequestWebService.wsdl",
+      "../WSDL/SearchOfIndexMapV2_0WebService.wsdl",
+      "../WSDL/XSD/PollRequest.xsd",
+      "../WSDL/XSD/RequestApplicationEnquiryV1_0.xsd",
+      "../WSDL/XSD/RequestDischargeActivityV1_0.xsd",
+      "../WSDL/XSD/RequestLandChargesBankruptcySearchV2_0.xsd",
+      "../WSDL/XSD/RequestLandChargesBankruptcySearchV2_1.xsd",
+      "../WSDL/XSD/RequestLandChargesFullSearchV2_0.xsd",
+      "../WSDL/XSD/RequestLandChargesFullSearchV2_1.xsd",
+      "../WSDL/XSD/RequestOCWithSummaryV2_0.xsd",
+      "../WSDL/XSD/RequestOfficialSearchOfPartWithPriorityV2_0.xsd",
+      "../WSDL/XSD/RequestOfficialSearchOfPartWithPriorityV2_1.xsd",
+      "../WSDL/XSD/RequestOfficialSearchOfWholeWithPriorityV2_0.xsd",
+      "../WSDL/XSD/RequestOfficialSearchOfWholeWithPriorityV2_1.xsd",
+      "../WSDL/XSD/RequestSearchByPropertyDescriptionV2_0.xsd",
+      "../WSDL/XSD/RequestSearchOfIndexMapV2_0.xsd",
+      "../WSDL/XSD/RequestTitleKnownOfficialCopyV2_1.xsd",
+      "../WSDL/XSD/ResponseApplicationEnquiryV1_0.xsd",
+      "../WSDL/XSD/ResponseDischargeActivityV1_0.xsd",
+      "../WSDL/XSD/ResponseLandChargesBankruptcySearchV2_0.xsd",
+      "../WSDL/XSD/ResponseLandChargesFullSearchV2_0.xsd",
+      "../WSDL/XSD/ResponseOCWithSummaryV2_1.xsd",
+      "../WSDL/XSD/ResponseOfficialSearchOfPartWithPriorityV2_0.xsd",
+      "../WSDL/XSD/ResponseOfficialSearchOfWholeWithPriorityV2_0.xsd",
+      "../WSDL/XSD/ResponseSearchByPropertyDescriptionV2_0.xsd",
+      "../WSDL/XSD/ResponseSearchOfIndexMapV2_0.xsd",
+      "../WSDL/XSD/ResponseTitleKnownOfficialCopyV2_0.xsd"
+    ],
+    "namespaceMappings": [
+      "*, ServiceReference"
+    ],
+    "outputFile": "Reference.cs",
+    "targetFramework": "net8.0",
+    "typeReuseMode": "All"
+  }
+}
+```
+

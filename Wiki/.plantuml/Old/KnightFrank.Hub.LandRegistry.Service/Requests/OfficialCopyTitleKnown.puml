@@ -1,0 +1,15 @@
+@startuml
+class OfficialCopyTitleKnownFactory {
+    + OfficialCopyTitleKnownFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class OfficialCopyTitleKnown {
+    + OfficialCopyTitleKnown(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+ServiceFactory <|-- OfficialCopyTitleKnownFactory
+LandRegistry <|-- OfficialCopyTitleKnown
+@enduml

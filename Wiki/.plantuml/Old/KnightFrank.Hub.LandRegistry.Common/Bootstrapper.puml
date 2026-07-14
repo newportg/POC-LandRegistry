@@ -1,0 +1,5 @@
+@startuml
+class Bootstrapper <<static>> {
+    + {static} AddCoreServices(services:IServiceCollection) : IServiceCollection
+}
+@enduml

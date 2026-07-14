@@ -1,0 +1,71 @@
+@startuml 
+!include <C4/C4_Component>
+!include <azure/AzureCommon>
+!include <azure/Compute/AzureFunction>
+!include <azure/Web/AzureAPIManagement>
+!include <azure/Integration/AzureServiceBusTopic>
+!include <azure/Networking/AzureApplicationGateway>
+!include <azure/Networking/All>
+!include <azure/Web/AzureWebApp>
+!include <azure/DevOps/AzureApplicationInsights>
+!include <azure/Storage/AzureBlobStorage>
+!include <azure/Databases/AzureCosmosDb>
+!include <azure/Security/AzureKeyVault>
+!include <azure/Identity/AzureAppRegistration>
+!include <azure/Identity/AzureActiveDirectory>
+!include <azure/Identity/AzureManagedIdentity>
+
+LAYOUT_WITH_LEGEND()
+'LAYOUT_LEFT_RIGHT()
+
+AddElementTag("microService", $shape=EightSidedShape(), $fontColor="white", $legendText="micro service\neight sided")
+AddElementTag("storage", $shape=RoundedBoxShape(), $fontColor="white")
+
+System_Boundary(s1, "Knight Frank") {
+
+    AzureWebApp(local, "Application", "Internal")
+    Container_Boundary(c1, "Shared Subscription") {
+
+        Container_Boundary(rgsd, "rg-shared-data-env-ne") {
+            AzureCosmosDb(db, "cosmos-shared-data-env-ne", "Container - LR")
+        }
+
+        Container_Boundary(rgsh, "rg-shared-env-ne") {
+            AzureAPIManagement(apimI, "apim-shared-env-ne", "Internal Interface")
+            AzureServiceBusTopic(sb, "New\Updated Properties", "Integration")
+        }
+
+        Container_Boundary(rggw, "rg-landregistry-env-ne") {
+            AzureFunction(svc, "func-landregistry-env-ne", "Azure Function")
+            AzureApplicationInsights(ai, "appi-landregistry-env-ne", "Application Insights")
+            AzureBlobStorage(st, "stLandRegistryEnvNe", "Storage Account")
+            AzureKeyVault(key, "key-landregistry-env-ne", "Key Vault")
+
+            svc -up-> ai : uses
+            svc -up-> st : uses
+            svc -up-> key : uses
+        }
+
+        svc -down-> db : uses
+        apimI <-> svc 
+        local -down-> apimI
+        sb -> svc
+        apimI -[hidden]down-> sb
+        local -> sb
+
+        Container_Boundary(docm, "rg-docmgmt-env-ne") {
+            AzureFunction(docmsvc, "func-docmgmt-env-ne", "Azure Function")
+        }
+
+        rggw -[hidden]Up-> docm
+        apimI -> docmsvc
+    }
+}
+
+Container_Boundary(extLR, "External Property Title Service", "Manages Property Titles", "") {
+    System_Ext(lrsvc, "Land Registry", "UK Goverment Agency")    
+    System_Ext(nimsvc, "Land Registry", "Nimbus")    
+}
+
+svc -> extLR
+@enduml

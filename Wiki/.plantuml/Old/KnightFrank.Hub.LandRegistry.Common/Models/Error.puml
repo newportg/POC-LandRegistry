@@ -1,0 +1,10 @@
+@startuml
+class Error {
+    + Code : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + <<override>> Equals(obj:global::System.Object) : global::System.Boolean
+    + <<override>> GetHashCode() : global::System.Int32
+}
+class "EqualityComparer`1"<T> {
+}
+@enduml

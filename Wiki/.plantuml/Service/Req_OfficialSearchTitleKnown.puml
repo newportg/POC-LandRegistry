@@ -1,0 +1,82 @@
+@startjson
+
+{
+    "RequestTitleKnownOfficialCopyV2_1Type": {
+    "Q1IdentifierType": {
+      "MessageID": "GUID"
+    },
+    "Q1ProductType": {
+        "DocumentDetails": {
+          "TypeOfDocumentCode": "The code representing the type of document requested",
+          "DateOfDocumentDate": [ "DateTime" ],
+          "TitleNumberFiledUnder": [ "string" ],
+          "AdditionalInformation": [ "string" ]
+        },
+        "ExternalReference": {
+          "Reference": "External Reference",
+          "AllocatedBy": [ "Ignore" ],
+          "Description": [ "Ignore" ]
+        },
+        "CustomerReference": {
+          "Reference": "CustomerReference",
+          "AllocatedBy": [ "The name of the organisation that has allocated the Reference" ],
+          "Description": [ "This field can be used to provide reference description" ]
+        },
+        "SubjectProperty": {
+          "TenureTypeCode": "The tenure type of the property (e.g., freehold, leasehold)",
+          "TitleNumber": "The title number of the property"
+        },
+        "ExpectedPrice": [
+            {
+                "GrossPriceAmount": "Decimal - The total expected price including taxes and fees",
+                "NetPriceAmount": "Decimal - The expected price excluding taxes and fees",
+                "VatAmount": "Decimal - The amount of VAT applicable"
+            }
+        ],
+        "Contact":[
+            {
+                "Name": "The name of the contact person",
+                "Communication": {
+                    "Telephone": "The telephone number of the contact person"
+                }
+            }
+        ],
+        "TitleKnownOfficalCopy": {
+			"RequestedOfficialCopyCode": [ "string"],
+			"PropertyDescription": "string",
+			"OfficialCopyTypeCode": "string",
+			"ContinueIfTitleIsClosedAndContinuedIndicator": "boolean",
+			"NotifyIfPendingFirstRegistrationIndicator": "boolean",
+			"NotifyIfPendingApplicationIndicator": "boolean",
+			"SendBackDatedIndicator": "boolean",
+			"ContinueIfActualFeeExceedsExpectedFeeIndicator": "boolean",
+			"CertificateInFormCI": [
+                {
+                    "EstatePlanPlotNumberNumeric": [ "Decimal - The plot number associated with the estate plan in Form CI" ]
+                }
+            ]
+
+        },
+        "AlternateDispatchDetails": {
+          "AlternateDispatchName": [ "string"],
+          "AlternateDispatchReference": [ "sttring"],
+          "AlternateDispatchAddress": [ 
+            {
+                "PostalAddress": [
+                    {
+                        "AddressLine": [ "string" ],
+                        "PostCode": [ "string" ]
+                    }
+                ],
+                "DXDetails": {
+                    "DXNumber": "string",
+                    "ExchangeName": "string"
+                }
+            }
+          ]
+        }
+    }
+  }
+}
+
+@endjson

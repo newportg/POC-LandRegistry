@@ -1,0 +1,36 @@
+@startuml
+class Response {
+    + Status : string <<get>> <<set>>
+}
+class Acknowledgement {
+    + UniqueMsgId : string <<get>> <<set>>
+    + MessageDescription : string <<get>> <<set>>
+    + HMLRReference : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Rejection {
+    + ExternalReference : string <<get>> <<set>>
+    + <<override>> Equals(obj:global::System.Object) : global::System.Boolean
+    + <<override>> GetHashCode() : global::System.Int32
+}
+class Results {
+    + ExternalReference : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : global::System.Int32
+}
+class RejectionResponse {
+    + Reason : string <<get>> <<set>>
+    + Code : string <<get>> <<set>>
+    + <<override>> Equals(obj:global::System.Object) : global::System.Boolean
+    + <<override>> GetHashCode() : global::System.Int32
+}
+class "EqualityComparer`1"<T> {
+}
+Response --> "Acknowledgement" Acknowledgement
+Response --> "Rejection" Rejection
+Response --> "Results" Results
+Acknowledgement --> "ExpectedResponseDateTime" DateTime
+Rejection --> "RejectionResponse" RejectionResponse
+Results --> "MessageDetails" MessageDetails
+@enduml

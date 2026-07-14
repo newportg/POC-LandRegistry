@@ -1,0 +1,250 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj": {}
+  },
+  "projects": {
+    "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj",
+        "projectName": "KnightFrank.Hub.LandRegistry.Common",
+        "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj",
+        "packagesPath": "C:\\Users\\NEWPORTG\\.nuget\\packages\\",
+        "outputPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\NEWPORTG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.10.0, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.10.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj",
+        "projectName": "KnightFrank.Hub.LandRegistry.Service",
+        "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj",
+        "packagesPath": "C:\\Users\\NEWPORTG\\.nuget\\packages\\",
+        "outputPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\NEWPORTG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
+                "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Azure.Identity": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "Azure.Security.KeyVault.Certificates": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Azure.Security.KeyVault.Secrets": {
+              "target": "Package",
+              "version": "[4.6.0, )"
+            },
+            "Flurl.Http": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.4.1, )"
+            },
+            "System.ServiceModel.Duplex": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.ServiceModel.Federation": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.ServiceModel.NetTcp": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.ServiceModel.Primitives": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "System.ServiceModel.Security": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.28, 8.0.28]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

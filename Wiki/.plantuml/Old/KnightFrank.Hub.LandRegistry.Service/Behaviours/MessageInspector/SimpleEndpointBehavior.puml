@@ -1,0 +1,9 @@
+@startuml
+class SimpleEndpointBehavior {
+    + AddBindingParameters(endpoint:ServiceEndpoint, bindingParameters:System.ServiceModel.Channels.BindingParameterCollection) : void
+    + ApplyClientBehavior(endpoint:ServiceEndpoint, clientRuntime:ClientRuntime) : void
+    + ApplyDispatchBehavior(endpoint:ServiceEndpoint, endpointDispatcher:EndpointDispatcher) : void
+    + Validate(endpoint:ServiceEndpoint) : void
+}
+IEndpointBehavior <|-- SimpleEndpointBehavior
+@enduml

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?><definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://officialsearchv2_1.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="OfficialSearchWebService" targetNamespace="http://officialsearchv2_1.ws.bg.lr.gov/">
+  <types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://officialsearchv2_1.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://officialsearchv2_1.ws.bg.lr.gov/" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2011/ResponseOfficialSearchOfWholeWithPriorityV2_0" xmlns:ns1="http://www.oscre.org/ns/eReg-Final/2011/RequestOfficialSearchOfWholeWithPriorityV2_1" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://officialsearchv2_1.ws.bg.lr.gov/">
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/RequestOfficialSearchOfWholeWithPriorityV2_1" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/OfficialSearchV2_1WebService?xsd=RequestOfficialSearchOfWholeWithPriorityV2_1.xsd"/>
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/ResponseOfficialSearchOfWholeWithPriorityV2_0" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/OfficialSearchV2_1WebService?xsd=ResponseOfficialSearchOfWholeWithPriorityV2_0.xsd"/>
+			
+  <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string"/>
+			
+  <xsd:element name="processOS1Request" type="ns3:processOS1Request"/>
+			
+  <xsd:element name="processOS1RequestResponse" type="ns3:processOS1RequestResponse"/>
+			
+  <xsd:complexType name="processOS1Request">
+			    
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="arg0" type="ns1:RequestOfficialSearchOfWholeWithPriorityV2_1Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+			
+  <xsd:complexType name="processOS1RequestResponse">
+				
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="return" type="ns2:ResponseOfficialSearchOfWholeWithPriorityV2_0Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+		
+</xsd:schema>
+  </types>
+  <message name="officialsearchRequest">
+    <part element="tns:processOS1Request" name="parameters">
+    </part>
+  </message>
+  <message name="SOAPEngineSystemException">
+    <part element="tns:SOAPEngineSystemException" name="fault">
+    </part>
+  </message>
+  <message name="officialsearchResponse">
+    <part element="tns:processOS1RequestResponse" name="parameters">
+    </part>
+  </message>
+  <portType name="OfficialSearchV2_1Service">
+    <operation name="processOS1Request">
+      <input message="tns:officialsearchRequest">
+    </input>
+      <output message="tns:officialsearchResponse">
+    </output>
+      <fault message="tns:SOAPEngineSystemException" name="SOAPEngineSystemException">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="OfficialSearchV2_1WSImplPortBinding" type="tns:OfficialSearchV2_1Service">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="processOS1Request">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOAPEngineSystemException">
+        <soap:fault name="SOAPEngineSystemException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="OfficialSearchV2_1WebService">
+    <port binding="tns:OfficialSearchV2_1WSImplPortBinding" name="OfficialSearchV2_1WSImplPort">
+      <soap:address location="https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/OfficialSearchV2_1WebService"/>
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,7 @@
+@startuml
+class ToLCBankruptcySearch {
+    + ToLCBankruptcySearch()
+    + {static} Item(parties:SearchParty) : object
+}
+Profile <|-- ToLCBankruptcySearch
+@enduml

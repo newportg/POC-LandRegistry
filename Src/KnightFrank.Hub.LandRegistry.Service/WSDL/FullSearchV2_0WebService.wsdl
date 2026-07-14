@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?><definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://fullsearchv2_0.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="FullSearchV2_0WebService" targetNamespace="http://fullsearchv2_0.ws.bg.lr.gov/">
+  <types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://fullsearchv2_0.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://fullsearchv2_0.ws.bg.lr.gov/" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2011/ResponseLandChargesFullSearchV2_0" xmlns:ns1="http://www.oscre.org/ns/eReg-Final/2011/RequestLandChargesFullSearchV2_0" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://fullsearchv2_0.ws.bg.lr.gov/">
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/RequestLandChargesFullSearchV2_0" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/FullSearchV2_0WebService?xsd=RequestLandChargesFullSearchV2_0.xsd"/>
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/ResponseLandChargesFullSearchV2_0" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/FullSearchV2_0WebService?xsd=ResponseLandChargesFullSearchV2_0.xsd"/>
+			
+  <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string"/>
+			
+  <xsd:element name="fullSearch" type="ns3:fullSearch"/>
+			
+  <xsd:element name="fullSearchResponse" type="ns3:fullSearchResponse"/>
+			
+  <xsd:complexType name="fullSearch">
+				
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="arg0" type="ns1:RequestLandChargesFullSearchV2_0Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+			
+  <xsd:complexType name="fullSearchResponse">
+				
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="return" type="ns2:LandChargesFullSearchResponseV2_0Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+		
+</xsd:schema>
+  </types>
+  <message name="SOAPEngineSystemException">
+    <part element="tns:SOAPEngineSystemException" name="fault">
+    </part>
+  </message>
+  <message name="fullSearchResponse">
+    <part element="tns:fullSearchResponse" name="parameters">
+    </part>
+  </message>
+  <message name="fullSearch">
+    <part element="tns:fullSearch" name="parameters">
+    </part>
+  </message>
+  <portType name="FullSearchV2_0Service">
+    <operation name="fullSearch">
+      <input message="tns:fullSearch">
+    </input>
+      <output message="tns:fullSearchResponse">
+    </output>
+      <fault message="tns:SOAPEngineSystemException" name="SOAPEngineSystemException">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="FullSearchV2_0WSImplPortBinding" type="tns:FullSearchV2_0Service">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="fullSearch">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOAPEngineSystemException">
+        <soap:fault name="SOAPEngineSystemException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="FullSearchV2_0WebService">
+    <port binding="tns:FullSearchV2_0WSImplPortBinding" name="FullSearchV2_0WSImplPort">
+      <soap:address location="https://bgtest.landregistry.gov.uk/b2b/BGStubService/FullSearchV2_0WebService"/>
+    </port>
+  </service>
+</definitions>

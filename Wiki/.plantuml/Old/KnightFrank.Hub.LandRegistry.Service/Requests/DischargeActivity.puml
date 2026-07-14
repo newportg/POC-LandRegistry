@@ -1,0 +1,28 @@
+@startuml
+class DischargeActivityFactory {
+    + DischargeActivityFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class PollDischargeActivityFactory {
+    + PollDischargeActivityFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class DischargeActivity {
+    + DischargeActivity(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+class PollDischargeActivity {
+    + PollDischargeActivity(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+ServiceFactory <|-- DischargeActivityFactory
+ServiceFactory <|-- PollDischargeActivityFactory
+LandRegistry <|-- DischargeActivity
+LandRegistry <|-- PollDischargeActivity
+@enduml

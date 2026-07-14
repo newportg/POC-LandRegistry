@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?><definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://officialsearchofpartv2_1.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="OfficialSearchOfPartV2_1WebService" targetNamespace="http://officialsearchofpartv2_1.ws.bg.lr.gov/">
+  <types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://officialsearchofpartv2_1.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://officialsearchofpartv2_1.ws.bg.lr.gov/" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2011/ResponseOfficialSearchOfPartWithPriorityV2_0" xmlns:ns1="http://www.oscre.org/ns/eReg-Final/2011/RequestOfficialSearchOfPartWithPriorityV2_1" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://officialsearchofpartv2_1.ws.bg.lr.gov/">
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/RequestOfficialSearchOfPartWithPriorityV2_1" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialSearchOfPartV2_1WebService?xsd=RequestOfficialSearchOfPartWithPriorityV2_1.xsd"/>
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/ResponseOfficialSearchOfPartWithPriorityV2_0" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialSearchOfPartV2_1WebService?xsd=ResponseOfficialSearchOfPartWithPriorityV2_0.xsd"/>
+			
+  <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string"/>
+			
+  <xsd:element name="processOS2Request" type="ns3:processOS2Request"/>
+			
+  <xsd:element name="processOS2RequestResponse" type="ns3:processOS2RequestResponse"/>
+			
+  <xsd:complexType name="processOS2Request">
+			    
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="arg0" type="ns1:RequestOfficialSearchOfPartWithPriorityV2_1Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+			
+  <xsd:complexType name="processOS2RequestResponse">
+				
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="return" type="ns2:OfficialSearchOfPartWithPriorityResponseV2_0Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+		
+</xsd:schema>
+  </types>
+  <message name="officialsearchResponse">
+    <part element="tns:processOS2RequestResponse" name="parameters">
+    </part>
+  </message>
+  <message name="officialsearchRequest">
+    <part element="tns:processOS2Request" name="parameters">
+    </part>
+  </message>
+  <message name="SOAPEngineSystemException">
+    <part element="tns:SOAPEngineSystemException" name="fault">
+    </part>
+  </message>
+  <portType name="OfficialSearchOfPartV2_1Service">
+    <operation name="processOS2Request">
+      <input message="tns:officialsearchRequest">
+    </input>
+      <output message="tns:officialsearchResponse">
+    </output>
+      <fault message="tns:SOAPEngineSystemException" name="SOAPEngineSystemException">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="OfficialSearchOfPartV2_1WSImplPortBinding" type="tns:OfficialSearchOfPartV2_1Service">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="processOS2Request">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOAPEngineSystemException">
+        <soap:fault name="SOAPEngineSystemException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="OfficialSearchOfPartV2_1WebService">
+    <port binding="tns:OfficialSearchOfPartV2_1WSImplPortBinding" name="OfficialSearchOfPartV2_1WSImplPort">
+      <soap:address location="https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialSearchOfPartV2_1WebService"/>
+    </port>
+  </service>
+</definitions>

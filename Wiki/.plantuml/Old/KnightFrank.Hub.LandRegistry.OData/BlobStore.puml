@@ -1,0 +1,11 @@
+@startuml
+class BlobStore {
+    + BlobStore(storageAcct:string, key:string, container:string)
+    + Get(entity:TableEntity) : dynamic
+    + Insert(entity:TableEntity) : IFlurlResponse
+    + Delete(entity:TableEntity) : IFlurlResponse
+    + CreateContainer() : IFlurlResponse
+    + DeleteContainer() : IFlurlResponse
+    + ListContainers() : IFlurlResponse
+}
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+class LCFullSearchMessageDetails {
+    + Description : string <<get>> <<set>>
+    + HMLRReference : string <<get>> <<set>>
+    + ActualPrice : decimal <<get>> <<set>>
+    + ResultTypeCode : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class "EqualityComparer`1"<T> {
+}
+MessageDetails <|-- LCFullSearchMessageDetails
+LCFullSearchMessageDetails --> "Attachment" Attachment
+@enduml

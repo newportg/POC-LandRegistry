@@ -1,0 +1,123 @@
+using 'main.bicep'
+
+param para_target_env = 'vse'
+param para_appFamily_name = 'tst'
+param para_application_name = 'LandR'
+param para_svcPlan = ''
+
+param para_kvSecretsObject = {
+  secrets: [
+    {
+      secretName: 'TableStorageUrl'
+      secretValue: 'http://127.0.0.1:10002/devstoreaccount1'
+    }
+    {
+      secretName: 'TableStorageSasKey'
+      secretValue: 'gjQA2Dm%2FR4bGWDMkX%2B85ufBGvb2G9Uwss6GLUzAc6Zg%3D'
+    }
+    {
+      secretName: 'TableStorageTableName'
+      secretValue: 'LandRegistry'
+    }
+    {
+      secretName: 'LandRegistryCertificates'
+      secretValue: 'B10D6788259CA89F7309A07C334B1B2DE4B7D520'
+    }
+    {
+      secretName: 'LandRegistryUserId'
+      secretValue: 'BGUser001'
+    }
+    {
+      secretName: 'LandRegistryPassword'
+      secretValue: 'landreg001'
+    }
+    {
+      secretName: 'CertName'
+      secretValue: 'FreddoFrog'
+    }
+    {
+      secretName: 'KeyVaultUri'
+      secretValue: 'https://kv-poc-landregist-vse-ne.vault.azure.net/'
+    }
+    {
+      secretName: 'LandRegistryBaseAddress'
+      secretValue: 'https://bgtest.landregistry.gov.uk/'
+    }
+    {
+      secretName: 'LandRegistryApplicationEnquiry'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/ApplicationEnquiryV1_0WebService'
+    }
+    {
+      secretName: 'LandRegistryLCBankruptcySearch'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/BankruptcySearchV2_1WebService'
+    }
+    {
+      secretName: 'LandRegistryDischargeActivity'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/DischargeActivityV1_0WebService'
+    }
+    {
+      secretName: 'LandRegistryEnquiryByPropertyDescription'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/EnquiryByPropertyDescriptionV2_0WebService'
+    }
+    {
+      secretName: 'LandRegistryLCFullSearch'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/FullSearchV2_1WebService'
+    }
+    {
+      secretName: 'LandRegistryOfficialCopyTitleKnown'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/OfficialCopyTitleKnownV2_1WebService'
+    }
+    {
+      secretName: 'LandRegistryOfficialSearchWhole'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/OfficialSearchV2_1WebService'
+    }
+    {
+      secretName: 'LandRegistryOfficialSearchPart'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialSearchOfPartV2_1WebService'
+    }
+    {
+      secretName: 'LandRegistryPollApplicationEnquiry'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/ApplicationEnquiryV1_0PollRequestWebService'
+    }
+    {
+      secretName: 'LandRegistryPollLCBankruptcySearch'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/BankruptcySearchV2_0PollRequestWebService'
+    }
+    {
+      secretName: 'LandRegistryPollDischargeActivity'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/DischargeActivityV1_0PollRequestWebService'
+    }
+    {
+      secretName: 'LandRegistryPollEnquiryByPropertyDescription'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/EnquiryByPropertyDescriptionV2_0PollWebService'
+    }
+    {
+      secretName: 'LandRegistryPollLCFullSearch'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/FullSearchV2_1PollRequestWebService'
+    }
+    {
+      secretName: 'LandRegistryPollOfficialSearchWhole'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/ECBG_StubService/OfficialSearchV2_0PollRequestWebService'
+    }
+    {
+      secretName: 'LandRegistryPollOfficialSearchPart'
+      secretValue: 'https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialSearchOfPartV2_1PollRequestWebService'
+    }
+    {
+      secretName: 'LandRegistryExpectedPrice'
+      secretValue: '3'
+    }
+    {
+      secretName: 'LandRegistryContinueIfFeeExceedsExpectedPrice'
+      secretValue: 'false'
+    }
+    {
+      secretName: 'LandRegistryContactName'
+      secretValue: 'Knight Frank'
+    }
+    {
+      secretName: 'LandRegistryContactPhone'
+      secretValue: '01234 5678901'
+    }
+  ]
+}

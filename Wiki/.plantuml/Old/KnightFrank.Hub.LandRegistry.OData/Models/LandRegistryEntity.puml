@@ -1,0 +1,17 @@
+@startuml
+class LandRegistryEntity {
+    + LandRegistryEntity()
+    + UniqueMsgId : string <<get>> <<set>>
+    + Status : string <<get>> <<set>>
+    + AddressId : string <<get>> <<set>>
+    + PropertyName : string <<get>> <<set>>
+    + PropertyNumber : string <<get>> <<set>>
+    + Line1 : string <<get>> <<set>>
+    + Line2 : string <<get>> <<set>>
+    + Line3 : string <<get>> <<set>>
+    + City : string <<get>> <<set>>
+    + County : string <<get>> <<set>>
+    + PostCode : string <<get>> <<set>>
+}
+TableEntity <|-- LandRegistryEntity
+@enduml

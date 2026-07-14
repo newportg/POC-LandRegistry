@@ -1,0 +1,38 @@
+@startuml
+title Nimbus API: Document Purchase & Webhook Delivery Flow
+
+participant "User/Client App" as App
+participant "OAuth Server" as Auth
+participant "Nimbus API" as API
+participant "Webhook Endpoint" as Webhook
+
+autonumber
+
+== 1. Authentication (OAuth 2.0) ==
+App -> Auth: Request Access Token (Auth Code / Refresh)
+Auth --> App: Return Bearer Token (Expires 1h)
+
+== 2. Document Selection & Purchase ==
+App -> API: POST /check-availability (Title Number)
+note right: Includes Bearer Token
+API --> App: 200 OK (Document List + Costs)
+
+App -> API: POST /purchase (Documents Select)
+API --> App: 202 Accepted (Order ID)
+
+== 3. Asynchronous Webhook Delivery ==
+note over API, Webhook: Processing documents in background...
+API -> Webhook: POST /delivery (Order ID + Download URLs)
+note left: Includes X-Nimbus-Signature (HMAC)
+
+activate Webhook
+Webhook -> Webhook: Validate HMAC Signature
+Webhook --> API: 200 OK (Ack)
+
+== 4. Final Download ==
+Webhook -> Webhook: Trigger Background Download
+Webhook -> API: GET Document (Download URL)
+API --> Webhook: Binary File Content
+deactivate Webhook
+
+@enduml

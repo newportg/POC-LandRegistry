@@ -1,0 +1,8 @@
+@startuml
+class TableEntity {
+    + ETag : string <<get>> <<set>>
+    + PartitionKey : string <<get>> <<set>>
+    + RowKey : string <<get>> <<set>>
+    + Timestamp : string <<get>> <<set>>
+}
+@enduml

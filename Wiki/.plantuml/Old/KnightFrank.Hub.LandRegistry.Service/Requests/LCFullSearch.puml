@@ -1,0 +1,28 @@
+@startuml
+class LCFullSearchFactory {
+    + LCFullSearchFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class PollLCFullSearchFactory {
+    + PollLCFullSearchFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class LCFullSearch {
+    + LCFullSearch(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+class PollFullSearch {
+    + PollFullSearch(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+ServiceFactory <|-- LCFullSearchFactory
+ServiceFactory <|-- PollLCFullSearchFactory
+LandRegistry <|-- LCFullSearch
+LandRegistry <|-- PollFullSearch
+@enduml

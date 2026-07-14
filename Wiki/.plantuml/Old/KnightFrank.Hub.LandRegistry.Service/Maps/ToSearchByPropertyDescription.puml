@@ -1,0 +1,6 @@
+@startuml
+class ToRequestSearchByPropertyDescriptionMap {
+    + ToRequestSearchByPropertyDescriptionMap()
+}
+Profile <|-- ToRequestSearchByPropertyDescriptionMap
+@enduml

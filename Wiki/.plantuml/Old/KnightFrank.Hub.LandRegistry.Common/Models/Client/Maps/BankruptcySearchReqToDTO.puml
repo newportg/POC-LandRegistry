@@ -1,0 +1,6 @@
+@startuml
+class BankruptcySearchReqToDTO {
+    + BankruptcySearchReqToDTO()
+}
+Profile <|-- BankruptcySearchReqToDTO
+@enduml

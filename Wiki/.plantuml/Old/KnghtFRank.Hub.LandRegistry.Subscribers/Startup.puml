@@ -1,0 +1,6 @@
+@startuml
+class Startup {
+    + <<override>> Configure(builder:IFunctionsHostBuilder) : void
+}
+FunctionsStartup <|-- Startup
+@enduml

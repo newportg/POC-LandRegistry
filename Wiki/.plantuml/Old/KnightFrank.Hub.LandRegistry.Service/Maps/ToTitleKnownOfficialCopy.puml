@@ -1,0 +1,6 @@
+@startuml
+class ToTitleKnownOfficialCopy {
+    + ToTitleKnownOfficialCopy()
+}
+Profile <|-- ToTitleKnownOfficialCopy
+@enduml

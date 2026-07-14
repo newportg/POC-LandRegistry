@@ -1,0 +1,39 @@
+@startuml
+!include .\\KnightFrank.Hub.LandRegistry.Service\LandRegistrySvc.puml
+!include .\\KnightFrank.Hub.LandRegistry.Service\ServiceFactory.puml
+
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromApplicationEnquiry.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromDischargeActivity.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromEnquiryByPropertyDescription.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromLCBankruptcySearch.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromLCFullSearch.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromOfficialSearchPart.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromOfficialSearchWhole.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\FromTitleKnownOfficialCopy.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToApplicationEnquiry.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToDischargeActivity.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToLCBankruptcySearch.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToLCFullSearch.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToOfficialSearchPart.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToOfficialSearchWhole.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToPollRequestTypeMap.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToSearchByPropertyDescription.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Maps\ToTitleKnownOfficialCopy.puml
+!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\ApplicationEnquiry.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\DischargeActivity.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\EnquiryByPropertyDescription.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\LCBankruptcySearch.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\LCFullSearch.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\OfficialCopyTitleKnown.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\OfficialSearchPart.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Requests\OfficialSearchWhole.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\ServiceReference\Reference.puml
+
+
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Behaviours\MessageInspector\SecurityHeader.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Behaviours\MessageInspector\SimpleEndpointBehavior.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Behaviours\MessageInspector\SimpleMessageInspector.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Behaviours\SoapHeader\HMLRBGMessageEndpointBehavior.puml
+'!include .\\KnightFrank.Hub.LandRegistry.Service\Behaviours\SoapHeader\HMLRBGMessageInspector.puml
+
+@enduml

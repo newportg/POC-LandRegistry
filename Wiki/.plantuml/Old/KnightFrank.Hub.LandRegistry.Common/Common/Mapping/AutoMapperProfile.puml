@@ -1,0 +1,5 @@
+@startuml
+class AutoMapperProfile <<static>> {
+    + {static} AddMapProfiles(container:IServiceCollection, name:string) : IServiceCollection
+}
+@enduml

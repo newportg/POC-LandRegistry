@@ -1,0 +1,6 @@
+@startuml
+class ToDischargeActivity {
+    + ToDischargeActivity()
+}
+Profile <|-- ToDischargeActivity
+@enduml

@@ -1,0 +1,153 @@
+@startuml
+class Request {
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Identity {
+    + UniqueMsgId : string <<get>> <<set>>
+    + ExternalRef : string <<get>> <<set>>
+    + CustomerRef : string <<get>> <<set>>
+    + AllocatedBy : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Property {
+    + Property()
+    + PropertyName : string <<get>> <<set>>
+    + PropertyNumber : string <<get>> <<set>>
+    + Line1 : string <<get>> <<set>>
+    + Line2 : string <<get>> <<set>>
+    + Line3 : string <<get>> <<set>>
+    + City : string <<get>> <<set>>
+    + County : string <<get>> <<set>>
+    + PostCode : string <<get>> <<set>>
+    + Tenure : string <<get>> <<set>>
+    + TitleNumber : string <<get>> <<set>>
+    + ExpectedPrice : decimal <<get>> <<set>>
+    + PropertyDescription : string <<get>> <<set>>
+    + LocalAuthority : string <<get>> <<set>>
+    + CurrencyID : string <<get>> <<set>>
+    + GrossPriceAmount : decimal <<get>> <<set>>
+    + NetPriceAmount : decimal <<get>> <<set>>
+    + VATAmount : decimal <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+enum SearchType {
+    Individual= 10,
+    Company= 20,
+    Complex= 30,
+    LocalAuthority= 40,
+}
+class SearchParty {
+    + ContinueIfFeeExceeds : bool <<get>> <<set>> = false
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Applicant {
+    + CompanyName : string <<get>> <<set>>
+    + Surname : string <<get>> <<set>>
+    + Forename : string <<get>> <<set>>
+    + Middle : string <<get>> <<set>>
+    + ComplexName : string <<get>> <<set>>
+    + Client : string <<get>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Flags {
+    + Flags()
+    + OfficialCopy : string <<get>> <<set>>
+    + RequestedOfficialCopy : string <<get>> <<set>>
+    + ContinueIfFeeExceeds : bool <<get>> <<set>> = false
+    + ClosedAndContinued : bool <<get>> <<set>> = false
+    + PendingApps : bool <<get>> <<set>> = false
+    + FirstRegistration : bool <<get>> <<set>> = false
+    + SendBackdated : bool <<get>> <<set>> = false
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class DocumentInfo {
+    + DocumentType : string <<get>> <<set>>
+    + AdditionalInfo : string <<get>> <<set>>
+    + TitleNumberFiledUnder : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Contact {
+    + Contact()
+    + Name : string <<get>>
+    + Telephone : string <<get>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Other {
+}
+class AlternativeDespatchDetails {
+    + Reference : string <<get>> <<set>>
+    + Name : string <<get>> <<set>>
+    + PostCode : string <<get>> <<set>>
+    + DXNumber : string <<get>> <<set>>
+    + ExchangeName : string <<get>> <<set>>
+}
+class ApplicationReference {
+    + Reference : string <<get>> <<set>> = null
+}
+class PrioritySearch {
+    + PriorityType : string <<get>> <<set>>
+    + PropertyDescription : string <<get>> <<set>>
+    + ContinueIfFeeExceeds : bool <<get>> <<set>> = false
+    + ContinueIfNameMismatch : bool <<get>> <<set>> = false
+    + ContinueIfDeveloperTitle : bool <<get>> <<set>> = false
+    + ContinueIfPendingSearchesOfPart : bool <<get>> <<set>> = false
+    + PropreietorOrFirstApplicant : string <<get>> <<set>>
+    + ApplicantNames : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class PropertyIdentification {
+    + PropertyDescription : string <<get>> <<set>> = null
+}
+class TitlePlan {
+    + TitlePlanNumber : string <<get>> <<set>>
+    + Reference : string <<get>> <<set>>
+}
+class EstatePlan {
+    + PlotDetails : string <<get>> <<set>>
+}
+class PlanAttachment {
+    + Title : string <<get>> <<set>>
+    + Date : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + CopyrightNotices : string <<get>> <<set>>
+}
+class TimeshareDetails {
+    + TimeshareLease : bool <<get>> <<set>> = false
+    + TimePeriod : string <<get>> <<set>>
+}
+class "EqualityComparer`1"<T> {
+}
+Request o-> "Reference" Identity
+Request --> "Property" Property
+Request --> "Applicant" Applicant
+Request --> "Flags" Flags
+Request o-> "Contact" Contact
+Request --> "Other" Other
+Request --> "ApplicationReference" ApplicationReference
+Request --> "SearchParty" SearchParty
+Request --> "AlternativeDespatchDetails" AlternativeDespatchDetails
+Request --> "PrioritySearch" PrioritySearch
+Property --> "ChargeDate" DateTime
+SearchParty --> "SearchType" SearchType
+Applicant --> "From" DateTime
+Applicant --> "To" DateTime
+DocumentInfo --> "DocumentDate" DateTime
+PrioritySearch --> "PropertyIdentification" PropertyIdentification
+PrioritySearch --> "SearchFrom" DateTime
+PrioritySearch --> "TimeshareDetails" TimeshareDetails
+PropertyIdentification o-> "TitlePlan" TitlePlan
+PropertyIdentification o-> "EstatePlan" EstatePlan
+PropertyIdentification o-> "PlanAttachment" PlanAttachment
+EstatePlan --> "ApprovalDate" DateTime
+PlanAttachment --> "BinaryObject" BinaryObjectType
+@enduml

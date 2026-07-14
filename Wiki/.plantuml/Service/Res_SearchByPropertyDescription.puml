@@ -1,0 +1,67 @@
+@startjson
+
+{
+    "ResponseSearchByPropertyDescriptionV2_0Type": {
+        "Q1GatewayResponseType": {
+            "Typecode": "string",
+            "Acknowledgement":[
+                {
+                    "UniqueMessageID": "GUID",
+                    "ExpectedResponseDateTime": "2024-06-12T10:05:00Z",
+                    "MessageDescription": "Your request has been received and is being processed"
+                }
+            ],
+            "Rejection": [
+                {
+                    "ExternalReference":{
+                        "Reference": "External Reference",
+                        "AllocatedBy": [ "string" ],
+                        "Description": [ "string" ]
+                    },
+                    "RejectionResponse":[
+                        {
+                            "Reason": "string",
+                            "Code": "string",
+                            "OtherDescription": ["string"],
+                            "ValidationErrors": [
+                                {
+                                    "Code": "string",
+                                    "Description": "string"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "Results": [
+                {
+                    "MessageDetails": {
+                        "Description": "string"
+                    },
+                    "ExternalReference":{
+                        "Reference": "External Reference",
+                        "AllocatedBy": [ "string" ],
+                        "Description": [ "string" ]
+                    },
+                    "Title": [
+                        {
+                            "TitleNumber": "string",
+                            "Description": [ "string" ],
+                            "TenureInformation": "TenureTypeCode 10-170",
+                            "Address": {
+                                "BuildingName": "The name of the building",
+                                "SubBuildingName": "The name of the sub-building",
+                                "BuildingNumber": "The number of the building",
+                                "StreetName": "The name of the street",
+                                "CityName": "The name of the city",
+                                "PostCodeZone": "The postcode"
+                            }
+                        }
+                    ] 
+                }
+            ]
+        }
+    }
+}
+
+@endjson

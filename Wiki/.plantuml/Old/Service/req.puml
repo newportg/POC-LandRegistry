@@ -1,0 +1,59 @@
+@startjson
+
+{
+  "id": "string",
+  "fixflo_id": "string",
+  "property": {
+    "id": "12345",
+    "furnished": "furnished",
+    "branch_name": "Canary Wharf",
+    "no_of_bedrooms": 2,
+    "address": {
+      "line1": "Test",
+      "line2": "Test",
+      "town": "Apt 4B",
+      "county": "New York",
+      "postcode": "NY",
+      "country": "Test"
+    }
+  },
+  "tenants": [
+    {
+      "name": "Jane Doe",
+      "email": [
+        "janedoe@example.com",
+        "janedoe@example.com"
+      ],
+      "mobiles": [
+        "0987654321",
+        "0123456789"
+      ]
+    }
+  ],
+  "landlords": [
+    {
+      "name": "John Doe",
+      "email": [
+        "johndoe@example.com",
+        "janedoe@example.com"
+      ],
+      "mobile": "0987654321"
+    }
+  ],
+  "propertymanager": {
+    "name": "John Doe",
+    "email": [
+      "johndoe@example.com",
+      "janedoe@example.com"
+    ],
+    "department": "Prime or Resi or ILM"
+  },
+  "start_date": "08/10/2024",
+  "end_date": "07/10/2025",
+  "branch_name": "Canary Wharf",
+  "due_date": "08-04-2025 (DD/MM/YYYY)",
+  "additional_comments": "Special instruction to PI"
+}
+
+@endjson
+

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?><definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ocwithsummaryv2_1.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="OfficialCopyWithSummaryV2_1WebService" targetNamespace="http://ocwithsummaryv2_1.ws.bg.lr.gov/">
+  <types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ocwithsummaryv2_1.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://ocwithsummaryv2_1.ws.bg.lr.gov/" xmlns:ns2="http://www.oscre.org/ns/eReg-Final/2011/ResponseOCWithSummaryV2_1" xmlns:ns1="http://www.oscre.org/ns/eReg-Final/2011/RequestOCWithSummaryV2_0" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://ocwithsummaryv2_1.ws.bg.lr.gov/">
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/RequestOCWithSummaryV2_0" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialCopyWithSummaryV2_1WebService?xsd=RequestOCWithSummaryV2_0.xsd"/>
+			
+  <xsd:import namespace="http://www.oscre.org/ns/eReg-Final/2011/ResponseOCWithSummaryV2_1" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialCopyWithSummaryV2_1WebService?xsd=ResponseOCWithSummaryV2_1.xsd"/>
+				
+  <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string"/>
+			    
+  <xsd:element name="performOCWithSummary" type="ns3:performOCWithSummary"/>
+				
+  <xsd:element name="performOCWithSummaryResponse" type="ns3:performOCWithSummaryResponse"/>
+				
+  <xsd:complexType name="performOCWithSummary">
+				    
+    <xsd:sequence>
+				      
+      <xsd:element minOccurs="0" name="arg0" type="ns1:RequestOCWithSummaryV2_0Type"/>
+				    
+    </xsd:sequence>
+				
+  </xsd:complexType>
+				
+  <xsd:complexType name="performOCWithSummaryResponse">
+				    
+    <xsd:sequence>
+					     
+      <xsd:element minOccurs="0" name="return" type="ns2:ResponseOCWithSummaryV2_1Type"/>
+				    
+    </xsd:sequence>
+				
+  </xsd:complexType>
+		
+</xsd:schema>
+  </types>
+  <message name="SOAPEngineSystemException">
+    <part element="tns:SOAPEngineSystemException" name="fault">
+    </part>
+  </message>
+  <message name="oCWithSummaryResponse">
+    <part element="tns:performOCWithSummaryResponse" name="parameters">
+    </part>
+  </message>
+  <message name="oCWithSummaryRequest">
+    <part element="tns:performOCWithSummary" name="parameters">
+    </part>
+  </message>
+  <portType name="OCWithSummaryV2_1Service">
+    <operation name="performOCWithSummary">
+      <input message="tns:oCWithSummaryRequest">
+    </input>
+      <output message="tns:oCWithSummaryResponse">
+    </output>
+      <fault message="tns:SOAPEngineSystemException" name="SOAPEngineSystemException">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="OCWithSummaryV2_1WSImplPortBinding" type="tns:OCWithSummaryV2_1Service">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="performOCWithSummary">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOAPEngineSystemException">
+        <soap:fault name="SOAPEngineSystemException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="OfficialCopyWithSummaryV2_1WebService">
+    <port binding="tns:OCWithSummaryV2_1WSImplPortBinding" name="OCWithSummaryV2_1WSImplPort">
+      <soap:address location="https://bgtest.landregistry.gov.uk/b2b/BGStubService/OfficialCopyWithSummaryV2_1WebService"/>
+    </port>
+  </service>
+</definitions>

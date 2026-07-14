@@ -1,0 +1,5 @@
+@startuml
+class Bootstrapper <<static>> {
+    + {static} AddODataServices(services:IServiceCollection, storageName:string, sasKey:string, lrTable:string) : IServiceCollection
+}
+@enduml

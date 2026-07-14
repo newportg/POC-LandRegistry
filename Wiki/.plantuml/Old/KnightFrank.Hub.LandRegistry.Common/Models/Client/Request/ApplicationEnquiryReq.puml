@@ -1,0 +1,12 @@
+@startuml
+class ApplicationEnquiryReq {
+    + ApplicationReference : string <<get>> <<set>>
+}
+class ApplicationEnquiryReq_Property {
+    + TitleNumber : string <<get>> <<set>>
+    + ContinueIfTitleIsClosedAndContinuedIndicator : bool <<get>> <<set>> = false
+}
+ApplicationEnquiryReq o-> "RequestType" RequestTypes
+ApplicationEnquiryReq --> "Identity" Identity
+ApplicationEnquiryReq --> "Property" ApplicationEnquiryReq_Property
+@enduml

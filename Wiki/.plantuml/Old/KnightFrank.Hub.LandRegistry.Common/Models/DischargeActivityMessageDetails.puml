@@ -1,0 +1,18 @@
+@startuml
+class DischargeActivityMessageDetails {
+    + Description : string <<get>> <<set>>
+    + TitleNumber : string <<get>> <<set>>
+    + DischargeCount : int <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Discharges {
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class "EqualityComparer`1"<T> {
+}
+MessageDetails <|-- DischargeActivityMessageDetails
+DischargeActivityMessageDetails --> "ResultDateTime" DateTime
+Discharges --> "DischargeDate" DateTime
+@enduml

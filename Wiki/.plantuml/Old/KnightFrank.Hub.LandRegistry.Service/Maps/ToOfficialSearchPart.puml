@@ -1,0 +1,9 @@
+@startuml
+class ToOfficialSearchPart {
+    + ToOfficialSearchPart()
+    + Contact(cont:Contact) : Q1ContactType6[]
+    + PriorityCodeType(type:string) : PriorityCodeContentType1
+    + PropertyId(src:PropertyIdentification) : object
+}
+Profile <|-- ToOfficialSearchPart
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class TableRepository <<sealed>> {
+    + TableRepository(pollingDataTable:CloudTable, logger:ILogger<TableRepository>)
+    + <<async>> GetPollingDataAsync() : Task<List<LandRegistryTableRecord>>
+    + AddEntityAndSaveAsync(item:LandRegistryTableRecord) : Task
+    + <<async>> SaveAsync(item:LandRegistryTableRecord) : Task
+    + <<async>> DeleteAsync(item:LandRegistryTableRecord) : Task
+}
+ITableRepository <|-- TableRepository
+@enduml

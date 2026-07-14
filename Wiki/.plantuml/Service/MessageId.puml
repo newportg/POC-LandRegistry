@@ -1,0 +1,10 @@
+@startuml
+    actor Client
+    participant "Message ID Generator" as Generator
+    participant "Persistent Storage" as Storage
+    Client -> Generator: Request to generate message ID
+    Generator -> Generator: Generate unique message ID
+    Generator -> Storage: Store message ID with request details
+    Storage --> Generator: Acknowledgment of storage
+    Generator --> Client: Return generated message ID   
+@enduml

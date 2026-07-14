@@ -1,0 +1,7 @@
+@startuml
+class ToLCFullSearch {
+    + ToLCFullSearch()
+    + {static} Item(parties:SearchParty) : object
+}
+Profile <|-- ToLCFullSearch
+@enduml

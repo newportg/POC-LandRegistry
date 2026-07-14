@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "KnightFrank.Hub.LandRegistry.Fv": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7268",
+      "launchBrowser": false
+    }
+  }
+}

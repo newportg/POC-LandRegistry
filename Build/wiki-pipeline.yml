@@ -1,0 +1,64 @@
+pool:
+  vmImage: 'windows-latest'
+
+#trigger:
+#- wikiMain
+
+
+trigger:
+  branches:
+    include:
+    - wikiMain
+  paths:
+    include:
+    - Wiki/.plantuml/**
+
+steps: 
+ - checkout: self
+   persistCredentials: true
+   clean: true
+
+ - task: PowerShell@2
+   inputs:
+     targetType: 'inline'
+     script: |
+       choco install graphviz
+       choco install openjdk.portable
+       choco install nodejs
+       choco install plantuml
+
+ - task: PowerShell@2
+   displayName: Build Images
+   inputs:
+     targetType: 'inline'
+     script: |
+             $sourceRoot = "$Env:Build.SourcesDirectory"
+             
+             echo  '$(System.DefaultWorkingDirectory)'
+             $source = Join-Path -Path '$(System.DefaultWorkingDirectory)' -ChildPath("\wiki\.plantuml")
+             $dest = Join-Path -Path '$(System.DefaultWorkingDirectory)' -ChildPath("\wiki\.attachments")
+             echo $source $dest
+
+             Get-ChildItem $source -Recurse -Filter "*.puml" |
+                 Foreach-Object   {
+                     $fileWithPath = $_.Fullname         
+                     $input =  Join-Path  -Path $_.DirectoryName -ChildPath ("{0}.puml" -f $_.Basename ) 
+                     $dest = $_.DirectoryName
+                     $dest = $dest.replace('plantuml', 'attachments')
+                     echo "dir" $input $dest
+                     $execute = "java -jar C:\ProgramData\chocolatey\lib\plantuml\tools\plantuml.jar $input -o $dest"; 
+                     Invoke-Expression -Command $execute 
+                 }
+
+ - task: PowerShell@2
+   displayName: Checkin
+   inputs:
+     targetType: 'inline'
+     script: |
+            git config --global user.email "gary.newport@knightfrank.com"
+            git config --global user.name "Gary Newport"
+            git add .
+            git commit -m "Updated files"
+            git push origin HEAD:refs/heads/wikiMain
+
+            # git push origin HEAD:wikiMain

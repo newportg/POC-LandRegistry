@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8'?><definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://applicationenquiryv1_0.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" name="ApplicationEnquiryV1_0WebService" targetNamespace="http://applicationenquiryv1_0.ws.bg.lr.gov/">
+  <types>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://applicationenquiryv1_0.ws.bg.lr.gov/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns3="http://applicationenquiryv1_0.ws.bg.lr.gov/" xmlns:ns2="http://www.landregistry.gov.uk/ResponseApplicationEnquiryV1_0" xmlns:ns1="http://www.landregistry.gov.uk/RequestApplicationEnquiryV1_0" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://applicationenquiryv1_0.ws.bg.lr.gov/">
+			
+  <xsd:import namespace="http://www.landregistry.gov.uk/RequestApplicationEnquiryV1_0" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/ApplicationEnquiryV1_0WebService?xsd=RequestApplicationEnquiryV1_0.xsd"/>
+			
+  <xsd:import namespace="http://www.landregistry.gov.uk/ResponseApplicationEnquiryV1_0" schemaLocation="https://bgtest.landregistry.gov.uk/b2b/BGStubService/ApplicationEnquiryV1_0WebService?xsd=ResponseApplicationEnquiryV1_0.xsd"/>
+			
+  <xsd:element name="SOAPEngineSystemException" nillable="true" type="xsd:string"/>
+			
+  <xsd:element name="applicationEnquiry" type="ns3:applicationEnquiry"/>
+			
+  <xsd:element name="applicationEnquiryResponse" type="ns3:applicationEnquiryResponse"/>
+			
+  <xsd:complexType name="applicationEnquiry">
+				
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="arg0" type="ns1:RequestApplicationEnquiryV1_0Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+			
+  <xsd:complexType name="applicationEnquiryResponse">
+				
+    <xsd:sequence>
+					
+      <xsd:element minOccurs="0" name="return" type="ns2:ResponseApplicationEnquiryV1_0Type"/>
+				
+    </xsd:sequence>
+			
+  </xsd:complexType>
+		
+</xsd:schema>
+  </types>
+  <message name="applicationEnquiryRequest">
+    <part element="tns:applicationEnquiry" name="parameters">
+    </part>
+  </message>
+  <message name="SOAPEngineSystemException">
+    <part element="tns:SOAPEngineSystemException" name="fault">
+    </part>
+  </message>
+  <message name="applicationEnquiryResponse">
+    <part element="tns:applicationEnquiryResponse" name="parameters">
+    </part>
+  </message>
+  <portType name="ApplicationEnquiryV1_0Service">
+    <operation name="applicationEnquiry">
+      <input message="tns:applicationEnquiryRequest">
+    </input>
+      <output message="tns:applicationEnquiryResponse">
+    </output>
+      <fault message="tns:SOAPEngineSystemException" name="SOAPEngineSystemException">
+    </fault>
+    </operation>
+  </portType>
+  <binding name="ApplicationEnquiryV1_0WSImplPortBinding" type="tns:ApplicationEnquiryV1_0Service">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="applicationEnquiry">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="SOAPEngineSystemException">
+        <soap:fault name="SOAPEngineSystemException" use="literal"/>
+      </fault>
+    </operation>
+  </binding>
+  <service name="ApplicationEnquiryV1_0WebService">
+    <port binding="tns:ApplicationEnquiryV1_0WSImplPortBinding" name="ApplicationEnquiryV1_0WSImplPort">
+      <soap:address location="https://bgtest.landregistry.gov.uk/b2b/BGStubService/ApplicationEnquiryV1_0WebService"/>
+    </port>
+  </service>
+</definitions>
