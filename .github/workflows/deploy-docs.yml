@@ -53,6 +53,34 @@ jobs:
             cp -R Wiki docs-src/wiki
           fi
 
+          # Make legacy hidden attachments render in MkDocs by exposing them as
+          # non-hidden "attachments" and normalizing markdown link targets.
+          if [ -d docs-src/wiki/.attachments ]; then
+            cp -R docs-src/wiki/.attachments docs-src/wiki/attachments
+            ln -s "$PWD/docs-src/wiki/attachments" docs-src/attachments
+
+            # Many pages reference .attachments as if it exists beside each file.
+            # Create per-folder symlinks to a single attachments directory.
+            while IFS= read -r -d '' mdfile; do
+              mddir="$(dirname "$mdfile")"
+              if [ "$mddir" != "docs-src/wiki" ] && [ ! -e "$mddir/attachments" ]; then
+                ln -s "$PWD/docs-src/wiki/attachments" "$mddir/attachments"
+              fi
+            done < <(find docs-src/wiki -type f -name '*.md' -print0)
+
+            # Rewrite legacy attachment links and strip "=750x" style suffixes.
+            while IFS= read -r -d '' mdfile; do
+              sed -E -i \
+                -e 's#\(/Wiki/\.attachments/#(attachments/#g' \
+                -e 's#\(/wiki/\.attachments/#(attachments/#g' \
+                -e 's#\(wiki/\.attachments/#(attachments/#g' \
+                -e 's#\(/\.attachments/#(attachments/#g' \
+                -e 's#\(\.attachments/#(attachments/#g' \
+                -e 's#\(([^)]*\.(png|jpg|jpeg|gif|svg|webp))\s+=([0-9]+x[0-9]*)\)#(\1)#Ig' \
+                "$mdfile"
+            done < <(find docs-src -type f -name '*.md' -print0)
+          fi
+
           printf '%s\n' \
             'site_name: Knight Frank Hub Land Registry' \
             'docs_dir: docs-src' \
