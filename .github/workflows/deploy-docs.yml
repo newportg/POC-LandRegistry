@@ -35,7 +35,7 @@ jobs:
       - name: Install MkDocs
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material plantuml-markdown pymdown-extensions
 
       - name: Prepare docs source
         shell: bash
@@ -138,6 +138,10 @@ jobs:
             'markdown_extensions:' \
             '  - toc:' \
             '      permalink: true' \
+            '  - pymdownx.superfences' \
+            '  - plantuml_markdown:' \
+            '      server: https://www.plantuml.com/plantuml' \
+            '      format: svg' \
             > mkdocs.yml
 
       - name: Build documentation site

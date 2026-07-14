@@ -83,3 +83,22 @@ In essence, a Title Absolute is the closest concept to a "government-guaranteed 
 
 ## SAD Lite
 ![SadLite](/Wiki/.attachments/SadLite.png)
+
+## PlantUML Render Test
+
+```plantuml
+@startuml
+title Land Registry Request Flow (Sample)
+actor Client
+participant "API" as Api
+participant "Service Bus" as Bus
+participant "Subscriber" as Sub
+
+Client -> Api: Submit request
+Api -> Bus: Publish message
+Bus -> Sub: Deliver message
+Sub --> Bus: Ack
+Bus --> Api: Correlation status
+Api --> Client: Accepted
+@enduml
+```
