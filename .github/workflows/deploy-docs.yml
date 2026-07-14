@@ -82,7 +82,7 @@ jobs:
           fi
 
           printf '%s\n' \
-            'site_name: Knight Frank Hub Land Registry' \
+            'site_name: POC - Land Registry' \
             'docs_dir: docs-src' \
             'site_dir: site' \
             'theme:' \
