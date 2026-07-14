@@ -5,6 +5,7 @@ A NoSql Cosmos DB container should be used as this service is similar in operati
 ## Containers
 
 ```plantuml
+@startjson
 {
     "id": "string<GUID>",    
     "audit": {
@@ -74,6 +75,7 @@ A NoSql Cosmos DB container should be used as this service is similar in operati
     ]    
 }
 
+@endjson
 ```
 
 ## Housekeeping
