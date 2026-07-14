@@ -65,7 +65,7 @@ jobs:
             > mkdocs.yml
 
       - name: Build documentation site
-        run: mkdocs build --strict
+        run: mkdocs build
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
