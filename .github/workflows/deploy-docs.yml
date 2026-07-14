@@ -87,6 +87,25 @@ jobs:
             'site_dir: site' \
             'theme:' \
             '  name: material' \
+            'nav:' \
+            '  - Home: index.md' \
+            '  - Wiki:' \
+            '      - Introduction and Goals: wiki/1-introduction-and-goals.md' \
+            '      - Architectural Constraints: wiki/2-architectural-constraints.md' \
+            '      - System Scope and Context: wiki/3-system-scope-and-context.md' \
+            '      - Solution Strategy: wiki/4-solution-strategy.md' \
+            '      - Building Block View:' \
+            '          - Overview: wiki/5-building-block-view.md' \
+            '          - Azure Function Detail: wiki/5-building-block-view/azure-function-detail.md' \
+            '          - Cosmos DB Component: wiki/5-building-block-view/cosmos-db-component.md' \
+            '          - Domain Logic Component: wiki/5-building-block-view/domain-logic-component.md' \
+            '          - Land Registry Service Handler: wiki/5-building-block-view/landregistry-service-handler.md' \
+            '          - Nimbus Service Handler: wiki/5-building-block-view/nimbus-service-handler.md' \
+            '          - Security Component: wiki/5-building-block-view/security-component.md' \
+            '      - Runtime View: wiki/6-runtime-view.md' \
+            '      - Deployment View: wiki/7-deployment-view.md' \
+            '      - Land Registry: wiki/LandRegistry.md' \
+            '      - Service: wiki/Service.md' \
             'markdown_extensions:' \
             '  - toc:' \
             '      permalink: true' \
