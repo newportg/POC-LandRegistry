@@ -4,11 +4,11 @@
 
 A internal user will have the ability to pass property information, to this service and receive a property information. 
 
-![image](/.attachments/BusinessContext.png =750x)
+![image](/.attachments/BusinessContext.png)
 
 ## Technical Context
 
-![image](/.attachments/TechnicalContext.png =750x)
+![image](/.attachments/TechnicalContext.png)
 
 * The API runs as a microservice on our cloud platform, and will be accessible via a API Management interface.
 * The connection to the external service provider is over HTTPS.
