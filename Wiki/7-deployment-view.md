@@ -1,6 +1,6 @@
 # 7, Deployment View
 
-![image](.attachments/DeploymentView.png =750x)
+![image](.attachments/DeploymentView.png)
 
 ## Security
 
