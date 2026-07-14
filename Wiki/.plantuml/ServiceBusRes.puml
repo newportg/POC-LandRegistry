@@ -28,7 +28,7 @@
                 "entityId": "string<uuid>"
             }
         ]
-    },    
+    },
     "property" : {
         "titleNo": "string",
         "address" : {
@@ -38,7 +38,7 @@
             "cityName":"string",
             "postcode":"string"
         },
-        "tenureFeeeHold": "boolean"
+        "tenureFeeeHold": "boolean",
         "documents": [
             {
                 "documentId": "string<uuid>",
