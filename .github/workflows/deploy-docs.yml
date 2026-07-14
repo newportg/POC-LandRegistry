@@ -53,16 +53,16 @@ jobs:
             cp -R Wiki docs-src/wiki
           fi
 
-          cat > mkdocs.yml <<'EOF'
-site_name: Knight Frank Hub Land Registry
-docs_dir: docs-src
-site_dir: site
-theme:
-  name: material
-markdown_extensions:
-  - toc:
-      permalink: true
-          EOF
+          printf '%s\n' \
+            'site_name: Knight Frank Hub Land Registry' \
+            'docs_dir: docs-src' \
+            'site_dir: site' \
+            'theme:' \
+            '  name: material' \
+            'markdown_extensions:' \
+            '  - toc:' \
+            '      permalink: true' \
+            > mkdocs.yml
 
       - name: Build documentation site
         run: mkdocs build --strict
