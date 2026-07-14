@@ -4,7 +4,7 @@ A NoSql Cosmos DB container should be used as this service is similar in operati
 
 ## Containers
 
-![image](.attachments/ServiceBusRes.png )
+![image](.attachments/ServiceBusRes.png)
 
 ## Housekeeping
 
