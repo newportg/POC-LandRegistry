@@ -1,7 +1,7 @@
 # API Audit Get Host
 
 ## Calls that will illicit this response.
-<details>
+
  <summary>
     <code>GET</code> 
     <code><b>/audit/host/{option}/{variable}</b></code> 
@@ -44,7 +44,6 @@ If either a Hostname or Ip address is specified then the request will return lis
 >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/host
 > ```
 
-</details>
 
 ## Response
 

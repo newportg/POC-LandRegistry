@@ -2,7 +2,6 @@
 
 ### Land Registry Information
 
-<details>
    <summary>
       <code>POST</code>
       <code><b>/lrinfo/GetTitleDetails</b></code> 
@@ -24,9 +23,7 @@ Calls the Land Registry, and returns document ids relevant to the passed address
 > | `404`| `application/json`   | `{"code":"404","message":"Not Found"}`    | The request was understood, but no data was found|
 > | `409`| `application/json`   | `{"code":"409","message":"Conflict"}`     | The request Application Id already exists |
 
-</details>
 
-<details>
  <summary>
     <code>GET</code> 
     <code><b>/lrinfo/ByApplicationId/{id}</b></code> 
@@ -59,12 +56,10 @@ Returns information held, by the source applications name and Id
 > ```
 
 
-</details>
 
 
 ### Audit
 
-<details>
  <summary>
     <code>GET</code> 
     <code><b>/audit/BySourceApp/{app}</b></code> 
@@ -97,9 +92,6 @@ If no Application name is specified then a list of all application names and the
 >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/BySourceApp/hub
 > ```
 
-</details>
-
-<details>
  <summary>
     <code>GET</code> 
     <code><b>/audit/User/{option}/{variable}</b></code> 
@@ -146,9 +138,6 @@ If either the User Id/Login Name or Email Address is passed then the details for
 >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/User/login/newportg
 > ```
 
-</details>
-
-<details>
  <summary>
     <code>GET</code> 
     <code><b>/audit/impersonating/{option}/{variable}</b></code> 
@@ -195,9 +184,6 @@ If either the User Id/Login Name or Email Address is passed then the details for
 >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/impersonating/login/newportg
 > ```
 
-</details>
-
-<details>
  <summary>
     <code>GET</code> 
     <code><b>/audit/host/{option}/{variable}</b></code> 
@@ -240,4 +226,3 @@ If either a Hostname or Ip address is specified then the request will return lis
 >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/host
 > ```
 
-</details>
