@@ -1,6 +1,5 @@
 
 ## Calls that will illicit this response.
-<details>
    <summary>
       <code>POST</code>
       <code><b>/lrinfo/GetTitleDetails</b></code> 
@@ -245,8 +244,7 @@ Calls the Land Registry, and returns document ids relevant to the passed address
 > | `400`| `application/json`   | `{"code":"400","message":"Bad Request"}`  | The requested data does not exist |
 > | `404`| `application/json`   | `{"code":"404","message":"Not Found"}`    | The request was understood, but no data was found|
 
-</details>
-<details>
+
   <summary>
       <code>GET</code> 
       <code><b>/lrinfo/ByApplicationId/{App}/{id}</b></code> 
@@ -276,7 +274,6 @@ Calls the Land Registry, and returns document ids relevant to the passed address
   > ```javascript
   >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/ByApplicationId/hub/1111222233334444
   > ```
-</details>
 
 ## Response
 

@@ -18,7 +18,7 @@ Calls the Land Registry, and returns document ids relevant to the passed address
 
 > | http code     | content-type  | response ||
 > |---|--- |---|---|
-> | `200`| `application/json`   | [Json Response](/5-building-block-view/azure-function-detail/API/API-Response.md)      | |
+> | `200`| `application/json`   |  [[ API-Response|Json Response ]       | |
 > | `400`| `application/json`   | `{"code":"400","message":"Bad Request"}`  | The requested data does not exist |
 > | `404`| `application/json`   | `{"code":"404","message":"Not Found"}`    | The request was understood, but no data was found|
 > | `409`| `application/json`   | `{"code":"409","message":"Conflict"}`     | The request Application Id already exists |
