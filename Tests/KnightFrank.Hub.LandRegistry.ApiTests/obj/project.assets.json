@@ -13415,11 +13415,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
+      "projectUniqueName": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
       "projectName": "KnightFrank.Hub.LandRegistry.ApiTests",
-      "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
+      "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
       "packagesPath": "C:\\Users\\NEWPORTG\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\obj\\",
+      "outputPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -13441,8 +13441,8 @@
           "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj": {
-              "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj"
+            "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj": {
+              "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj"
             }
           }
         }

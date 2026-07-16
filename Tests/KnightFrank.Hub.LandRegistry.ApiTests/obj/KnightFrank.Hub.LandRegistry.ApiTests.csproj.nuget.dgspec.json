@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj": {}
+    "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj": {}
   },
   "projects": {
-    "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj": {
+    "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj",
+        "projectUniqueName": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj",
         "projectName": "KnightFrank.Hub.LandRegistry.Api",
-        "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj",
+        "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj",
         "packagesPath": "C:\\Users\\NEWPORTG\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\obj\\",
+        "outputPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,11 +33,11 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
-                "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj"
+              "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
+                "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj"
               },
-              "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj": {
-                "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj"
+              "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj": {
+                "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj"
               }
             }
           }
@@ -129,14 +129,14 @@
         }
       }
     },
-    "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
+    "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj",
+        "projectUniqueName": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj",
         "projectName": "KnightFrank.Hub.LandRegistry.Common",
-        "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj",
+        "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj",
         "packagesPath": "C:\\Users\\NEWPORTG\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\obj\\",
+        "outputPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -236,14 +236,14 @@
         }
       }
     },
-    "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj": {
+    "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj",
+        "projectUniqueName": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj",
         "projectName": "KnightFrank.Hub.LandRegistry.Service",
-        "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj",
+        "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\KnightFrank.Hub.LandRegistry.Service.csproj",
         "packagesPath": "C:\\Users\\NEWPORTG\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\obj\\",
+        "outputPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -265,8 +265,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
-                "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj"
+              "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj": {
+                "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\KnightFrank.Hub.LandRegistry.Common\\KnightFrank.Hub.LandRegistry.Common.csproj"
               }
             }
           }
@@ -371,14 +371,14 @@
         }
       }
     },
-    "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj": {
+    "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
+        "projectUniqueName": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
         "projectName": "KnightFrank.Hub.LandRegistry.ApiTests",
-        "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
+        "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\KnightFrank.Hub.LandRegistry.ApiTests.csproj",
         "packagesPath": "C:\\Users\\NEWPORTG\\.nuget\\packages\\",
-        "outputPath": "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\obj\\",
+        "outputPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ApiTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -400,8 +400,8 @@
             "framework": "net8.0",
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj": {
-                "projectPath": "C:\\Source\\POC\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj"
+              "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj": {
+                "projectPath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Src\\Api\\KnightFrank.Hub.LandRegistry.Api\\KnightFrank.Hub.LandRegistry.Api.csproj"
               }
             }
           }

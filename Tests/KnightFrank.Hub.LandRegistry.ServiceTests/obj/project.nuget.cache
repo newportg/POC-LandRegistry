@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+AvdZc8dopc=",
+  "dgSpecHash": "ArFyqSRuFd0=",
   "success": true,
-  "projectFilePath": "C:\\Source\\POC\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ServiceTests\\KnightFrank.Hub.LandRegistry.ServiceTests.csproj",
+  "projectFilePath": "C:\\Source\\Personal\\newportg.github.io\\Content\\Projects\\POC-LandRegistry\\Tests\\KnightFrank.Hub.LandRegistry.ServiceTests\\KnightFrank.Hub.LandRegistry.ServiceTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NEWPORTG\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\NEWPORTG\\.nuget\\packages\\azure.core\\1.40.0\\azure.core.1.40.0.nupkg.sha512",

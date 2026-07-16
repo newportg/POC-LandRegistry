@@ -68,8 +68,9 @@ The sequence diagram below shows the flow of calls to the filter service.
 ### Component Detail
 
 1. Hub Detail
-2. Azure Function Detail
-3. Security Component
-4. Service Component
-5. Domain Logic Component
-6. Cosmos DB Component
+2. [[azure-function-detail]]
+3. [[security-component]]
+4. [[landregistry-service-handler]]
+5. [[nimbus-service-handler]]
+6. [[domain-logic-component]]
+7. [[cosmos-db-component]]
