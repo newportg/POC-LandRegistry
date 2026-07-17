@@ -35,7 +35,7 @@ jobs:
       - name: Install MkDocs
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs mkdocs-material plantuml-markdown pymdown-extensions
+          pip install mkdocs mkdocs-material plantuml-markdown pymdown-extensions mkdocs-roamlinks-plugin
 
       - name: Prepare docs source
         shell: bash
@@ -87,6 +87,9 @@ jobs:
             'site_dir: site' \
             'theme:' \
             '  name: material' \
+            'plugins:' \
+            '  - search' \
+            '  - roamlinks' \
             'nav:' \
             '  - About: index.md' \
             '  - Introduction and Goals: wiki/1-introduction-and-goals.md' \
