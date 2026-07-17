@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnightFrank.Hub.LandRegistry.Common")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60545c719293e42d3213714263fbb201dfc1b6f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+deed206394f58cd8ace6272e3a38e8ad472828fd")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnightFrank.Hub.LandRegistry.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnightFrank.Hub.LandRegistry.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
