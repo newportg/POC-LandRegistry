@@ -1,1 +1,7 @@
-API-Response
+API-GetTitleDetails
+API-GetApplicationId
+
+API-GetHost
+API-GetImpersonating
+API-GetSourceApp
+API-GetUser
