@@ -51,7 +51,9 @@ If either the User Id/Login Name or Email Address is passed then the details for
 
 ## Response
 
-![Get By User Response](.attachments/API/GetByUserDetailRes.png)
+![Get By User Response](/wiki/.attachments/API/GetByUserDetailRes.png)
+![[GetByUserDetailsRes.png]]
+
 
 ## Field Descriptions
 ## Example JSON Object
