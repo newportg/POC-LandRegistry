@@ -51,7 +51,7 @@ If either the User Id/Login Name or Email Address is passed then the details for
 
 ![Get By User Response](/wiki/.attachments/API/GetByUserDetailRes.png)
 
-![[.attachments/API/GetByUserDetailRes.png]]
+![[/wiki/.attachments/API/GetByUserDetailRes.png]]
 
 
 ## Field Descriptions
