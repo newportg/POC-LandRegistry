@@ -1,5 +1,5 @@
-|<IMG  src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/69/HMLR_logo.png"  alt="HM Land Registry"/>|
-|--|
+| <IMG  src="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/organisation/logo/69/HMLR_logo.png"  alt="HM Land Registry"/> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 
 # 1, Introduction and Goals
@@ -10,7 +10,7 @@ This service will enable us to communicate with the Land Registry and retrieve l
 
 Nimbus is a third party who supplies Land Registry titles, cheaper, and using a easier Restful interface.
 
-**N.B.** As the decision on which service to use has not been decided, at this point, when the term 'Land Registry' is used it referes to either service.
+**N.B.** As the decision on which service to use has not been decided, at this point, when the term 'Land Registry' is used it refers to either service.
 
 ## Goals
 
@@ -21,21 +21,4 @@ The goal of this implementation is to integrate the Land Registry with hub, so w
 * Retrieve documentary information on properties. 
 
 
-
-## Stakeholders
-
-| Department                      | Name                |
-| ------------------------------- | ------------------- |
-| Delivery Lead                   |						|
-| Scrum Master                    |						|
-| Architecture                    | Gary Newport        |
-| Business Analysis               |						|
-| IT Development                  |				        |
-
-## External Contacts
-
-| Company  | Name         | Email                      |
-| -------- | ------------ | -------------------------- |
-| LR | Cara Wiles (Account Admin) |
-| LR | James Rippin ( Technical contact) |
 

@@ -49,10 +49,6 @@ If either a Hostname or Ip address is specified then the request will return lis
 
 ![Get Host Response](.attachments/API/GetByHostCountRes.png)
 
-![Get Host Detail Response](.attachments/API/GetByHostDetailRes.png)
-
-
-
 ## Field Descriptions
 ## Example JSON Object
 ```json

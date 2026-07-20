@@ -27,7 +27,7 @@ The proposed pattern architecture aligns to our current Group Technology Princip
 * External generation of property inspection material should follow Knight Franks security and access rules concerning all clients, and especially clients with restricted access, such as high net worth and clients with NDA's
 * Tenancy, Occupier Details and Property Inspection material should not persist on external sites longer than is necessary to complete the task.
   * This is to avoid possible security leaks
-  * Minimise storage costs
+  * Minimize storage costs
 * Access to the service will follow current approved security and access rules.
   * Managed Identity to provide resource access.
   * User Identity optional, as calling systems will have already authenticated the user.

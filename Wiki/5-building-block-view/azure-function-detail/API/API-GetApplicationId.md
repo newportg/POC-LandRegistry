@@ -35,7 +35,7 @@
 
 ## Response
 
-![image](.attachments/ServiceBusRes.png )
+![Image](/wiki/.attachments/ServiceBusRes.png)
 
 ## Field Descriptions
 ## Example JSON Object validated against schema
