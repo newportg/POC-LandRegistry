@@ -9,17 +9,17 @@
       <code>(Returns the information by the Source App Id)</code>
   </summary>
 
-  #### Description
+#### Description
   Returns information held, by the source applications name and Id
 
-  #### Parameters
+#### Parameters
 
   > | name | type | data type | description |
   > |---|---|---|---|
   > | `App Name`   | mandatory | string   | Application Name  |
   > | `App Id`   | mandatory | guid   | Application Id  |
 
-  #### Responses
+#### Responses
 
   > | http code     | content-type  | response ||
   > |---|--- |---|---|
@@ -27,7 +27,7 @@
   > | `400`| `application/json`   | `{"code":"400","message":"Bad Request"}`  | The requested data does not exist |
   > | `404`| `application/json`   | `{"code":"404","message":"Not Found"}`    | The request was understood, but no data was found|
 
-  #### Example cURL
+#### Example cURL
 
   > ```javascript
   >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/ByApplicationId/hub/1111222233334444
