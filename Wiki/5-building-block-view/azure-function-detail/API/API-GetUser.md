@@ -2,7 +2,6 @@
 
 ## Calls that will illicit this response.
 
-<details>
  <summary>
     <code>GET</code> 
     <code><b>/audit/User/{option}/{variable}</b></code> 
@@ -47,7 +46,6 @@ If either the User Id/Login Name or Email Address is passed then the details for
 >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/audit/User/login/newportg
 > ```
 
-</details>
 
 ## Response
 
