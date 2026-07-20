@@ -1,0 +1,53 @@
+@startuml 
+!include <C4/C4_Component>
+!include <azure/AzureCommon>
+!include <azure/Compute/AzureFunction>
+!include <azure/Web/AzureAPIManagement>
+!include <azure/Integration/AzureServiceBusTopic>
+!include <azure/Web/AzureSearch>
+
+LAYOUT_LEFT_RIGHT()
+LAYOUT_WITH_LEGEND()
+
+AddElementTag("microService", $shape=EightSidedShape(), $fontColor="white", $legendText="micro service\neight sided")
+AddElementTag("storage", $shape=RoundedBoxShape(), $fontColor="white")
+
+
+AzureAPIManagement(apim, "APIM", "Management")
+AzureServiceBusTopic(to, "New\Updated Properties", "Integration")
+AzureServiceBusTopic(from, "Title Deed References", "Integration")
+
+Container_Boundary(app, "Property Title Service", "Manages Property Titles", "", $tags = "microService") {
+    AzureFunction(aFunc, "Function - Property Title Service", "Http/Sbus Trigger")
+    Component(compDom, "Domain Logic Component", "Process, Rules and validation")
+    Component(compSec, "Security Component", "Provides functionality to validate callers and grant access to the service ")
+    Component(compSvc, "Land Registry Service Handler", "Provides functionality to interact with the LR service")
+    Component(compAudit, "Audit Component", "Provides functionality that is useful for administration")
+    SystemDb(compDb, "Cosmos DB", "Title/Deed Storage", $tags = "storage")
+}
+
+System(doc, "DocMgr Service", "Document Management", $tags = "microService")
+
+Container_Boundary(svc, "External Property Title Service", "Manages Property Titles", "") {
+    System_Ext(lrsvc, "Land Registry", "UK Goverment Agency")    
+    System_Ext(nimsvc, "Land Registry", "Nimbus")    
+}
+    
+Rel(apim, aFunc, "HTTP Trigger") 
+
+Rel(aFunc, compDom, "")
+Rel(aFunc, compSec, "")
+Rel(compDom, doc, "")
+Rel(compDom, compDb, "")
+
+Rel_U(aFunc, from, "Publish")
+Rel_U(aFunc, to, "Subscribe")
+
+Rel(compDom, compSvc, "")
+Rel(compDom, compAudit, "")
+
+Rel(compSvc, svc, "Send Property for inspection", "Https")
+Rel(svc, compSvc, "Report")
+
+@enduml
+

@@ -1,0 +1,9 @@
+@startjson
+
+{
+        "MessageType" : ["Complete", "InspectionDate"],
+        "Id" : "string<GUID>",
+        "date" : "string<dateTime>",
+        "report_url": "string<Url>"
+}
+@endjson

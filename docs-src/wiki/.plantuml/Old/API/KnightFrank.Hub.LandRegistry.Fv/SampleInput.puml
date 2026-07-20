@@ -1,0 +1,19 @@
+@startuml
+class SampleInput {
+    + Name : string <<get>> <<set>>
+    + Value : int <<get>> <<set>>
+}
+class Class1 {
+    + Name : string? <<get>> <<set>>
+}
+class Class2 {
+    + Count : int <<get>> <<set>>
+}
+class Class3 {
+    + Name : string? <<get>> <<set>>
+    + bob : float <<get>> <<set>>
+}
+SampleInput --> "Class1" Class1
+SampleInput --> "Class2" Class2
+SampleInput --> "Class3" Class3
+@enduml

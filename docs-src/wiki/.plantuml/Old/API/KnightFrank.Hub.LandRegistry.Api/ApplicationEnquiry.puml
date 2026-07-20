@@ -1,0 +1,7 @@
+@startuml
+class ApplicationEnquiry {
+    + <<async>> ApplicationEnquiryReq(req:HttpRequestData) : Task<HttpResponseData>
+}
+class "ILogger`1"<T> {
+}
+@enduml

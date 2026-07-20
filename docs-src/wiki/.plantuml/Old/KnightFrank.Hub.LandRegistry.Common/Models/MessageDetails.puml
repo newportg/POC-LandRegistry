@@ -1,0 +1,18 @@
+@startuml
+abstract class MessageDetails {
+}
+class MessageMessageDetails {
+    + Description : string <<get>> <<set>>
+    + HMLRReference : string <<get>> <<set>>
+    + ActualPrice : decimal <<get>> <<set>>
+    + ResultTypeCode : string <<get>> <<set>>
+    + TitleNumber : string <<get>> <<set>>
+    + DischargeCount : int <<get>> <<set>>
+}
+MessageDetails <|-- MessageMessageDetails
+MessageMessageDetails --> "Title" Title
+MessageMessageDetails --> "DateTime" DateTime
+MessageMessageDetails --> "RecentApplication" RecentApplication
+MessageMessageDetails --> "Attachment" Attachment
+MessageMessageDetails --> "ResultDateTime" DateTime
+@enduml

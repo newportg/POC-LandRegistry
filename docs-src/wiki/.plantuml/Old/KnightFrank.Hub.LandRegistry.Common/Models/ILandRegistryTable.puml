@@ -1,0 +1,10 @@
+@startuml
+interface ILandRegistryTable {
+    + GetById(drawNumber:string) : List<LandRegistryDto>
+    + Select(filter:string) : List<LandRegistryDto>
+    + Insert(dto:LandRegistryDto) : int
+    + Update(dto:LandRegistryDto) : int
+    + Upsert(dto:LandRegistryDto) : int
+    + Delete(dto:LandRegistryDto) : int
+}
+@enduml

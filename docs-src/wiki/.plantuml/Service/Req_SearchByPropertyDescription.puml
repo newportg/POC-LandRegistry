@@ -1,0 +1,34 @@
+@startjson
+
+{
+  "RequestSearchByPropertyDescriptionV2_0Type": {
+    "Q1IdentifierType": {
+      "MessageID": "GUID"
+    },
+    "Q1ProductType": {
+      "CustomerReference": {
+        "Reference": "CustomerReference",
+        "AllocatedBy": [ "The name of the organisation that has allocated the Reference" ],
+        "Description": [ "This field can be used to provide reference description" ]
+      },
+      "ExternalReference": {
+        "Reference": "External Reference",
+        "AllocatedBy": [ "Ignore" ],
+        "Description": [ "Ignore" ]
+      },
+      "SubjectProperty": {
+        "Address": {
+          "BuildingName": "The name of the house or building",
+          "BuildingNumber": "The number of the house or building",
+          "StreetName": "The name of the street where the target property is located",
+          "CityName": "The name of the city where the target property is located",
+          "PostCodeZone": "The postcode where the target property is located"
+        }
+      }
+    }
+  }
+}
+
+@endjson
+
+

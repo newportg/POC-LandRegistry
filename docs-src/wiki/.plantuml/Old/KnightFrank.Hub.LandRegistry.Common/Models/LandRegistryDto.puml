@@ -1,0 +1,30 @@
+@startuml
+enum RequestTypes {
+    ApplicationEnquiry,
+    LCBankruptcySearch,
+    DischargeActivity,
+    EnquiryByPropertyDescription,
+    LCFullSearch,
+    OfficialCopyTitleKnown,
+    OfficialSearchWhole,
+    OfficialSearchPart,
+    PollApplicationEnquiry,
+    PollLCBankruptcySearch,
+    PollDischargeActivity,
+    PollLCFullSearch,
+    PollEnquiryByPropertyDescription,
+    PollOfficialSearchWhole,
+    PollOfficialSearchPart,
+}
+class LandRegistryDto {
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+    + {static} GetRequest(requestType:RequestTypes, json:string) : LandRegistryDto
+}
+class "EqualityComparer`1"<T> {
+}
+LandRegistryDto o-> "RequestType" RequestTypes
+LandRegistryDto --> "Request" Request
+LandRegistryDto --> "Response" Response
+LandRegistryDto --> "SystemError" Error
+@enduml

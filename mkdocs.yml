@@ -1,0 +1,64 @@
+site_name: POC - Land Registry
+docs_dir: docs-src
+site_dir: site
+theme:
+  name: material
+plugins:
+  - search
+  - roamlinks
+nav:
+  - 'About': 'index.md'
+  - 'Introduction and Goals': 'wiki/1-introduction-and-goals.md'
+  - 'Architectural Constraints': 'wiki/2-architectural-constraints.md'
+  - 'System Scope and Context': 'wiki/3-system-scope-and-context.md'
+  - 'Solution Strategy': 'wiki/4-solution-strategy.md'
+  - 'Building Block View':
+      - 'Overview': 'wiki/5-building-block-view.md'
+      - 'Azure Function Detail':
+          - 'Overview': 'wiki/5-building-block-view/azure-function-detail.md'
+          - 'Service Bus Interface': 'wiki/5-building-block-view/azure-function-detail/Service-Bus-Interface.md'
+          - 'API':
+              - 'Overview': 'wiki/5-building-block-view/azure-function-detail/API.md'
+              - 'Get Title Details': 'wiki/5-building-block-view/azure-function-detail/API/API-GetTitleDetails.md'
+              - 'Get Application ID': 'wiki/5-building-block-view/azure-function-detail/API/API-GetApplicationId.md'
+              - 'Get Host': 'wiki/5-building-block-view/azure-function-detail/API/API-GetHost.md'
+              - 'Get Impersonating': 'wiki/5-building-block-view/azure-function-detail/API/API-GetImpersonating.md'
+              - 'Get Source App': 'wiki/5-building-block-view/azure-function-detail/API/API-GetSourceApp.md'
+              - 'Get User': 'wiki/5-building-block-view/azure-function-detail/API/API-GetUser.md'
+          - 'Address Mapping': 'wiki/5-building-block-view/azure-function-detail/Address-Mapping.md'
+      - 'Cosmos DB Component': 'wiki/5-building-block-view/cosmos-db-component.md'
+      - 'Domain Logic Component': 'wiki/5-building-block-view/domain-logic-component.md'
+      - 'Security Component': 'wiki/5-building-block-view/security-component.md'
+      - 'Nimbus Service Handler':
+          - 'Overview': 'wiki/5-building-block-view/nimbus-service-handler.md'
+          - 'OAuth2': 'wiki/5-building-block-view/nimbus-service-handler/oauth2.md'
+          - 'OpenAPI Docs': 'wiki/5-building-block-view/nimbus-service-handler/openapi-docs.md'
+          - 'OpenAPI Search': 'wiki/5-building-block-view/nimbus-service-handler/openapi-search.md'
+          - 'Webhook': 'wiki/5-building-block-view/nimbus-service-handler/webhook.md'
+      - 'Land Registry Service Handler':
+          - 'Overview': 'wiki/5-building-block-view/landregistry-service-handler.md'
+          - 'Certificate Creation': 'wiki/5-building-block-view/landregistry-service-handler/Certificate-Creation.md'
+          - 'Development Activities': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities.md'
+          - 'Development Activities Certificate Request': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-CertificateRequest.md'
+          - 'Development Activities Install Azure Key Vault Certificate': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-InstallAzureKeyVaultCertificate.md'
+          - 'Development Activities Install Certificates': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-InstallCertificates.md'
+          - 'Development Activities Message ID': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-MessageID.md'
+          - 'Development Activities Outstanding Requests': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-OutstandingRequests.md'
+          - 'Development Activities Process Responses': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-ProcessResponses.md'
+          - 'Development Activities Send Requests': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-SendRequests.md'
+          - 'Development Activities Service Reference': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-ServiceReference.md'
+          - 'Development Activities SOAP Header': 'wiki/5-building-block-view/landregistry-service-handler/DevelopmentActivities-SOAPHeader.md'
+          - 'Certificates':
+              - 'HMLR Client Cert': 'wiki/5-building-block-view/landregistry-service-handler/certs/HMLR_ClientCert.md'
+              - 'HMLR Intermediate CA': 'wiki/5-building-block-view/landregistry-service-handler/certs/HMLR_IntermediateCA.md'
+              - 'HMLR Root CA': 'wiki/5-building-block-view/landregistry-service-handler/certs/HMLR_RootCA.md'
+  - 'Runtime View': 'wiki/6-runtime-view.md'
+  - 'Deployment View': 'wiki/7-deployment-view.md'
+  - 'Service': 'wiki/Service.md'
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - plantuml_markdown:
+      server: https://www.plantuml.com/plantuml
+      format: svg

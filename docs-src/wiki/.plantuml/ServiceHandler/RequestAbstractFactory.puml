@@ -1,0 +1,61 @@
+@startuml
+
+interface ILandRegistrySvc {
+    + FindProperty(property:LandRegistryDto) : Task<LandRegistryDto>
+}
+
+class LandRegistrySvc {
+    + LandRegistrySvc(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<async>> FindProperty(request:LandRegistryDto) : Task<LandRegistryDto>
+    + GetServiceFactory(request:LandRegistryDto) : ServiceFactory
+    + KeyVault(key:string) : X509Certificate2?
+    + VerifyCertificate(certificateBytes:byte[]) : bool
+    + {static} CalculateExpirationTime(expiryDate:DateTime) : string
+}
+
+abstract class ServiceFactory {
+    + {abstract} GetService() : LandRegistry
+}
+abstract class LandRegistry {
+    + {abstract} Map(landRegistryDto:LandRegistryDto) : void
+    + {abstract} Validate() : void
+    + {abstract} Request() : Task
+    + {abstract} Response() : LandRegistryDto
+}
+
+class EnquiryByPropertyDescriptionFactory {
+    + EnquiryByPropertyDescriptionFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+
+class EnquiryByPropertyDescription {
+    + EnquiryByPropertyDescription(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+
+class OfficialCopyTitleKnownFactory {
+    + OfficialCopyTitleKnownFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class OfficialCopyTitleKnown {
+    + OfficialCopyTitleKnown(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+
+ILandRegistrySvc <|-- LandRegistrySvc
+LandRegistrySvc .right.> ServiceFactory : uses
+LandRegistrySvc -down-> LandRegistry : uses
+ServiceFactory <|-- EnquiryByPropertyDescriptionFactory
+LandRegistry <|-down- EnquiryByPropertyDescription
+EnquiryByPropertyDescriptionFactory ..> EnquiryByPropertyDescription : creates
+ServiceFactory <|-- OfficialCopyTitleKnownFactory
+LandRegistry <|-down- OfficialCopyTitleKnown
+OfficialCopyTitleKnownFactory ..> OfficialCopyTitleKnown : creates
+
+@enduml

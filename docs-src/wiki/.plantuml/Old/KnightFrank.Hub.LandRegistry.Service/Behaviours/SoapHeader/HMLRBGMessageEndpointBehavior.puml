@@ -1,0 +1,9 @@
+@startuml
+class HMLRBGMessageEndpointBehavior {
+    + HMLRBGMessageEndpointBehavior(username:string, password:string, logger:ILogger<LandRegistrySvc>)
+}
+Attribute <|-- HMLRBGMessageEndpointBehavior
+IEndpointBehavior <|-- HMLRBGMessageEndpointBehavior
+IOperationBehavior <|-- HMLRBGMessageEndpointBehavior
+IContractBehavior <|-- HMLRBGMessageEndpointBehavior
+@enduml

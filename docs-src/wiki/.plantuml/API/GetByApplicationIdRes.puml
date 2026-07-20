@@ -1,0 +1,47 @@
+@startjson
+
+[
+    {
+        "sourceApp": "string",
+        "sourceAppId": "string<uuid>",       
+        "property": {
+            "titleNo": "string",
+            "address" : {
+                    "buildingName":"string",
+                    "buildingNumber":"string",
+                    "streetName":"string",
+                    "cityName":"string",
+                    "postcode":"string"
+            },
+            "documents": [
+                {
+                    "documentId": "string<uuid>",
+                    "fileInfo": {
+                        "filename": "string",
+                        "fileExtension": "string",
+                        "localeIsoCode": "string<ISO 2 Char>",
+                        "documentType": "string",
+                        "version": "integer",
+                        "versionDate": "string<datetime>",
+                        "orderNo": "integer",
+                        "size":"integer",
+                        "fileMetaData": [
+                            {
+                                "key":"string",
+                                "value":"string"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "error" : [
+            {
+                "Description" : "String"
+            }
+        ]   
+    }
+]
+
+
+@endjson

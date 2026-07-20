@@ -1,0 +1,9 @@
+@startuml
+class Identity {
+    + UniqueMsgId : string <<get>> <<set>>
+    + ExternalRef : string <<get>> <<set>>
+    + CustomerRef : string <<get>> <<set>>
+    + AllocatedBy : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+}
+@enduml

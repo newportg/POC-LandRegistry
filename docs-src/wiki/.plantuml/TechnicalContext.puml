@@ -1,0 +1,40 @@
+@startuml
+!include <C4/C4_Container>
+!include <azure/AzureCommon>
+!include <azure/Integration/AzureServiceBusTopic>
+
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+AddElementTag("microService", $shape=EightSidedShape(), $fontColor="white", $legendText="micro service\neight sided")
+AddElementTag("storage", $shape=RoundedBoxShape(), $fontColor="white")
+
+
+System_Boundary(c1, "Knight Frank") {
+    System(hub, "Hub", "Internal Residential Transaction")
+
+    System_Boundary(auth, "Managed Identity") {
+        AzureServiceBusTopic(to, "New\Updated Properties", "Integration")
+        AzureServiceBusTopic(from, "Title/Deed References", "Integration")
+
+        System(app, "Land Registry Service", "Requests details from the registry concerning ownership", $tags = "microService")  
+        System(doc, "DocMgr Service", "Document Management", $tags = "microService")
+    }
+}
+
+Container_Boundary(svc, "External Property Title Service", "Manages Property Titles", "") {
+    System_Ext(lrsvc, "Land Registry", "UK Goverment Agency")    
+    System_Ext(nimsvc, "Land Registry", "Nimbus")    
+}
+
+Rel(hub, to, "Hub Publish")
+Rel(hub, from, "Hub Subscribe")
+Rel_U(app, from, "Publish")
+Rel_U(app, to, "Subscribe")
+
+Rel(hub, app, "Ad-hoc Rest API calls", "Https")
+Rel(app, svc, "Request property title deeds", "Https")
+Rel(app, doc, "Send Deed to DocMgr")
+Rel(svc, app, "Report")
+
+@enduml

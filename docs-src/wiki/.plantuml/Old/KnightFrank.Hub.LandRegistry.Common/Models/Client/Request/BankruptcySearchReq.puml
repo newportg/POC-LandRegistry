@@ -1,0 +1,62 @@
+@startuml
+class BankruptcySearchReq {
+}
+class ExpectedPrice {
+}
+class AmountType {
+    + Currency : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Contact {
+    + Name : string <<get>> <<set>>
+    + Telephone : string <<get>> <<set>>
+}
+class LandChargesBankruptcySearch {
+    + BankruptcySearchPrivateIndividual : string <<get>> <<set>>
+    + ContinueIfTitleIsClosedAndContinuedIndicator : bool <<get>> <<set>> = false
+}
+class BankruptcySearchComplexName {
+    + BankruptcySearchTypeCode : string <<get>> = "30"
+}
+class BankruptcySearchPrivateIndividual {
+    + BankruptcySearchTypeCode : string <<get>> = "10"
+}
+class ComplexName {
+    + Name : string <<get>> <<set>>
+}
+class PrivateIndividual {
+    + Forename : string <<get>> <<set>>
+    + Surname : string <<get>> <<set>>
+}
+class AlternativeDespatchDetails {
+    + AlternativeDespatchName : string <<get>> <<set>>
+    + AlternativeDespatchReference : string <<get>> <<set>>
+}
+class AlternativeDespatchAddress {
+}
+class DXDetails {
+    + DXNumber : string <<get>> <<set>>
+    + ExchangeName : string <<get>> <<set>>
+}
+class PostalAddress {
+    + Line1 : string <<get>> <<set>>
+    + Line2 : string <<get>> <<set>>
+    + Line3 : string <<get>> <<set>>
+    + Line4 : string <<get>> <<set>>
+    + Line5 : string <<get>> <<set>>
+    + Postcode : string <<get>> <<set>>
+}
+BankruptcySearchReq o-> "RequestType" RequestTypes
+BankruptcySearchReq --> "Identity" Identity
+BankruptcySearchReq --> "ExpectedPrice" ExpectedPrice
+BankruptcySearchReq --> "Contact" Contact
+BankruptcySearchReq --> "LandChargesBankruptcySearch" LandChargesBankruptcySearch
+BankruptcySearchReq --> "AlternativeDespatchDetails" AlternativeDespatchDetails
+ExpectedPrice --> "GrossPriceAmount" AmountType
+ExpectedPrice --> "NetPriceAmount" AmountType
+ExpectedPrice --> "VATAmount" AmountType
+LandChargesBankruptcySearch --> "BankruptcySearchComplexName" BankruptcySearchComplexName
+AlternativeDespatchDetails --> "AlternativeDespatchAddress" AlternativeDespatchAddress
+AlternativeDespatchAddress --> "DXDetails" DXDetails
+AlternativeDespatchAddress --> "PostalAddress" PostalAddress
+@enduml

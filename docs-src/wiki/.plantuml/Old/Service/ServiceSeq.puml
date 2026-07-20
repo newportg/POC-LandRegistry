@@ -1,0 +1,109 @@
+@startuml 
+
+Actor Negotiator as neg
+Actor PM as App
+database PMdb as pmdb
+Actor Timer
+queue ServiceBus
+
+participant Service
+participant DocMgmt
+database  DataStore
+participant ACT as svc
+
+== Set API Key Value ==
+Timer -> Service
+Service -> svc ++ #gold: Set API Key Value
+svc --> Service --
+Service --> Timer
+
+... <size:18>**Periodically Reset the API Key Value**</size> ...
+
+Timer -> Service
+Service -> svc ++ #gold: Set API Key Value
+svc --> Service --
+Service --> Timer
+
+== Send Request == 
+neg -> App ++ #gold : Create Tenancy 
+        App -> ServiceBus ++ #gold : Send Create Tenancy details
+                ServiceBus -> Service  ++ #gold
+                        Service -> DataStore  : Save Message
+                        Service -> svc  ++ #gold : /pmtenancy
+                        svc --> Service --:
+                        Service -> DataStore  : Update Message        
+                Service --> ServiceBus --:
+        ServiceBus --> App --: Response
+App -> pmdb : Update
+App --> neg --: Notify   
+
+...
+
+neg -> App  ++ #gold: Update Tenancy {id}
+        App -> ServiceBus ++ #gold : Send Update Tenancy Information
+                ServiceBus -> Service ++ #gold : 
+                        Service -> DataStore  : Update Message
+                        Service -> svc ++ #gold: /pmtenancy/{id}
+                        svc --> Service --:
+                        Service -> DataStore  : Update Message        
+                Service --> ServiceBus --:
+        ServiceBus --> App --:
+App -> pmdb : Update        
+App --> neg --: Notify
+
+== Post Inspection ==
+            svc -> Service ++ #gold: Webhook {id}
+            Service --> svc --: Acknowledge
+            Service -> svc ++ #gold: Download Report
+            svc --> Service --
+            Service -> DocMgmt ++ #gold: Save Document
+            DocMgmt --> Service --
+        Service -> ServiceBus : Publish
+    ServiceBus -> App
+App -> pmdb : Update    
+App -> neg : Notify 
+
+== End Of Tenancy ==
+App -> ServiceBus ++ #gold: Delete Tenancy {id}
+    ServiceBus -> Service ++ #gold:
+        Service -> svc ++ #gold: /pmdelete{id}
+        svc --> Service --
+        Service -> DataStore  : Delete Message 
+    Service --> ServiceBus --:
+App -> pmdb : Update    
+ServiceBus --> App --
+
+== WebHook ==
+            svc -> Service ++ #gold: Webhook {id}
+            Service --> svc : Acknowledge
+            Service -> DataStore  : Update Message    
+        Service -> ServiceBus --: Publish
+    ServiceBus -> App
+App -> pmdb : Update    
+App -> neg : Notify 
+
+== Error Handling ==
+group svc System Error 5xx
+        svc --> Service : HTTP Status 5xx
+        Service -> svc : Retry - Several Times
+        Service -> ServiceBus : Publish request onto Inbound.
+
+end
+group svc Data Error 4xx
+        svc --> Service : HTTP Status 4xx
+        Service --> ServiceBus
+        ServiceBus --> App
+        App --> neg : Notify
+end    
+
+
+== Ad Hoc HTTP ==
+App -> Service ++ #gold
+        Service -> DataStore ++ #gold: Get Message
+        DataStore --> Service --
+        Service -> svc ++ #gold: Get Status
+        svc --> Service  --
+        Service -> DataStore : Update Message
+        Service --> App --
+App -> pmdb : Update
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+class ToOfficialSearchWhole {
+    + ToOfficialSearchWhole()
+    + Contact(cont:Contact) : Q1ContactType8[]
+    + PriorityCodeType(type:string) : PriorityCodeContentType3
+}
+Profile <|-- ToOfficialSearchWhole
+@enduml

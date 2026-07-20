@@ -1,0 +1,28 @@
+@startuml
+class EnquiryByPropertyDescriptionMessageDetails {
+    + Description : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : global::System.Int32
+}
+class Title {
+    + TitleNumber : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + TenureTypeCode : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : global::System.Int32
+}
+class Address {
+    + BuildingName : string <<get>> <<set>>
+    + SubBuildingName : string <<get>> <<set>>
+    + BuildingNumber : string <<get>> <<set>>
+    + StreetName : string <<get>> <<set>>
+    + CityName : string <<get>> <<set>>
+    + PostcodeZone : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class "EqualityComparer`1"<T> {
+}
+MessageDetails <|-- EnquiryByPropertyDescriptionMessageDetails
+Title --> "Address" Address
+@enduml

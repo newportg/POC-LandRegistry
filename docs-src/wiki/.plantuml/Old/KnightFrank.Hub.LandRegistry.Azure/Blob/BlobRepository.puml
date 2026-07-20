@@ -1,0 +1,8 @@
+@startuml
+class BlobRepository <<sealed>> {
+    + BlobRepository(hubContainer:BlobContainerClient)
+    + <<async>> GetAsync(fileName:string) : Task<T>
+    + DeleteAsync(fileName:string) : Task
+}
+IBlobRepository <|-- BlobRepository
+@enduml

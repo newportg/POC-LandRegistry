@@ -1,0 +1,47 @@
+@startuml
+class ApplicationEnquiryMessageDetails {
+    + Description : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class ApplicationEnquiry {
+    + ApplicationType : string <<get>> <<set>>
+    + Expedited : bool <<get>> <<set>>
+    + ApplicationReference : string <<get>> <<set>>
+    + Applicant : string <<get>> <<set>>
+    + CustomerReference : string <<get>> <<set>>
+    + ApplicationReceivedBy : string <<get>> <<set>>
+    + PropertyDescription : string <<get>> <<set>>
+    + LodgedBy : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class ApplicationProgress {
+    + Description : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class Correspondence {
+    + CorrespondenceType : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class RecentApplication {
+    + EndReason : string <<get>> <<set>>
+    + <<override>> Equals(obj:object) : bool
+    + <<override>> GetHashCode() : int
+}
+class "EqualityComparer`1"<T> {
+}
+MessageDetails <|-- ApplicationEnquiryMessageDetails
+ApplicationEnquiryMessageDetails --> "DateTime" DateTime
+ApplicationEnquiryMessageDetails --> "Title" Title
+ApplicationEnquiryMessageDetails --> "RecentApplication" RecentApplication
+ApplicationEnquiry --> "PriorityDate" DateTime
+ApplicationEnquiry --> "PriorityTime" DateTime
+ApplicationEnquiry --> "ApplicationProgress" ApplicationProgress
+Correspondence --> "RequestedOnDate" DateTime
+Correspondence --> "IssuedOnDate" DateTime
+Correspondence --> "ExpiresOnDate" DateTime
+RecentApplication --> "EndDate" DateTime
+@enduml

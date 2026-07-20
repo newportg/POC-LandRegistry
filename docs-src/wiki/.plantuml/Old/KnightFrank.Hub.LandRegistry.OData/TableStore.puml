@@ -1,0 +1,14 @@
+@startuml
+class TableStore {
+    + TableStore(storageAcct:string, key:string, container:string)
+    + Select(filter:string) : Models.OData
+    + Get(entity:TableEntity) : dynamic
+    + Insert(entity:TableEntity) : IFlurlResponse
+    + Update(entity:TableEntity) : IFlurlResponse
+    + Upsert(entity:TableEntity) : IFlurlResponse
+    + Delete(entity:TableEntity) : IFlurlResponse
+    + CreateContainer() : IFlurlResponse
+    + DeleteContainer() : IFlurlResponse
+    + ListContainers() : IFlurlResponse
+}
+@enduml

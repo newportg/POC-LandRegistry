@@ -1,0 +1,6 @@
+@startuml
+class OData {
+    + odata : string <<get>> <<set>>
+}
+OData --> "value" dynamic
+@enduml

@@ -1,0 +1,3306 @@
+@startuml
+interface ApplicationEnquiryV1_0PollService {
+}
+class PollRequestType <<partial>> {
+}
+class Q1IdentifierType <<partial>> {
+}
+class MessageIDTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1DXDetailsType9 <<partial>> {
+}
+class Q3TextType12 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType9 <<partial>> {
+}
+class Q1AlternativeDespatchDetailsType9 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1WithPlanWithoutPostcodeType <<partial>> {
+}
+class Q1Len50TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1Len100TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1Len35TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1Len38TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1Len8TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1WithPlanAddressDetailsType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1AddressWithPostcodeType <<partial>> {
+}
+class Q1PostcodeZoneType2 <<partial>> {
+}
+class DateType13 <<partial>> {
+}
+class BinaryObjectType9 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1PlanDetailsAttachmentType <<partial>> {
+}
+class Q1PlanType <<partial>> {
+}
+class Q1WithAttachedPlanType <<partial>> {
+}
+class Q1WithoutPlanWithoutPostcodeType <<partial>> {
+}
+class Q1WithoutPlanAddressDetailsType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1WithoutAttachedPlanType <<partial>> {
+}
+class Q1SearchOfIndexMapType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1CommunicationType9 <<partial>> {
+}
+class Q1ContactType9 <<partial>> {
+}
+class AmountType17 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType10 <<partial>> {
+}
+class Q1CustomerReferenceType11 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType23 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class IndicatorType13 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q1ProductType13 <<partial>> {
+}
+class Q1TextType13 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType14 <<partial>> {
+}
+class RequestSearchOfIndexMapV2_0Type <<partial>> {
+}
+class ResultCodeType5 <<partial>> {
+}
+enum ResultCodeContentType5 {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+}
+class DateType12 <<partial>> {
+}
+class BinaryObjectType8 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1AttachmentType6 <<partial>> {
+}
+class TextType10 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1MessageDetailsType9 <<partial>> {
+}
+class Q1ResultsType9 <<partial>> {
+}
+class Q1ExternalReferenceType22 <<partial>> {
+}
+class Q1HMLRReferenceType5 <<partial>> {
+}
+class Q1ActualPriceType6 <<partial>> {
+}
+class AmountType16 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ValidationErrorsType9 <<partial>> {
+}
+class Q1RejectionResponseType9 <<partial>> {
+}
+class Q1RejectionType9 <<partial>> {
+}
+class DateTimeType9 <<partial>> {
+}
+class IdentifierType9 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType9 <<partial>> {
+}
+class Q1AcknowledgementType9 <<partial>> {
+}
+class ProductResponseCodeType9 <<partial>> {
+}
+enum ProductResponseCodeContentType9 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType9 <<partial>> {
+}
+class SearchOfIndexMapResponseV2_0Type <<partial>> {
+}
+class Q1DXDetailsType8 <<partial>> {
+}
+class Q3TextType11 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType8 <<partial>> {
+}
+class Q1AlternativeDespatchAddressType4 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1AlternativeDespatchDetailsType8 <<partial>> {
+    + AlternativeDespatchName : string <<get>> <<set>>
+    + AlternativeDespatchReference : string <<get>> <<set>>
+}
+class IndicatorType12 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class SearchFromDateType3 <<partial>> {
+}
+class PriorityCodeType3 <<partial>> {
+}
+enum PriorityCodeContentType3 {
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1OfficialSearchOfWholeWithPriorityType1 <<partial>> {
+    + PropertyDescription : string <<get>> <<set>>
+    + RegisteredProprietorsDetailsOrApplicantsForFirstRegistration : string <<get>> <<set>>
+    + ApplicantParty : string <<get>> <<set>>
+}
+class Q1CommunicationType8 <<partial>> {
+}
+class Q1ContactType8 <<partial>> {
+}
+class AmountType15 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType9 <<partial>> {
+}
+class Q2TextType10 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1SubjectPropertyType8 <<partial>> {
+}
+class Q1CustomerReferenceType10 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType21 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType12 <<partial>> {
+}
+class Q1TextType12 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType13 <<partial>> {
+}
+class RequestOfficialSearchOfWholeWithPriorityV2_1Type <<partial>> {
+}
+class Q1DXDetailsType7 <<partial>> {
+}
+class Q3TextType10 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType7 <<partial>> {
+}
+class Q1AlternativeDespatchDetailsType7 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class IndicatorType11 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class SearchFromDateType2 <<partial>> {
+}
+class PriorityCodeType2 <<partial>> {
+}
+enum PriorityCodeContentType2 {
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1OfficialSearchOfWholeWithPriorityType <<partial>> {
+    + PropertyDescription : string <<get>> <<set>>
+    + RegisteredProprietorsDetailsOrApplicantsForFirstRegistration : string <<get>> <<set>>
+    + ApplicantParty : string <<get>> <<set>>
+}
+class Q1CommunicationType7 <<partial>> {
+}
+class Q1ContactType7 <<partial>> {
+}
+class AmountType14 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType8 <<partial>> {
+}
+class Q2TextType9 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1SubjectPropertyType7 <<partial>> {
+}
+class Q1CustomerReferenceType9 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType20 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType11 <<partial>> {
+}
+class Q1TextType11 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType12 <<partial>> {
+}
+class RequestOfficialSearchOfWholeWithPriorityV2_0Type <<partial>> {
+}
+class ResultCodeType4 <<partial>> {
+}
+enum ResultCodeContentType4 {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+}
+class DateType11 <<partial>> {
+}
+class BinaryObjectType7 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1AttachmentType5 <<partial>> {
+}
+class TextType9 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1MessageDetailsType8 <<partial>> {
+}
+class Q1ResultsType8 <<partial>> {
+}
+class Q1ExternalReferenceType19 <<partial>> {
+}
+class Q1HMLRReferenceType4 <<partial>> {
+}
+class Q1ActualPriceType5 <<partial>> {
+}
+class AmountType13 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ValidationErrorsType8 <<partial>> {
+}
+class Q1RejectionResponseType8 <<partial>> {
+}
+class Q1RejectionType8 <<partial>> {
+}
+class DateTimeType8 <<partial>> {
+}
+class IdentifierType8 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType8 <<partial>> {
+}
+class Q1AcknowledgementType8 <<partial>> {
+}
+class ProductResponseCodeType8 <<partial>> {
+}
+enum ProductResponseCodeContentType8 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType8 <<partial>> {
+}
+class ResponseOfficialSearchOfWholeWithPriorityV2_0Type <<partial>> {
+}
+class Q1DXDetailsType6 <<partial>> {
+}
+class Q3TextType9 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType6 <<partial>> {
+}
+class Q1AlternativeDespatchAddressType3 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1AlternativeDespatchDetailsType6 <<partial>> {
+    + AlternativeDespatchName : string <<get>> <<set>>
+    + AlternativeDespatchReference : string <<get>> <<set>>
+}
+class Q1TitlePlanType1 <<partial>> {
+}
+class Q2TextType8 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1EstatePlanType1 <<partial>> {
+    + PlotDetails : string <<get>> <<set>>
+}
+class DateType10 <<partial>> {
+}
+class BinaryObjectType6 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1PlanAttachmentType1 <<partial>> {
+}
+class Q1PropertyIdentificationType1 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1TimesharePeriodTextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1TimeshareTimePeriodDemisedType1 <<partial>> {
+}
+class Q1TimeshareDetailsType1 <<partial>> {
+}
+class IndicatorType10 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q1ApplicantPartyType1 <<partial>> {
+    + ApplicantName : string <<get>> <<set>>
+}
+class Q1RegisteredProprietorPartyType1 <<partial>> {
+    + PropreitorName : string <<get>> <<set>>
+}
+class SearchFromDateType1 <<partial>> {
+}
+class PriorityCodeType1 <<partial>> {
+}
+enum PriorityCodeContentType1 {
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1OfficialSearchOfPartWithPriorityType1 <<partial>> {
+}
+class Q1CommunicationType6 <<partial>> {
+}
+class Q1ContactType6 <<partial>> {
+    + Name : string <<get>> <<set>>
+}
+class AmountType12 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType7 <<partial>> {
+}
+class Q1SubjectPropertyType6 <<partial>> {
+}
+class Q1CustomerReferenceType8 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType18 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType10 <<partial>> {
+}
+class Q1TextType10 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType11 <<partial>> {
+}
+class RequestOfficialSearchOfPartWithPriorityV2_1Type <<partial>> {
+}
+class Q1DXDetailsType5 <<partial>> {
+}
+class Q3TextType8 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType5 <<partial>> {
+}
+class Q1AlternativeDespatchDetailsType5 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1TitlePlanType <<partial>> {
+}
+class Q2TextType7 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class NumericType2 <<partial>> {
+    + Value : decimal <<get>> <<set>>
+}
+class Q1EstatePlanType <<partial>> {
+}
+class DateType9 <<partial>> {
+}
+class BinaryObjectType5 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1PlanAttachmentType <<partial>> {
+}
+class Q1PropertyIdentificationType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1TimesharePeriodTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1TimeshareTimePeriodDemisedType <<partial>> {
+}
+class Q1TimeshareDetailsType <<partial>> {
+}
+class IndicatorType9 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q1ApplicantPartyType <<partial>> {
+    + ApplicantName : string <<get>> <<set>>
+}
+class Q1RegisteredProprietorPartyType <<partial>> {
+    + PropreitorName : string <<get>> <<set>>
+}
+class SearchFromDateType <<partial>> {
+}
+class PriorityCodeType <<partial>> {
+}
+enum PriorityCodeContentType {
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1OfficialSearchOfPartWithPriorityType <<partial>> {
+}
+class Q1CommunicationType5 <<partial>> {
+}
+class Q1ContactType5 <<partial>> {
+    + Name : string <<get>> <<set>>
+}
+class AmountType11 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType6 <<partial>> {
+}
+class Q1SubjectPropertyType5 <<partial>> {
+}
+class Q1CustomerReferenceType7 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType17 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType9 <<partial>> {
+}
+class Q1TextType9 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType10 <<partial>> {
+}
+class RequestOfficialSearchOfPartWithPriorityV2_0Type <<partial>> {
+}
+class ResultCodeType3 <<partial>> {
+}
+enum ResultCodeContentType3 {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+}
+class DateType8 <<partial>> {
+}
+class BinaryObjectType4 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1AttachmentType4 <<partial>> {
+}
+class TextType8 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1MessageDetailsType7 <<partial>> {
+}
+class Q1ResultsType7 <<partial>> {
+}
+class Q1ExternalReferenceType16 <<partial>> {
+}
+class Q1HMLRReferenceType3 <<partial>> {
+}
+class Q1ActualPriceType4 <<partial>> {
+}
+class AmountType10 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ValidationErrorsType7 <<partial>> {
+}
+class Q1RejectionResponseType7 <<partial>> {
+}
+class Q1RejectionType7 <<partial>> {
+}
+class DateTimeType7 <<partial>> {
+}
+class IdentifierType7 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType7 <<partial>> {
+}
+class Q1AcknowledgementType7 <<partial>> {
+}
+class ProductResponseCodeType7 <<partial>> {
+}
+enum ProductResponseCodeContentType7 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType7 <<partial>> {
+}
+class OfficialSearchOfPartWithPriorityResponseV2_0Type <<partial>> {
+}
+class Q1ScheduleType <<partial>> {
+}
+class TextType7 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class VerbatimTextInfillType <<partial>> {
+}
+class PlansRefInfillType <<partial>> {
+}
+class OptMiscTextInfillType <<partial>> {
+}
+class NoteInfillType <<partial>> {
+}
+class NameInfillType <<partial>> {
+}
+class MiscTextInfillType <<partial>> {
+}
+class ExtentOfLandInfillType <<partial>> {
+}
+class DeedTypeInfillType <<partial>> {
+}
+class DeedPartyInfillType <<partial>> {
+}
+class DeedExtentInfillType <<partial>> {
+}
+class DeedDateInfillType <<partial>> {
+}
+class ChargePartyInfillType <<partial>> {
+}
+class AmountInfillType <<partial>> {
+}
+class Q1RegisterEntryType <<partial>> {
+}
+class Q1RegisterType <<partial>> {
+}
+class Q1OCRegisterDataType <<partial>> {
+}
+class Q1UnilateralNoticeDetailsType <<partial>> {
+}
+class Q1EntryDetailsType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class DateType7 <<partial>> {
+}
+class DateInfillType <<partial>> {
+}
+class ChargeDateInfillType <<partial>> {
+}
+enum ScheduleCodeType {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item50,
+    Item60,
+    Item70,
+    Item80,
+    Item90,
+    Item100,
+    Item110,
+    Item120,
+    Item130,
+    Item140,
+}
+enum SubRegisterCodeType {
+    A,
+    B,
+    C,
+    D,
+}
+class TitleNumberInfillType <<partial>> {
+}
+class Q2TextType6 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1DocumentEntryType <<partial>> {
+}
+enum DocumentCodeType {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item50,
+    Item60,
+    Item70,
+    Item80,
+    Item90,
+    Item100,
+    Item110,
+    Item120,
+    Item130,
+    Item140,
+    Item150,
+    Item160,
+    Item170,
+    Item180,
+}
+class IndicatorType8 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q1HomeRightsType <<partial>> {
+}
+class Q1AgreedNoticeType <<partial>> {
+    + AgreedNoticeTypeSpecified : bool <<get>> <<set>>
+}
+enum AgreedNoticeTypeCodeType {
+    Item10,
+    Item20,
+}
+class Q1SubChargeDetailsType <<partial>> {
+}
+class Q1ChargeType <<partial>> {
+}
+class Q1ChargeProprietorType <<partial>> {
+}
+class Q1PartyType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1OrganizationType <<partial>> {
+}
+class OrganisationNameTextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class CompanyRegistrationNumberTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1PrivateIndividualType <<partial>> {
+}
+class Q1NameType <<partial>> {
+}
+class Q1AddressType2 <<partial>> {
+}
+class Q1PostcodeZoneType1 <<partial>> {
+}
+class AddressLineType <<partial>> {
+}
+class NumericType1 <<partial>> {
+    + Value : decimal <<get>> <<set>>
+}
+class Q1CharityDetailsType <<partial>> {
+}
+class CharityCodeType <<partial>> {
+}
+enum CharityCodeContentType {
+    C,
+    R,
+    S,
+}
+class Q1ChargeDetailsType <<partial>> {
+}
+class RestrictionCodeType <<partial>> {
+}
+enum RestrictionCodeContentType {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1RestrictionType <<partial>> {
+}
+class Q1RestrictionEntryType <<partial>> {
+}
+enum ItemChoiceType1 {
+    ChargeRelatedRestriction,
+    ChargeRestriction,
+    NonChargeRestriction,
+}
+class RentAmountTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class LeaseTermTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1LeaseType <<partial>> {
+}
+class Q1ProprietorshipType <<partial>> {
+}
+enum ItemsChoiceType {
+    CautionerParty,
+    RegisteredProprietorParty,
+}
+class Q1RegisterEntryIndicatorsType <<partial>> {
+}
+class LandRegistryOfficeNameTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class AdministrativeAreaTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class DistrictNameTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1TitleRegistrationDetailsType <<partial>> {
+}
+class ClassOfTitleCodeType <<partial>> {
+}
+enum ClassOfTitleCodeContentType {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item50,
+    Item60,
+    Item70,
+    Item80,
+    Item90,
+    Item100,
+    Item110,
+    Item120,
+    Item130,
+}
+class Q1TitleType3 <<partial>> {
+}
+class Q1PricePaidEntryType <<partial>> {
+    + MultipleTitleIndicatorSpecified : bool <<get>> <<set>>
+}
+enum MultipleTitleCodeType {
+    Item2,
+    MoreThan2,
+}
+class Q1OCSummaryDataType <<partial>> {
+}
+class DateTimeType6 <<partial>> {
+}
+class BinaryObjectType3 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1AttachmentType3 <<partial>> {
+}
+class Q1MessageDetailsType6 <<partial>> {
+}
+class Q1ResultsType6 <<partial>> {
+}
+class Q1ExternalReferenceType15 <<partial>> {
+}
+class Q1ActualPriceType3 <<partial>> {
+}
+class AmountType9 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ValidationErrorsType6 <<partial>> {
+}
+class Q1RejectionResponseType6 <<partial>> {
+}
+class Q1RejectionType6 <<partial>> {
+}
+class IdentifierType6 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType6 <<partial>> {
+}
+class Q1AcknowledgementType6 <<partial>> {
+}
+class ProductResponseCodeType6 <<partial>> {
+}
+enum ProductResponseCodeContentType6 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType6 <<partial>> {
+}
+class ResponseOCWithSummaryV2_1Type <<partial>> {
+}
+class IndicatorType7 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q1TitleKnownOfficialCopyType1 <<partial>> {
+}
+class Q1CustomerReferenceType6 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q3TextType7 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType14 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class AmountType8 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType5 <<partial>> {
+}
+class Q2TextType5 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1SubjectPropertyType4 <<partial>> {
+}
+class Q1ProductType8 <<partial>> {
+}
+class Q1TextType8 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType9 <<partial>> {
+}
+class RequestOCWithSummaryV2_0Type <<partial>> {
+}
+class ResultCodeType2 <<partial>> {
+}
+enum ResultCodeContentType2 {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item50,
+}
+class DateType6 <<partial>> {
+}
+class BinaryObjectType2 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1AttachmentType2 <<partial>> {
+}
+class TextType6 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1MessageDetailsType5 <<partial>> {
+}
+class Q1ResultsType5 <<partial>> {
+}
+class Q1ExternalReferenceType13 <<partial>> {
+}
+class Q1ActualPriceType2 <<partial>> {
+}
+class AmountType7 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1HMLRReferenceType2 <<partial>> {
+}
+class HMLRReferenceTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class OrganisationNameTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class DescriptionTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1ValidationErrorsType5 <<partial>> {
+}
+class Q1RejectionResponseType5 <<partial>> {
+}
+class Q1RejectionType5 <<partial>> {
+}
+class DateTimeType5 <<partial>> {
+}
+class IdentifierType5 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType5 <<partial>> {
+}
+class Q1AcknowledgementType5 <<partial>> {
+}
+class ProductResponseCodeType5 <<partial>> {
+}
+enum ProductResponseCodeContentType5 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType5 <<partial>> {
+}
+class ResponseTitleKnownOfficialCopyV2_0Type <<partial>> {
+}
+class Q1DXDetailsType4 <<partial>> {
+}
+class Q3TextType6 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType4 <<partial>> {
+}
+class Q1AlternativeDespatchAddressType2 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1AlternativeDespatchDetailsType4 <<partial>> {
+    + AlternativeDespatchName : string <<get>> <<set>>
+    + AlternativeDespatchReference : string <<get>> <<set>>
+}
+class NumericType <<partial>> {
+    + Value : decimal <<get>> <<set>>
+}
+class IndicatorType6 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class OfficialCopyCodeType <<partial>> {
+}
+enum OfficialCopyCodeContentType {
+    Item10,
+    Item20,
+}
+class RequestedOfficialCopyCodeType <<partial>> {
+}
+enum RequestedOfficialCopyCodeContentType {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item50,
+}
+class Q1TitleKnownOfficialCopyType <<partial>> {
+    + PropertyDescription : string <<get>> <<set>>
+}
+class Q1CommunicationType4 <<partial>> {
+}
+class Q1ContactType4 <<partial>> {
+}
+class AmountType6 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType4 <<partial>> {
+}
+class TenureCodeType1 <<partial>> {
+}
+enum TenureCodeContentType1 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item100,
+    Item110,
+    Item120,
+    Item130,
+    Item140,
+    Item150,
+    Item160,
+    Item170,
+}
+class Q1SubjectPropertyType3 <<partial>> {
+}
+class Q2TextType4 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1CustomerReferenceType5 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType12 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class DateType5 <<partial>> {
+}
+class TypeOfDocumentCodeType <<partial>> {
+}
+enum TypeOfDocumentCodeContentType {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item50,
+    Item60,
+    Item70,
+    Item80,
+    Item90,
+    Item100,
+    Item110,
+    Item120,
+    Item130,
+    Item140,
+    Item150,
+    Item160,
+    Item170,
+    Item180,
+}
+class Q1DocumentDetailsType <<partial>> {
+}
+class Q1ProductType7 <<partial>> {
+}
+class Q1TextType7 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType8 <<partial>> {
+}
+class RequestTitleKnownOfficialCopyV2_1Type <<partial>> {
+}
+class Q1DXDetailsType3 <<partial>> {
+}
+class Q3TextType5 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType3 <<partial>> {
+}
+class Q1AlternativeDespatchAddressType1 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1AlternativeDespatchDetailsType3 <<partial>> {
+    + AlternativeDespatchName : string <<get>> <<set>>
+    + AlternativeDespatchReference : string <<get>> <<set>>
+}
+class Q1NonStandardNamesToSearchType1 <<partial>> {
+    + Name : string <<get>> <<set>>
+}
+enum ComplexCodeType1 {
+    Item30,
+    Item40,
+}
+class IndividualNameType1 <<partial>> {
+    + Forename : string <<get>> <<set>>
+    + Surname : string <<get>> <<set>>
+}
+class StandardNameType1 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1StandardNamesToSearchType1 <<partial>> {
+}
+enum StandardCodeType1 {
+    Item10,
+    Item20,
+}
+class IndicatorType5 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q1LandChargesFullSearchType1 <<partial>> {
+}
+class Q1CommunicationType3 <<partial>> {
+}
+class Q1ContactType3 <<partial>> {
+}
+class AmountType5 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType3 <<partial>> {
+}
+class Q1CustomerReferenceType4 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType11 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType6 <<partial>> {
+}
+class Q1TextType6 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType7 <<partial>> {
+}
+class RequestLandChargesFullSearchV2_1Type <<partial>> {
+}
+class Q1DXDetailsType2 <<partial>> {
+}
+class Q3TextType4 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType2 <<partial>> {
+}
+class Q1AlternativeDespatchDetailsType2 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1NonStandardNamesToSearchType <<partial>> {
+    + Name : string <<get>> <<set>>
+}
+enum ComplexCodeType {
+    Item30,
+    Item40,
+}
+class IndividualNameType <<partial>> {
+    + Forename : string <<get>> <<set>>
+    + Surname : string <<get>> <<set>>
+}
+class StandardNameType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1StandardNamesToSearchType <<partial>> {
+}
+enum StandardCodeType {
+    Item10,
+    Item20,
+}
+class IndicatorType4 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q1LandChargesFullSearchType <<partial>> {
+}
+class Q1CommunicationType2 <<partial>> {
+}
+class Q1ContactType2 <<partial>> {
+}
+class AmountType4 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType2 <<partial>> {
+}
+class Q1CustomerReferenceType3 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType10 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType5 <<partial>> {
+}
+class Q1TextType5 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType6 <<partial>> {
+}
+class RequestLandChargesFullSearchV2_0Type <<partial>> {
+}
+class ResultCodeType1 <<partial>> {
+}
+enum ResultCodeContentType1 {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+}
+class DateType4 <<partial>> {
+}
+class BinaryObjectType1 <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1AttachmentType1 <<partial>> {
+}
+class TextType5 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1MessageDetailsType4 <<partial>> {
+}
+class Q1ResultsType4 <<partial>> {
+}
+class Q1ExternalReferenceType9 <<partial>> {
+}
+class Q1HMLRReferenceType1 <<partial>> {
+}
+class Q1ActualPriceType1 <<partial>> {
+}
+class AmountType3 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ValidationErrorsType4 <<partial>> {
+}
+class Q1RejectionResponseType4 <<partial>> {
+}
+class Q1RejectionType4 <<partial>> {
+}
+class DateTimeType4 <<partial>> {
+}
+class IdentifierType4 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType4 <<partial>> {
+}
+class Q1AcknowledgementType4 <<partial>> {
+}
+class ProductResponseCodeType4 <<partial>> {
+}
+enum ProductResponseCodeContentType4 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType4 <<partial>> {
+}
+class LandChargesFullSearchResponseV2_0Type <<partial>> {
+}
+class Q1AddressType1 <<partial>> {
+    + BuildingName : string <<get>> <<set>>
+    + BuildingNumber : string <<get>> <<set>>
+    + StreetName : string <<get>> <<set>>
+    + CityName : string <<get>> <<set>>
+    + PostcodeZone : string <<get>> <<set>>
+}
+class Q1SubjectPropertyType2 <<partial>> {
+}
+class Q1CustomerReferenceType2 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class TextType4 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType8 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType4 <<partial>> {
+}
+class Q1TextType4 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType5 <<partial>> {
+}
+class RequestSearchByPropertyDescriptionV2_0Type <<partial>> {
+}
+class Q1PostcodeZoneType <<partial>> {
+}
+class TextType3 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AddressType <<partial>> {
+}
+class TenureCodeType <<partial>> {
+}
+enum TenureCodeContentType {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item100,
+    Item110,
+    Item120,
+    Item130,
+    Item140,
+    Item150,
+    Item160,
+    Item170,
+}
+class Q1TenureInformationType <<partial>> {
+}
+class Q1TitleType2 <<partial>> {
+}
+class Q1MessageDetailsType3 <<partial>> {
+}
+class Q1ResultsType3 <<partial>> {
+}
+class Q1ExternalReferenceType7 <<partial>> {
+}
+class Q1ValidationErrorsType3 <<partial>> {
+}
+class Q1RejectionResponseType3 <<partial>> {
+}
+class Q1RejectionType3 <<partial>> {
+}
+class DateTimeType3 <<partial>> {
+}
+class IdentifierType3 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType3 <<partial>> {
+}
+class Q1AcknowledgementType3 <<partial>> {
+}
+class ProductResponseCodeType3 <<partial>> {
+}
+enum ProductResponseCodeContentType3 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType3 <<partial>> {
+}
+class ResponseSearchByPropertyDescriptionV2_0Type <<partial>> {
+}
+class DateType3 <<partial>> {
+}
+class IndicatorType3 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q2TextType3 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1SubjectPropertyType1 <<partial>> {
+}
+class Q3TextType3 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType6 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType3 <<partial>> {
+}
+class Q1TextType3 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType4 <<partial>> {
+}
+class RequestDischargeActivityV1_0Type <<partial>> {
+}
+class DateType2 <<partial>> {
+}
+class DischargeActivityType <<partial>> {
+}
+class LenderNameType <<partial>> {
+}
+class TextType2 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1MessageDetailsType2 <<partial>> {
+}
+class Q1DischargeCountType <<partial>> {
+    + Value : int <<get>> <<set>>
+}
+class Q2TextType2 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1TitleType1 <<partial>> {
+}
+class Q1ResultsType2 <<partial>> {
+}
+class DateTimeType2 <<partial>> {
+}
+class Q1ExternalReferenceType5 <<partial>> {
+}
+class Q1ValidationErrorsType2 <<partial>> {
+}
+class Q1RejectionResponseType2 <<partial>> {
+}
+class Q1RejectionType2 <<partial>> {
+}
+class IdentifierType2 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType2 <<partial>> {
+}
+class Q1AcknowledgementType2 <<partial>> {
+}
+class ProductResponseCodeType2 <<partial>> {
+}
+enum ProductResponseCodeContentType2 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType2 <<partial>> {
+}
+class ResponseDischargeActivityV1_0Type <<partial>> {
+}
+class Q1DXDetailsType1 <<partial>> {
+}
+class Q3TextType2 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType1 <<partial>> {
+}
+class Q1AlternativeDespatchAddressType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1AlternativeDespatchDetailsType1 <<partial>> {
+    + AlternativeDespatchName : string <<get>> <<set>>
+    + AlternativeDespatchReference : string <<get>> <<set>>
+}
+class IndicatorType2 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class ComplexNameTextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1BankruptcySearchComplexNamePartyType1 <<partial>> {
+}
+class Q1BankruptcySearchComplexNameType1 <<partial>> {
+    + Q1BankruptcySearchComplexNameType1()
+    + BankruptcySearchTypeCode : string <<get>> <<set>>
+}
+class Q1ForenamesTextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1SurnameTextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1BankruptcySearchPrivateIndividualPartyType1 <<partial>> {
+}
+class Q1BankruptcySearchPrivateIndividualType1 <<partial>> {
+    + Q1BankruptcySearchPrivateIndividualType1()
+    + BankruptcySearchTypeCode : string <<get>> <<set>>
+}
+class Q1LandChargesBankruptcySearchType1 <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1CommunicationType1 <<partial>> {
+}
+class Q1ContactType1 <<partial>> {
+}
+class AmountType2 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType1 <<partial>> {
+}
+class Q1CustomerReferenceType1 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType4 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType2 <<partial>> {
+}
+class Q1TextType2 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType3 <<partial>> {
+}
+class RequestLandChargesBankruptcySearchV2_1Type <<partial>> {
+}
+class Q1DXDetailsType <<partial>> {
+}
+class Q3TextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1AlternativePostalAddressType <<partial>> {
+}
+class Q1AlternativeDespatchDetailsType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class IndicatorType1 <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class ComplexNameTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1BankruptcySearchComplexNamePartyType <<partial>> {
+}
+class Q1BankruptcySearchComplexNameType <<partial>> {
+    + Q1BankruptcySearchComplexNameType()
+    + BankruptcySearchTypeCode : string <<get>> <<set>>
+}
+class Q1ForenamesTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1SurnameTextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1BankruptcySearchPrivateIndividualPartyType <<partial>> {
+}
+class Q1BankruptcySearchPrivateIndividualType <<partial>> {
+    + Q1BankruptcySearchPrivateIndividualType()
+    + BankruptcySearchTypeCode : string <<get>> <<set>>
+}
+class Q1LandChargesBankruptcySearchType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1CommunicationType <<partial>> {
+}
+class Q1ContactType <<partial>> {
+}
+class AmountType1 <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ExpectedPriceType <<partial>> {
+}
+class Q1CustomerReferenceType <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType3 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType1 <<partial>> {
+}
+class Q1TextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType2 <<partial>> {
+}
+class RequestLandChargesBankruptcySearchV2_0Type <<partial>> {
+}
+class ResultCodeType <<partial>> {
+}
+enum ResultCodeContentType {
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+}
+class DateType1 <<partial>> {
+}
+class BinaryObjectType <<partial>> {
+    + filename : string <<get>> <<set>>
+    + format : string <<get>> <<set>>
+    + mimeCode : string <<get>> <<set>>
+    + characterSetCode : string <<get>> <<set>>
+}
+class Q1AttachmentType <<partial>> {
+}
+class TextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1HMLRReferenceType <<partial>> {
+}
+class Q1MessageDetailsType1 <<partial>> {
+}
+class Q1ResultsType1 <<partial>> {
+}
+class Q1ExternalReferenceType2 <<partial>> {
+}
+class Q1ActualPriceType <<partial>> {
+}
+class AmountType <<partial>> {
+    + currencyID : string <<get>> <<set>>
+    + Value : decimal <<get>> <<set>>
+}
+class Q1ValidationErrorsType1 <<partial>> {
+}
+class Q1RejectionResponseType1 <<partial>> {
+}
+class Q1RejectionType1 <<partial>> {
+}
+class DateTimeType1 <<partial>> {
+}
+class IdentifierType1 <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType1 <<partial>> {
+}
+class Q1AcknowledgementType1 <<partial>> {
+}
+class ProductResponseCodeType1 <<partial>> {
+}
+enum ProductResponseCodeContentType1 {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType1 <<partial>> {
+}
+class ResponseLandChargesBankruptcySearchV2_0Type <<partial>> {
+}
+class IndicatorType <<partial>> {
+    + Value : bool <<get>> <<set>>
+}
+class Q2TextType1 <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1SubjectPropertyType <<partial>> {
+}
+class Q3TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1ExternalReferenceType1 <<partial>> {
+    + Reference : string <<get>> <<set>>
+}
+class Q1ProductType <<partial>> {
+    + Item : object <<get>> <<set>>
+}
+class Q1TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class Q1IdentifierType1 <<partial>> {
+}
+class RequestApplicationEnquiryV1_0Type <<partial>> {
+}
+class CorrespondenceDetailsType <<partial>> {
+}
+enum CorrespondenceContentType {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+}
+class DateType <<partial>> {
+}
+enum ItemChoiceType {
+    IssuedOnDate,
+    RequestedOnDate,
+}
+class ApplicationProgressType <<partial>> {
+}
+class TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class TimeType <<partial>> {
+}
+class PriorityPeriodType <<partial>> {
+}
+class NewTitleDetailsType <<partial>> {
+}
+class Q2TextType <<partial>> {
+    + Value : string <<get>> <<set>>
+}
+class ParentTitleDetailsType <<partial>> {
+}
+class Q1ApplicationEnquiryType <<partial>> {
+    + Expedited : bool <<get>> <<set>>
+    + ApplicationReference : string <<get>> <<set>>
+    + Item : object <<get>> <<set>>
+    + CustomerReference : string <<get>> <<set>>
+    + PropertyDescription : string <<get>> <<set>>
+    + LodgedBy : string <<get>> <<set>>
+    + SearchCertificateNumber : string <<get>> <<set>>
+    + SearchInterestSpecified : bool <<get>> <<set>>
+}
+enum ApplicationTypeContentType {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+    Item40,
+    Item50,
+    Item60,
+    Item70,
+    Item80,
+    Item90,
+}
+enum ApplicationReceivedByContentType {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+enum SearchInterestType {
+    L,
+    P,
+    C,
+}
+class Q1TitleType <<partial>> {
+}
+class RecentApplicationType <<partial>> {
+}
+enum EndReasonContentType {
+    Item0,
+    Item10,
+    Item20,
+}
+class Q1MessageDetailsType <<partial>> {
+}
+class Q1ResultsType <<partial>> {
+}
+class DateTimeType <<partial>> {
+}
+class Q1ExternalReferenceType <<partial>> {
+}
+class Q1ValidationErrorsType <<partial>> {
+}
+class Q1RejectionResponseType <<partial>> {
+}
+class Q1RejectionType <<partial>> {
+}
+class IdentifierType <<partial>> {
+    + schemeAgencyName : string <<get>> <<set>>
+    + schemeName : string <<get>> <<set>>
+    + Value : string <<get>> <<set>>
+}
+class Q1AcknowledgementDetailsType <<partial>> {
+}
+class Q1AcknowledgementType <<partial>> {
+}
+class ProductResponseCodeType <<partial>> {
+}
+enum ProductResponseCodeContentType {
+    Item0,
+    Item10,
+    Item20,
+    Item30,
+}
+class Q1GatewayResponseType <<partial>> {
+}
+class ResponseApplicationEnquiryV1_0Type <<partial>> {
+}
+class getResponseRequest <<partial>> {
+    + getResponseRequest()
+    + getResponseRequest(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse <<partial>> {
+    + getResponseResponse()
+    + getResponseResponse(@return:ServiceReference.ResponseApplicationEnquiryV1_0Type)
+}
+interface ApplicationEnquiryV1_0PollServiceChannel {
+}
+class ApplicationEnquiryV1_0PollServiceClient <<partial>> {
+    + ApplicationEnquiryV1_0PollServiceClient()
+    + ApplicationEnquiryV1_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + ApplicationEnquiryV1_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + ApplicationEnquiryV1_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + ApplicationEnquiryV1_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface ApplicationEnquiryV1_0Service {
+}
+class applicationEnquiryRequest <<partial>> {
+    + applicationEnquiryRequest()
+    + applicationEnquiryRequest(arg0:ServiceReference.RequestApplicationEnquiryV1_0Type)
+}
+class applicationEnquiryResponse <<partial>> {
+    + applicationEnquiryResponse()
+    + applicationEnquiryResponse(@return:ServiceReference.ResponseApplicationEnquiryV1_0Type)
+}
+interface ApplicationEnquiryV1_0ServiceChannel {
+}
+class ApplicationEnquiryV1_0ServiceClient <<partial>> {
+    + ApplicationEnquiryV1_0ServiceClient()
+    + ApplicationEnquiryV1_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + ApplicationEnquiryV1_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + ApplicationEnquiryV1_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + ApplicationEnquiryV1_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + applicationEnquiryAsync(arg0:ServiceReference.RequestApplicationEnquiryV1_0Type) : System.Threading.Tasks.Task<ServiceReference.applicationEnquiryResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface BankruptcySearchV2_0PollService {
+}
+class getResponseRequest1 <<partial>> {
+    + getResponseRequest1()
+    + getResponseRequest1(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse1 <<partial>> {
+    + getResponseResponse1()
+    + getResponseResponse1(@return:ServiceReference.ResponseLandChargesBankruptcySearchV2_0Type)
+}
+interface BankruptcySearchV2_0PollServiceChannel {
+}
+class BankruptcySearchV2_0PollServiceClient <<partial>> {
+    + BankruptcySearchV2_0PollServiceClient()
+    + BankruptcySearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + BankruptcySearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + BankruptcySearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + BankruptcySearchV2_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse1>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface BankruptcySearchV2_0Service {
+}
+class bankruptcySearchRequest <<partial>> {
+    + bankruptcySearchRequest()
+    + bankruptcySearchRequest(arg0:ServiceReference.RequestLandChargesBankruptcySearchV2_0Type)
+}
+class bankruptcySearchResponse <<partial>> {
+    + bankruptcySearchResponse()
+    + bankruptcySearchResponse(@return:ServiceReference.ResponseLandChargesBankruptcySearchV2_0Type)
+}
+interface BankruptcySearchV2_0ServiceChannel {
+}
+class BankruptcySearchV2_0ServiceClient <<partial>> {
+    + BankruptcySearchV2_0ServiceClient()
+    + BankruptcySearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + BankruptcySearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + BankruptcySearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + BankruptcySearchV2_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + bankruptcySearchAsync(arg0:ServiceReference.RequestLandChargesBankruptcySearchV2_0Type) : System.Threading.Tasks.Task<ServiceReference.bankruptcySearchResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface BankruptcySearchV2_1PollService {
+}
+class getResponseRequest2 <<partial>> {
+    + getResponseRequest2()
+    + getResponseRequest2(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse2 <<partial>> {
+    + getResponseResponse2()
+    + getResponseResponse2(@return:ServiceReference.ResponseLandChargesBankruptcySearchV2_0Type)
+}
+interface BankruptcySearchV2_1PollServiceChannel {
+}
+class BankruptcySearchV2_1PollServiceClient <<partial>> {
+    + BankruptcySearchV2_1PollServiceClient()
+    + BankruptcySearchV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + BankruptcySearchV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + BankruptcySearchV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + BankruptcySearchV2_1PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse2>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface BankruptcySearchV2_1Service {
+}
+class bankruptcySearchRequest1 <<partial>> {
+    + bankruptcySearchRequest1()
+    + bankruptcySearchRequest1(arg0:ServiceReference.RequestLandChargesBankruptcySearchV2_1Type)
+}
+class bankruptcySearchResponse1 <<partial>> {
+    + bankruptcySearchResponse1()
+    + bankruptcySearchResponse1(@return:ServiceReference.ResponseLandChargesBankruptcySearchV2_0Type)
+}
+interface BankruptcySearchV2_1ServiceChannel {
+}
+class BankruptcySearchV2_1ServiceClient <<partial>> {
+    + BankruptcySearchV2_1ServiceClient()
+    + BankruptcySearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + BankruptcySearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + BankruptcySearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + BankruptcySearchV2_1ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + bankruptcySearchAsync(arg0:ServiceReference.RequestLandChargesBankruptcySearchV2_1Type) : System.Threading.Tasks.Task<ServiceReference.bankruptcySearchResponse1>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface DischargeActivityV1_0PollService {
+}
+class getResponseRequest3 <<partial>> {
+    + getResponseRequest3()
+    + getResponseRequest3(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse3 <<partial>> {
+    + getResponseResponse3()
+    + getResponseResponse3(@return:ServiceReference.ResponseDischargeActivityV1_0Type)
+}
+interface DischargeActivityV1_0PollServiceChannel {
+}
+class DischargeActivityV1_0PollServiceClient <<partial>> {
+    + DischargeActivityV1_0PollServiceClient()
+    + DischargeActivityV1_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + DischargeActivityV1_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + DischargeActivityV1_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + DischargeActivityV1_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse3>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface DischargeActivityV1_0Service {
+}
+class dischargeActivityRequest <<partial>> {
+    + dischargeActivityRequest()
+    + dischargeActivityRequest(arg0:ServiceReference.RequestDischargeActivityV1_0Type)
+}
+class dischargeActivityResponse <<partial>> {
+    + dischargeActivityResponse()
+    + dischargeActivityResponse(@return:ServiceReference.ResponseDischargeActivityV1_0Type)
+}
+interface DischargeActivityV1_0ServiceChannel {
+}
+class DischargeActivityV1_0ServiceClient <<partial>> {
+    + DischargeActivityV1_0ServiceClient()
+    + DischargeActivityV1_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + DischargeActivityV1_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + DischargeActivityV1_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + DischargeActivityV1_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + dischargeActivityAsync(arg0:ServiceReference.RequestDischargeActivityV1_0Type) : System.Threading.Tasks.Task<ServiceReference.dischargeActivityResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface PropertyDescriptionEnquiryV2_0PollService {
+}
+class getResponseRequest4 <<partial>> {
+    + getResponseRequest4()
+    + getResponseRequest4(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse4 <<partial>> {
+    + getResponseResponse4()
+    + getResponseResponse4(@return:ServiceReference.ResponseSearchByPropertyDescriptionV2_0Type)
+}
+interface PropertyDescriptionEnquiryV2_0PollServiceChannel {
+}
+class PropertyDescriptionEnquiryV2_0PollServiceClient <<partial>> {
+    + PropertyDescriptionEnquiryV2_0PollServiceClient()
+    + PropertyDescriptionEnquiryV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + PropertyDescriptionEnquiryV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + PropertyDescriptionEnquiryV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + PropertyDescriptionEnquiryV2_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse4>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface PropertyDescriptionEnquiryV2_0Service {
+}
+class searchPropertiesRequest <<partial>> {
+    + searchPropertiesRequest()
+    + searchPropertiesRequest(arg0:ServiceReference.RequestSearchByPropertyDescriptionV2_0Type)
+}
+class searchPropertiesResponse <<partial>> {
+    + searchPropertiesResponse()
+    + searchPropertiesResponse(@return:ServiceReference.ResponseSearchByPropertyDescriptionV2_0Type)
+}
+interface PropertyDescriptionEnquiryV2_0ServiceChannel {
+}
+class PropertyDescriptionEnquiryV2_0ServiceClient <<partial>> {
+    + PropertyDescriptionEnquiryV2_0ServiceClient()
+    + PropertyDescriptionEnquiryV2_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + PropertyDescriptionEnquiryV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + PropertyDescriptionEnquiryV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + PropertyDescriptionEnquiryV2_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + searchPropertiesAsync(arg0:ServiceReference.RequestSearchByPropertyDescriptionV2_0Type) : System.Threading.Tasks.Task<ServiceReference.searchPropertiesResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface FullSearchV2_0PollService {
+}
+class getResponseRequest5 <<partial>> {
+    + getResponseRequest5()
+    + getResponseRequest5(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse5 <<partial>> {
+    + getResponseResponse5()
+    + getResponseResponse5(@return:ServiceReference.LandChargesFullSearchResponseV2_0Type)
+}
+interface FullSearchV2_0PollServiceChannel {
+}
+class FullSearchV2_0PollServiceClient <<partial>> {
+    + FullSearchV2_0PollServiceClient()
+    + FullSearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + FullSearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + FullSearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + FullSearchV2_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse5>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface FullSearchV2_0Service {
+}
+class fullSearchRequest <<partial>> {
+    + fullSearchRequest()
+    + fullSearchRequest(arg0:ServiceReference.RequestLandChargesFullSearchV2_0Type)
+}
+class fullSearchResponse <<partial>> {
+    + fullSearchResponse()
+    + fullSearchResponse(@return:ServiceReference.LandChargesFullSearchResponseV2_0Type)
+}
+interface FullSearchV2_0ServiceChannel {
+}
+class FullSearchV2_0ServiceClient <<partial>> {
+    + FullSearchV2_0ServiceClient()
+    + FullSearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + FullSearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + FullSearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + FullSearchV2_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + fullSearchAsync(arg0:ServiceReference.RequestLandChargesFullSearchV2_0Type) : System.Threading.Tasks.Task<ServiceReference.fullSearchResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface FullSearchV2_1PollService {
+}
+class getResponseRequest6 <<partial>> {
+    + getResponseRequest6()
+    + getResponseRequest6(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse6 <<partial>> {
+    + getResponseResponse6()
+    + getResponseResponse6(@return:ServiceReference.LandChargesFullSearchResponseV2_0Type)
+}
+interface FullSearchV2_1PollServiceChannel {
+}
+class FullSearchV2_1PollServiceClient <<partial>> {
+    + FullSearchV2_1PollServiceClient()
+    + FullSearchV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + FullSearchV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + FullSearchV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + FullSearchV2_1PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse6>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface FullSearchV2_1Service {
+}
+class fullSearchRequest1 <<partial>> {
+    + fullSearchRequest1()
+    + fullSearchRequest1(arg0:ServiceReference.RequestLandChargesFullSearchV2_1Type)
+}
+class fullSearchResponse1 <<partial>> {
+    + fullSearchResponse1()
+    + fullSearchResponse1(@return:ServiceReference.LandChargesFullSearchResponseV2_0Type)
+}
+interface FullSearchV2_1ServiceChannel {
+}
+class FullSearchV2_1ServiceClient <<partial>> {
+    + FullSearchV2_1ServiceClient()
+    + FullSearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + FullSearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + FullSearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + FullSearchV2_1ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + fullSearchAsync(arg0:ServiceReference.RequestLandChargesFullSearchV2_1Type) : System.Threading.Tasks.Task<ServiceReference.fullSearchResponse1>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OC1TitleKnownV2_1Service {
+}
+class performTitleKnownSearchRequest <<partial>> {
+    + performTitleKnownSearchRequest()
+    + performTitleKnownSearchRequest(arg0:ServiceReference.RequestTitleKnownOfficialCopyV2_1Type)
+}
+class performTitleKnownSearchResponse <<partial>> {
+    + performTitleKnownSearchResponse()
+    + performTitleKnownSearchResponse(@return:ServiceReference.ResponseTitleKnownOfficialCopyV2_0Type)
+}
+interface OC1TitleKnownV2_1ServiceChannel {
+}
+class OC1TitleKnownV2_1ServiceClient <<partial>> {
+    + OC1TitleKnownV2_1ServiceClient()
+    + OC1TitleKnownV2_1ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OC1TitleKnownV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OC1TitleKnownV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OC1TitleKnownV2_1ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + performTitleKnownSearchAsync(arg0:ServiceReference.RequestTitleKnownOfficialCopyV2_1Type) : System.Threading.Tasks.Task<ServiceReference.performTitleKnownSearchResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OCWithSummaryV2_1Service {
+}
+class performOCWithSummaryRequest <<partial>> {
+    + performOCWithSummaryRequest()
+    + performOCWithSummaryRequest(arg0:ServiceReference.RequestOCWithSummaryV2_0Type)
+}
+class performOCWithSummaryResponse <<partial>> {
+    + performOCWithSummaryResponse()
+    + performOCWithSummaryResponse(@return:ServiceReference.ResponseOCWithSummaryV2_1Type)
+}
+interface OCWithSummaryV2_1ServiceChannel {
+}
+class OCWithSummaryV2_1ServiceClient <<partial>> {
+    + OCWithSummaryV2_1ServiceClient()
+    + OCWithSummaryV2_1ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OCWithSummaryV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OCWithSummaryV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OCWithSummaryV2_1ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + performOCWithSummaryAsync(arg0:ServiceReference.RequestOCWithSummaryV2_0Type) : System.Threading.Tasks.Task<ServiceReference.performOCWithSummaryResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OfficialSearchOfPartV2_0PollService {
+}
+class getResponseRequest7 <<partial>> {
+    + getResponseRequest7()
+    + getResponseRequest7(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse7 <<partial>> {
+    + getResponseResponse7()
+    + getResponseResponse7(@return:ServiceReference.OfficialSearchOfPartWithPriorityResponseV2_0Type)
+}
+interface OfficialSearchOfPartV2_0PollServiceChannel {
+}
+class OfficialSearchOfPartV2_0PollServiceClient <<partial>> {
+    + OfficialSearchOfPartV2_0PollServiceClient()
+    + OfficialSearchOfPartV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OfficialSearchOfPartV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OfficialSearchOfPartV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OfficialSearchOfPartV2_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse7>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OfficialSearchOfPartV2_0Service {
+}
+class processOS2RequestRequest <<partial>> {
+    + processOS2RequestRequest()
+    + processOS2RequestRequest(arg0:ServiceReference.RequestOfficialSearchOfPartWithPriorityV2_0Type)
+}
+class processOS2RequestResponse <<partial>> {
+    + processOS2RequestResponse()
+    + processOS2RequestResponse(@return:ServiceReference.OfficialSearchOfPartWithPriorityResponseV2_0Type)
+}
+interface OfficialSearchOfPartV2_0ServiceChannel {
+}
+class OfficialSearchOfPartV2_0ServiceClient <<partial>> {
+    + OfficialSearchOfPartV2_0ServiceClient()
+    + OfficialSearchOfPartV2_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OfficialSearchOfPartV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OfficialSearchOfPartV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OfficialSearchOfPartV2_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + processOS2RequestAsync(arg0:ServiceReference.RequestOfficialSearchOfPartWithPriorityV2_0Type) : System.Threading.Tasks.Task<ServiceReference.processOS2RequestResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OfficialSearchOfPartV2_1PollService {
+}
+class getResponseRequest8 <<partial>> {
+    + getResponseRequest8()
+    + getResponseRequest8(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse8 <<partial>> {
+    + getResponseResponse8()
+    + getResponseResponse8(@return:ServiceReference.OfficialSearchOfPartWithPriorityResponseV2_0Type)
+}
+interface OfficialSearchOfPartV2_1PollServiceChannel {
+}
+class OfficialSearchOfPartV2_1PollServiceClient <<partial>> {
+    + OfficialSearchOfPartV2_1PollServiceClient()
+    + OfficialSearchOfPartV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OfficialSearchOfPartV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OfficialSearchOfPartV2_1PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OfficialSearchOfPartV2_1PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse8>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OfficialSearchOfPartV2_1Service {
+}
+class processOS2RequestRequest1 <<partial>> {
+    + processOS2RequestRequest1()
+    + processOS2RequestRequest1(arg0:ServiceReference.RequestOfficialSearchOfPartWithPriorityV2_1Type)
+}
+class processOS2RequestResponse1 <<partial>> {
+    + processOS2RequestResponse1()
+    + processOS2RequestResponse1(@return:ServiceReference.OfficialSearchOfPartWithPriorityResponseV2_0Type)
+}
+interface OfficialSearchOfPartV2_1ServiceChannel {
+}
+class OfficialSearchOfPartV2_1ServiceClient <<partial>> {
+    + OfficialSearchOfPartV2_1ServiceClient()
+    + OfficialSearchOfPartV2_1ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OfficialSearchOfPartV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OfficialSearchOfPartV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OfficialSearchOfPartV2_1ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + processOS2RequestAsync(arg0:ServiceReference.RequestOfficialSearchOfPartWithPriorityV2_1Type) : System.Threading.Tasks.Task<ServiceReference.processOS2RequestResponse1>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OfficialSearchV2_0PollService {
+}
+class getResponseRequest9 <<partial>> {
+    + getResponseRequest9()
+    + getResponseRequest9(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse9 <<partial>> {
+    + getResponseResponse9()
+    + getResponseResponse9(@return:ServiceReference.ResponseOfficialSearchOfWholeWithPriorityV2_0Type)
+}
+interface OfficialSearchV2_0PollServiceChannel {
+}
+class OfficialSearchV2_0PollServiceClient <<partial>> {
+    + OfficialSearchV2_0PollServiceClient()
+    + OfficialSearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OfficialSearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OfficialSearchV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OfficialSearchV2_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse9>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OfficialSearchV2_0Service {
+}
+class processOS1RequestRequest <<partial>> {
+    + processOS1RequestRequest()
+    + processOS1RequestRequest(arg0:ServiceReference.RequestOfficialSearchOfWholeWithPriorityV2_0Type)
+}
+class processOS1RequestResponse <<partial>> {
+    + processOS1RequestResponse()
+    + processOS1RequestResponse(@return:ServiceReference.ResponseOfficialSearchOfWholeWithPriorityV2_0Type)
+}
+interface OfficialSearchV2_0ServiceChannel {
+}
+class OfficialSearchV2_0ServiceClient <<partial>> {
+    + OfficialSearchV2_0ServiceClient()
+    + OfficialSearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OfficialSearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OfficialSearchV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OfficialSearchV2_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + processOS1RequestAsync(arg0:ServiceReference.RequestOfficialSearchOfWholeWithPriorityV2_0Type) : System.Threading.Tasks.Task<ServiceReference.processOS1RequestResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface OfficialSearchV2_1Service {
+}
+class processOS1RequestRequest1 <<partial>> {
+    + processOS1RequestRequest1()
+    + processOS1RequestRequest1(arg0:ServiceReference.RequestOfficialSearchOfWholeWithPriorityV2_1Type)
+}
+class processOS1RequestResponse1 <<partial>> {
+    + processOS1RequestResponse1()
+    + processOS1RequestResponse1(@return:ServiceReference.ResponseOfficialSearchOfWholeWithPriorityV2_0Type)
+}
+interface OfficialSearchV2_1ServiceChannel {
+}
+class OfficialSearchV2_1ServiceClient <<partial>> {
+    + OfficialSearchV2_1ServiceClient()
+    + OfficialSearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + OfficialSearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + OfficialSearchV2_1ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + OfficialSearchV2_1ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + processOS1RequestAsync(arg0:ServiceReference.RequestOfficialSearchOfWholeWithPriorityV2_1Type) : System.Threading.Tasks.Task<ServiceReference.processOS1RequestResponse1>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface SearchOfIndexMapV2_0PollService {
+}
+class getResponseRequest10 <<partial>> {
+    + getResponseRequest10()
+    + getResponseRequest10(arg0:ServiceReference.PollRequestType)
+}
+class getResponseResponse10 <<partial>> {
+    + getResponseResponse10()
+    + getResponseResponse10(@return:ServiceReference.SearchOfIndexMapResponseV2_0Type)
+}
+interface SearchOfIndexMapV2_0PollServiceChannel {
+}
+class SearchOfIndexMapV2_0PollServiceClient <<partial>> {
+    + SearchOfIndexMapV2_0PollServiceClient()
+    + SearchOfIndexMapV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration)
+    + SearchOfIndexMapV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + SearchOfIndexMapV2_0PollServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + SearchOfIndexMapV2_0PollServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + getResponseAsync(arg0:ServiceReference.PollRequestType) : System.Threading.Tasks.Task<ServiceReference.getResponseResponse10>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+interface SearchOfIndexMapV2_0Service {
+}
+class searchOfIndexMapRequest <<partial>> {
+    + searchOfIndexMapRequest()
+    + searchOfIndexMapRequest(arg0:ServiceReference.RequestSearchOfIndexMapV2_0Type)
+}
+class searchOfIndexMapResponse <<partial>> {
+    + searchOfIndexMapResponse()
+    + searchOfIndexMapResponse(@return:ServiceReference.SearchOfIndexMapResponseV2_0Type)
+}
+interface SearchOfIndexMapV2_0ServiceChannel {
+}
+class SearchOfIndexMapV2_0ServiceClient <<partial>> {
+    + SearchOfIndexMapV2_0ServiceClient()
+    + SearchOfIndexMapV2_0ServiceClient(endpointConfiguration:EndpointConfiguration)
+    + SearchOfIndexMapV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:string)
+    + SearchOfIndexMapV2_0ServiceClient(endpointConfiguration:EndpointConfiguration, remoteAddress:System.ServiceModel.EndpointAddress)
+    + SearchOfIndexMapV2_0ServiceClient(binding:System.ServiceModel.Channels.Binding, remoteAddress:System.ServiceModel.EndpointAddress)
+    + searchOfIndexMapAsync(arg0:ServiceReference.RequestSearchOfIndexMapV2_0Type) : System.Threading.Tasks.Task<ServiceReference.searchOfIndexMapResponse>
+    + <<virtual>> OpenAsync() : System.Threading.Tasks.Task
+}
+class "ClientBase`1"<T> {
+}
+enum EndpointConfiguration {
+    ApplicationEnquiryV1_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    ApplicationEnquiryV1_0WSImplPort,
+}
+enum EndpointConfiguration {
+    BankruptcySearchV2_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    BankruptcySearchV2_0WSImplPort,
+}
+enum EndpointConfiguration {
+    BankruptcySearchV2_1PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    BankruptcySearchV2_1WSImplPort,
+}
+enum EndpointConfiguration {
+    DischargeActivityV1_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    DischargeActivityV1_0WSImplPort,
+}
+enum EndpointConfiguration {
+    PropertyDescriptionEnquiryV2_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    PropertyDescriptionV2_0WSImplPort,
+}
+enum EndpointConfiguration {
+    FullSearchV2_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    FullSearchV2_0WSImplPort,
+}
+enum EndpointConfiguration {
+    FullSearchV2_1PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    FullSearchV2_1WSImplPort,
+}
+enum EndpointConfiguration {
+    OC1TitleKnownV2_1WSImplPort,
+}
+enum EndpointConfiguration {
+    OCWithSummaryV2_1WSImplPort,
+}
+enum EndpointConfiguration {
+    OfficialSearchOfPartV2_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    OfficialSearchOfPartV2_0WSImplPort,
+}
+enum EndpointConfiguration {
+    OfficialSearchOfPartV2_1PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    OfficialSearchOfPartV2_1WSImplPort,
+}
+enum EndpointConfiguration {
+    OfficialSearchV2_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    OfficialSearchV2_0WSImplPort,
+}
+enum EndpointConfiguration {
+    OfficialSearchV2_1WSImplPort,
+}
+enum EndpointConfiguration {
+    SearchOfIndexMapV2_0PollRequestWSImplPort,
+}
+enum EndpointConfiguration {
+    SearchOfIndexMapV2_0WSImplPort,
+}
+PollRequestType --> "ID" Q1IdentifierType
+Q1IdentifierType --> "MessageID" MessageIDTextType
+Q1DXDetailsType9 --> "DXNumber" Q3TextType12
+Q1DXDetailsType9 --> "ExchangeName" Q3TextType12
+Q1AlternativePostalAddressType9 --> "Postcode" Q3TextType12
+Q1WithPlanWithoutPostcodeType --> "PropertyIdentifier" Q1Len50TextType
+Q1WithPlanWithoutPostcodeType --> "SubBuildingName" Q1Len100TextType
+Q1WithPlanWithoutPostcodeType --> "StreetName" Q1Len50TextType
+Q1WithPlanWithoutPostcodeType --> "Locality" Q1Len35TextType
+Q1WithPlanWithoutPostcodeType --> "TownName" Q1Len35TextType
+Q1WithPlanWithoutPostcodeType --> "CountyName" Q1Len35TextType
+Q1WithPlanWithoutPostcodeType --> "LocalAuthority" Q1Len38TextType
+Q1WithPlanWithoutPostcodeType --> "OSMapReference" Q1Len8TextType
+Q1AddressWithPostcodeType --> "PropertyIdentifier" Q1Len50TextType
+Q1AddressWithPostcodeType --> "SubBuildingName" Q1Len100TextType
+Q1AddressWithPostcodeType --> "StreetName" Q1Len50TextType
+Q1AddressWithPostcodeType --> "Locality" Q1Len35TextType
+Q1AddressWithPostcodeType --> "TownName" Q1Len35TextType
+Q1AddressWithPostcodeType --> "CountyName" Q1Len35TextType
+Q1AddressWithPostcodeType --> "LocalAuthority" Q1Len38TextType
+Q1AddressWithPostcodeType --> "PostcodeZone" Q1PostcodeZoneType2
+Q1AddressWithPostcodeType --> "OSMapReference" Q1Len8TextType
+Q1PostcodeZoneType2 --> "Postcode" Q3TextType12
+Q1PlanDetailsAttachmentType --> "EmbeddedFileBinaryObject" BinaryObjectType9
+Q1PlanDetailsAttachmentType --> "Title" Q3TextType12
+Q1PlanDetailsAttachmentType --> "Description" Q3TextType12
+Q1PlanDetailsAttachmentType --> "Date" DateType13
+Q1PlanDetailsAttachmentType --> "CopyrightNotices" Q3TextType12
+Q1PlanType --> "Description" Q3TextType12
+Q1PlanType --> "PlanDetailsAttachment" Q1PlanDetailsAttachmentType
+Q1WithAttachedPlanType --> "Plan" Q1PlanType
+Q1WithAttachedPlanType --> "WithPlanAddressDetails" Q1WithPlanAddressDetailsType
+Q1WithoutPlanWithoutPostcodeType --> "PropertyIdentifier" Q1Len50TextType
+Q1WithoutPlanWithoutPostcodeType --> "SubBuildingName" Q1Len100TextType
+Q1WithoutPlanWithoutPostcodeType --> "StreetName" Q1Len50TextType
+Q1WithoutPlanWithoutPostcodeType --> "Locality" Q1Len35TextType
+Q1WithoutPlanWithoutPostcodeType --> "TownName" Q1Len35TextType
+Q1WithoutPlanWithoutPostcodeType --> "CountyName" Q1Len35TextType
+Q1WithoutPlanWithoutPostcodeType --> "LocalAuthority" Q1Len38TextType
+Q1WithoutPlanWithoutPostcodeType --> "OSMapReference" Q1Len8TextType
+Q1WithoutAttachedPlanType --> "WithoutPlanAddressDetails" Q1WithoutPlanAddressDetailsType
+Q1CommunicationType9 --> "Telephone" Q3TextType12
+Q1ContactType9 --> "Name" Q3TextType12
+Q1ContactType9 --> "Communication" Q1CommunicationType9
+Q1ExpectedPriceType10 --> "GrossPriceAmount" AmountType17
+Q1ExpectedPriceType10 --> "NetPriceAmount" AmountType17
+Q1ExpectedPriceType10 --> "VATAmount" AmountType17
+Q1CustomerReferenceType11 --> "AllocatedBy" Q3TextType12
+Q1CustomerReferenceType11 --> "Description" Q3TextType12
+Q1ExternalReferenceType23 --> "AllocatedBy" Q3TextType12
+Q1ExternalReferenceType23 --> "Description" Q3TextType12
+Q1ProductType13 --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType13
+Q1ProductType13 --> "ExternalReference" Q1ExternalReferenceType23
+Q1ProductType13 --> "CustomerReference" Q1CustomerReferenceType11
+Q1ProductType13 --> "ExpectedPrice" Q1ExpectedPriceType10
+Q1ProductType13 --> "SearchOfIndexMap" Q1SearchOfIndexMapType
+Q1ProductType13 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType9
+Q1IdentifierType14 --> "MessageID" Q1TextType13
+RequestSearchOfIndexMapV2_0Type --> "ID" Q1IdentifierType14
+RequestSearchOfIndexMapV2_0Type --> "Product" Q1ProductType13
+ResultCodeType5 --> "Value" ResultCodeContentType5
+Q1AttachmentType6 --> "EmbeddedFileBinaryObject" BinaryObjectType8
+Q1AttachmentType6 --> "URL" TextType10
+Q1AttachmentType6 --> "Title" TextType10
+Q1AttachmentType6 --> "Description" TextType10
+Q1AttachmentType6 --> "Date" DateType12
+Q1AttachmentType6 --> "CopyrightNotices" TextType10
+Q1MessageDetailsType9 --> "Description" TextType10
+Q1ResultsType9 --> "MessageDetails" Q1MessageDetailsType9
+Q1ResultsType9 --> "ExternalReference" Q1ExternalReferenceType22
+Q1ResultsType9 --> "HMLRReference" Q1HMLRReferenceType5
+Q1ResultsType9 --> "ActualPrice" Q1ActualPriceType6
+Q1ResultsType9 --> "Attachment" Q1AttachmentType6
+Q1ResultsType9 --> "ResultTypeCode" ResultCodeType5
+Q1ExternalReferenceType22 --> "Reference" TextType10
+Q1ExternalReferenceType22 --> "AllocatedBy" TextType10
+Q1ExternalReferenceType22 --> "Description" TextType10
+Q1HMLRReferenceType5 --> "Reference" TextType10
+Q1HMLRReferenceType5 --> "AllocatedBy" TextType10
+Q1HMLRReferenceType5 --> "Description" TextType10
+Q1ActualPriceType6 --> "GrossPriceAmount" AmountType16
+Q1ActualPriceType6 --> "NetPriceAmount" AmountType16
+Q1ActualPriceType6 --> "VATAmount" AmountType16
+Q1ValidationErrorsType9 --> "Code" TextType10
+Q1ValidationErrorsType9 --> "Description" TextType10
+Q1RejectionResponseType9 --> "Reason" TextType10
+Q1RejectionResponseType9 --> "Code" TextType10
+Q1RejectionResponseType9 --> "OtherDescription" TextType10
+Q1RejectionType9 --> "ExternalReference" Q1ExternalReferenceType22
+Q1RejectionType9 --> "ActualPrice" Q1ActualPriceType6
+Q1RejectionType9 --> "RejectionResponse" Q1RejectionResponseType9
+Q1AcknowledgementDetailsType9 --> "UniqueID" IdentifierType9
+Q1AcknowledgementDetailsType9 --> "ExpectedResponseDateTime" DateTimeType9
+Q1AcknowledgementDetailsType9 --> "MessageDescription" TextType10
+Q1AcknowledgementType9 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType9
+Q1AcknowledgementType9 --> "HMLRReference" Q1HMLRReferenceType5
+ProductResponseCodeType9 --> "Value" ProductResponseCodeContentType9
+Q1GatewayResponseType9 --> "TypeCode" ProductResponseCodeType9
+Q1GatewayResponseType9 --> "Acknowledgement" Q1AcknowledgementType9
+Q1GatewayResponseType9 --> "Rejection" Q1RejectionType9
+Q1GatewayResponseType9 --> "Results" Q1ResultsType9
+SearchOfIndexMapResponseV2_0Type --> "GatewayResponse" Q1GatewayResponseType9
+Q1DXDetailsType8 --> "DXNumber" Q3TextType11
+Q1DXDetailsType8 --> "ExchangeName" Q3TextType11
+Q1AlternativePostalAddressType8 --> "Postcode" Q3TextType11
+Q1AlternativeDespatchDetailsType8 --> "AlternativeDespatchAddress" Q1AlternativeDespatchAddressType4
+PriorityCodeType3 --> "Value" PriorityCodeContentType3
+Q1OfficialSearchOfWholeWithPriorityType1 --> "PriorityTypeCode" PriorityCodeType3
+Q1OfficialSearchOfWholeWithPriorityType1 --> "SearchFromDate" SearchFromDateType3
+Q1OfficialSearchOfWholeWithPriorityType1 --> "ContinueIfNameMismatchOnRegisterIndicator" IndicatorType12
+Q1OfficialSearchOfWholeWithPriorityType1 --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType12
+Q1OfficialSearchOfWholeWithPriorityType1 --> "ContinueIfPendingSearchesOfPartIndicator" IndicatorType12
+Q1OfficialSearchOfWholeWithPriorityType1 --> "ContinueIfDeveloperTitleIndicator" IndicatorType12
+Q1CommunicationType8 --> "Telephone" Q3TextType11
+Q1ContactType8 --> "Name" Q3TextType11
+Q1ContactType8 --> "Communication" Q1CommunicationType8
+Q1ExpectedPriceType9 --> "GrossPriceAmount" AmountType15
+Q1ExpectedPriceType9 --> "NetPriceAmount" AmountType15
+Q1ExpectedPriceType9 --> "VATAmount" AmountType15
+Q1SubjectPropertyType8 --> "TitleNumber" Q2TextType10
+Q1CustomerReferenceType10 --> "AllocatedBy" Q3TextType11
+Q1CustomerReferenceType10 --> "Description" Q3TextType11
+Q1ExternalReferenceType21 --> "AllocatedBy" Q3TextType11
+Q1ExternalReferenceType21 --> "Description" Q3TextType11
+Q1ProductType12 --> "ExternalReference" Q1ExternalReferenceType21
+Q1ProductType12 --> "CustomerReference" Q1CustomerReferenceType10
+Q1ProductType12 --> "SubjectProperty" Q1SubjectPropertyType8
+Q1ProductType12 --> "ExpectedPrice" Q1ExpectedPriceType9
+Q1ProductType12 --> "OfficialSearchOfWholeWithPriority" Q1OfficialSearchOfWholeWithPriorityType1
+Q1ProductType12 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType8
+Q1IdentifierType13 --> "MessageID" Q1TextType12
+RequestOfficialSearchOfWholeWithPriorityV2_1Type --> "ID" Q1IdentifierType13
+RequestOfficialSearchOfWholeWithPriorityV2_1Type --> "Product" Q1ProductType12
+Q1DXDetailsType7 --> "DXNumber" Q3TextType10
+Q1DXDetailsType7 --> "ExchangeName" Q3TextType10
+Q1AlternativePostalAddressType7 --> "Postcode" Q3TextType10
+PriorityCodeType2 --> "Value" PriorityCodeContentType2
+Q1OfficialSearchOfWholeWithPriorityType --> "PriorityTypeCode" PriorityCodeType2
+Q1OfficialSearchOfWholeWithPriorityType --> "SearchFromDate" SearchFromDateType2
+Q1OfficialSearchOfWholeWithPriorityType --> "ContinueIfNameMismatchOnRegisterIndicator" IndicatorType11
+Q1OfficialSearchOfWholeWithPriorityType --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType11
+Q1OfficialSearchOfWholeWithPriorityType --> "ContinueIfPendingSearchesOfPartIndicator" IndicatorType11
+Q1OfficialSearchOfWholeWithPriorityType --> "ContinueIfDeveloperTitleIndicator" IndicatorType11
+Q1CommunicationType7 --> "Telephone" Q3TextType10
+Q1ContactType7 --> "Name" Q3TextType10
+Q1ContactType7 --> "Communication" Q1CommunicationType7
+Q1ExpectedPriceType8 --> "GrossPriceAmount" AmountType14
+Q1ExpectedPriceType8 --> "NetPriceAmount" AmountType14
+Q1ExpectedPriceType8 --> "VATAmount" AmountType14
+Q1SubjectPropertyType7 --> "TitleNumber" Q2TextType9
+Q1CustomerReferenceType9 --> "AllocatedBy" Q3TextType10
+Q1CustomerReferenceType9 --> "Description" Q3TextType10
+Q1ExternalReferenceType20 --> "AllocatedBy" Q3TextType10
+Q1ExternalReferenceType20 --> "Description" Q3TextType10
+Q1ProductType11 --> "ExternalReference" Q1ExternalReferenceType20
+Q1ProductType11 --> "CustomerReference" Q1CustomerReferenceType9
+Q1ProductType11 --> "SubjectProperty" Q1SubjectPropertyType7
+Q1ProductType11 --> "ExpectedPrice" Q1ExpectedPriceType8
+Q1ProductType11 --> "OfficialSearchOfWholeWithPriority" Q1OfficialSearchOfWholeWithPriorityType
+Q1ProductType11 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType7
+Q1IdentifierType12 --> "MessageID" Q1TextType11
+RequestOfficialSearchOfWholeWithPriorityV2_0Type --> "ID" Q1IdentifierType12
+RequestOfficialSearchOfWholeWithPriorityV2_0Type --> "Product" Q1ProductType11
+ResultCodeType4 --> "Value" ResultCodeContentType4
+Q1AttachmentType5 --> "EmbeddedFileBinaryObject" BinaryObjectType7
+Q1AttachmentType5 --> "Title" TextType9
+Q1AttachmentType5 --> "Description" TextType9
+Q1AttachmentType5 --> "Date" DateType11
+Q1AttachmentType5 --> "CopyrightNotices" TextType9
+Q1MessageDetailsType8 --> "Description" TextType9
+Q1ResultsType8 --> "MessageDetails" Q1MessageDetailsType8
+Q1ResultsType8 --> "ExternalReference" Q1ExternalReferenceType19
+Q1ResultsType8 --> "HMLRReference" Q1HMLRReferenceType4
+Q1ResultsType8 --> "ActualPrice" Q1ActualPriceType5
+Q1ResultsType8 --> "Attachment" Q1AttachmentType5
+Q1ResultsType8 --> "ResultTypeCode" ResultCodeType4
+Q1ExternalReferenceType19 --> "Reference" TextType9
+Q1ExternalReferenceType19 --> "AllocatedBy" TextType9
+Q1ExternalReferenceType19 --> "Description" TextType9
+Q1HMLRReferenceType4 --> "Reference" TextType9
+Q1HMLRReferenceType4 --> "AllocatedBy" TextType9
+Q1HMLRReferenceType4 --> "Description" TextType9
+Q1ActualPriceType5 --> "GrossPriceAmount" AmountType13
+Q1ActualPriceType5 --> "NetPriceAmount" AmountType13
+Q1ActualPriceType5 --> "VATAmount" AmountType13
+Q1ValidationErrorsType8 --> "Code" TextType9
+Q1ValidationErrorsType8 --> "Description" TextType9
+Q1RejectionResponseType8 --> "Reason" TextType9
+Q1RejectionResponseType8 --> "Code" TextType9
+Q1RejectionResponseType8 --> "OtherDescription" TextType9
+Q1RejectionType8 --> "ExternalReference" Q1ExternalReferenceType19
+Q1RejectionType8 --> "ActualPrice" Q1ActualPriceType5
+Q1RejectionType8 --> "RejectionResponse" Q1RejectionResponseType8
+Q1AcknowledgementDetailsType8 --> "UniqueID" IdentifierType8
+Q1AcknowledgementDetailsType8 --> "ExpectedResponseDateTime" DateTimeType8
+Q1AcknowledgementDetailsType8 --> "MessageDescription" TextType9
+Q1AcknowledgementType8 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType8
+Q1AcknowledgementType8 --> "HMLRReference" Q1HMLRReferenceType4
+ProductResponseCodeType8 --> "Value" ProductResponseCodeContentType8
+Q1GatewayResponseType8 --> "TypeCode" ProductResponseCodeType8
+Q1GatewayResponseType8 --> "Acknowledgement" Q1AcknowledgementType8
+Q1GatewayResponseType8 --> "Rejection" Q1RejectionType8
+Q1GatewayResponseType8 --> "Results" Q1ResultsType8
+ResponseOfficialSearchOfWholeWithPriorityV2_0Type --> "GatewayResponse" Q1GatewayResponseType8
+Q1DXDetailsType6 --> "DXNumber" Q3TextType9
+Q1DXDetailsType6 --> "ExchangeName" Q3TextType9
+Q1AlternativePostalAddressType6 --> "Postcode" Q3TextType9
+Q1AlternativeDespatchDetailsType6 --> "AlternativeDespatchAddress" Q1AlternativeDespatchAddressType3
+Q1TitlePlanType1 --> "TitlePlanNumber" Q2TextType8
+Q1TitlePlanType1 --> "Reference" Q3TextType9
+Q1EstatePlanType1 --> "ApprovalDate" DateType10
+Q1PlanAttachmentType1 --> "EmbeddedFileBinaryObject" BinaryObjectType6
+Q1PlanAttachmentType1 --> "Title" Q3TextType9
+Q1PlanAttachmentType1 --> "Description" Q3TextType9
+Q1PlanAttachmentType1 --> "Date" DateType10
+Q1PlanAttachmentType1 --> "CopyrightNotices" Q3TextType9
+Q1TimeshareTimePeriodDemisedType1 --> "TimesharePeriod" Q1TimesharePeriodTextType1
+Q1TimeshareDetailsType1 --> "SearchInRespectOfDiscontinuousTimeshareLeaseIndicator" IndicatorType10
+Q1TimeshareDetailsType1 --> "TimeshareTimePeriodDemised" Q1TimeshareTimePeriodDemisedType1
+PriorityCodeType1 --> "Value" PriorityCodeContentType1
+Q1OfficialSearchOfPartWithPriorityType1 --> "PriorityTypeCode" PriorityCodeType1
+Q1OfficialSearchOfPartWithPriorityType1 --> "ContinueIfNameMismatchOnRegisterIndicator" IndicatorType10
+Q1OfficialSearchOfPartWithPriorityType1 --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType10
+Q1OfficialSearchOfPartWithPriorityType1 --> "SearchFromDate" SearchFromDateType1
+Q1OfficialSearchOfPartWithPriorityType1 --> "RegisteredProprietorParty" Q1RegisteredProprietorPartyType1
+Q1OfficialSearchOfPartWithPriorityType1 --> "ApplicantParty" Q1ApplicantPartyType1
+Q1OfficialSearchOfPartWithPriorityType1 --> "TimeshareDetails" Q1TimeshareDetailsType1
+Q1OfficialSearchOfPartWithPriorityType1 --> "PropertyIdentification" Q1PropertyIdentificationType1
+Q1CommunicationType6 --> "Telephone" Q3TextType9
+Q1ContactType6 --> "Communication" Q1CommunicationType6
+Q1ExpectedPriceType7 --> "GrossPriceAmount" AmountType12
+Q1ExpectedPriceType7 --> "NetPriceAmount" AmountType12
+Q1ExpectedPriceType7 --> "VATAmount" AmountType12
+Q1SubjectPropertyType6 --> "TitleNumber" Q2TextType8
+Q1CustomerReferenceType8 --> "AllocatedBy" Q3TextType9
+Q1CustomerReferenceType8 --> "Description" Q3TextType9
+Q1ExternalReferenceType18 --> "AllocatedBy" Q3TextType9
+Q1ExternalReferenceType18 --> "Description" Q3TextType9
+Q1ProductType10 --> "ExternalReference" Q1ExternalReferenceType18
+Q1ProductType10 --> "CustomerReference" Q1CustomerReferenceType8
+Q1ProductType10 --> "SubjectProperty" Q1SubjectPropertyType6
+Q1ProductType10 --> "ExpectedPrice" Q1ExpectedPriceType7
+Q1ProductType10 --> "OfficialSearchOfPartWithPriority" Q1OfficialSearchOfPartWithPriorityType1
+Q1ProductType10 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType6
+Q1IdentifierType11 --> "MessageID" Q1TextType10
+RequestOfficialSearchOfPartWithPriorityV2_1Type --> "ID" Q1IdentifierType11
+RequestOfficialSearchOfPartWithPriorityV2_1Type --> "Product" Q1ProductType10
+Q1DXDetailsType5 --> "DXNumber" Q3TextType8
+Q1DXDetailsType5 --> "ExchangeName" Q3TextType8
+Q1AlternativePostalAddressType5 --> "Postcode" Q3TextType8
+Q1TitlePlanType --> "TitlePlanNumber" Q2TextType7
+Q1TitlePlanType --> "Reference" Q3TextType8
+Q1EstatePlanType --> "PlotNumberNumeric" NumericType2
+Q1EstatePlanType --> "ApprovalDate" DateType9
+Q1PlanAttachmentType --> "EmbeddedFileBinaryObject" BinaryObjectType5
+Q1PlanAttachmentType --> "Title" Q3TextType8
+Q1PlanAttachmentType --> "Description" Q3TextType8
+Q1PlanAttachmentType --> "Date" DateType9
+Q1PlanAttachmentType --> "CopyrightNotices" Q3TextType8
+Q1TimeshareTimePeriodDemisedType --> "TimesharePeriod" Q1TimesharePeriodTextType
+Q1TimeshareDetailsType --> "SearchInRespectOfDiscontinuousTimeshareLeaseIndicator" IndicatorType9
+Q1TimeshareDetailsType --> "TimeshareTimePeriodDemised" Q1TimeshareTimePeriodDemisedType
+PriorityCodeType --> "Value" PriorityCodeContentType
+Q1OfficialSearchOfPartWithPriorityType --> "PriorityTypeCode" PriorityCodeType
+Q1OfficialSearchOfPartWithPriorityType --> "ContinueIfNameMismatchOnRegisterIndicator" IndicatorType9
+Q1OfficialSearchOfPartWithPriorityType --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType9
+Q1OfficialSearchOfPartWithPriorityType --> "SearchFromDate" SearchFromDateType
+Q1OfficialSearchOfPartWithPriorityType --> "RegisteredProprietorParty" Q1RegisteredProprietorPartyType
+Q1OfficialSearchOfPartWithPriorityType --> "ApplicantParty" Q1ApplicantPartyType
+Q1OfficialSearchOfPartWithPriorityType --> "TimeshareDetails" Q1TimeshareDetailsType
+Q1OfficialSearchOfPartWithPriorityType --> "PropertyIdentification" Q1PropertyIdentificationType
+Q1CommunicationType5 --> "Telephone" Q3TextType8
+Q1ContactType5 --> "Communication" Q1CommunicationType5
+Q1ExpectedPriceType6 --> "GrossPriceAmount" AmountType11
+Q1ExpectedPriceType6 --> "NetPriceAmount" AmountType11
+Q1ExpectedPriceType6 --> "VATAmount" AmountType11
+Q1SubjectPropertyType5 --> "TitleNumber" Q2TextType7
+Q1CustomerReferenceType7 --> "AllocatedBy" Q3TextType8
+Q1CustomerReferenceType7 --> "Description" Q3TextType8
+Q1ExternalReferenceType17 --> "AllocatedBy" Q3TextType8
+Q1ExternalReferenceType17 --> "Description" Q3TextType8
+Q1ProductType9 --> "ExternalReference" Q1ExternalReferenceType17
+Q1ProductType9 --> "CustomerReference" Q1CustomerReferenceType7
+Q1ProductType9 --> "SubjectProperty" Q1SubjectPropertyType5
+Q1ProductType9 --> "ExpectedPrice" Q1ExpectedPriceType6
+Q1ProductType9 --> "OfficialSearchOfPartWithPriority" Q1OfficialSearchOfPartWithPriorityType
+Q1ProductType9 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType5
+Q1IdentifierType10 --> "MessageID" Q1TextType9
+RequestOfficialSearchOfPartWithPriorityV2_0Type --> "ID" Q1IdentifierType10
+RequestOfficialSearchOfPartWithPriorityV2_0Type --> "Product" Q1ProductType9
+ResultCodeType3 --> "Value" ResultCodeContentType3
+Q1AttachmentType4 --> "EmbeddedFileBinaryObject" BinaryObjectType4
+Q1AttachmentType4 --> "URL" TextType8
+Q1AttachmentType4 --> "Title" TextType8
+Q1AttachmentType4 --> "Description" TextType8
+Q1AttachmentType4 --> "Date" DateType8
+Q1AttachmentType4 --> "CopyrightNotices" TextType8
+Q1MessageDetailsType7 --> "Description" TextType8
+Q1ResultsType7 --> "MessageDetails" Q1MessageDetailsType7
+Q1ResultsType7 --> "ExternalReference" Q1ExternalReferenceType16
+Q1ResultsType7 --> "HMLRReference" Q1HMLRReferenceType3
+Q1ResultsType7 --> "ActualPrice" Q1ActualPriceType4
+Q1ResultsType7 --> "Attachment" Q1AttachmentType4
+Q1ResultsType7 --> "ResultTypeCode" ResultCodeType3
+Q1ExternalReferenceType16 --> "Reference" TextType8
+Q1ExternalReferenceType16 --> "AllocatedBy" TextType8
+Q1ExternalReferenceType16 --> "Description" TextType8
+Q1HMLRReferenceType3 --> "Reference" TextType8
+Q1HMLRReferenceType3 --> "AllocatedBy" TextType8
+Q1HMLRReferenceType3 --> "Description" TextType8
+Q1ActualPriceType4 --> "GrossPriceAmount" AmountType10
+Q1ActualPriceType4 --> "NetPriceAmount" AmountType10
+Q1ActualPriceType4 --> "VATAmount" AmountType10
+Q1ValidationErrorsType7 --> "Code" TextType8
+Q1ValidationErrorsType7 --> "Description" TextType8
+Q1RejectionResponseType7 --> "Reason" TextType8
+Q1RejectionResponseType7 --> "Code" TextType8
+Q1RejectionResponseType7 --> "OtherDescription" TextType8
+Q1RejectionType7 --> "ExternalReference" Q1ExternalReferenceType16
+Q1RejectionType7 --> "ActualPrice" Q1ActualPriceType4
+Q1RejectionType7 --> "RejectionResponse" Q1RejectionResponseType7
+Q1AcknowledgementDetailsType7 --> "UniqueID" IdentifierType7
+Q1AcknowledgementDetailsType7 --> "ExpectedResponseDateTime" DateTimeType7
+Q1AcknowledgementDetailsType7 --> "MessageDescription" TextType8
+Q1AcknowledgementType7 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType7
+Q1AcknowledgementType7 --> "HMLRReference" Q1HMLRReferenceType3
+ProductResponseCodeType7 --> "Value" ProductResponseCodeContentType7
+Q1GatewayResponseType7 --> "TypeCode" ProductResponseCodeType7
+Q1GatewayResponseType7 --> "Acknowledgement" Q1AcknowledgementType7
+Q1GatewayResponseType7 --> "Rejection" Q1RejectionType7
+Q1GatewayResponseType7 --> "Results" Q1ResultsType7
+OfficialSearchOfPartWithPriorityResponseV2_0Type --> "GatewayResponse" Q1GatewayResponseType7
+Q1ScheduleType --> "ScheduleType" TextType7
+TextType7 <|-- VerbatimTextInfillType
+TextType7 <|-- PlansRefInfillType
+TextType7 <|-- OptMiscTextInfillType
+TextType7 <|-- NoteInfillType
+TextType7 <|-- NameInfillType
+TextType7 <|-- MiscTextInfillType
+TextType7 <|-- ExtentOfLandInfillType
+TextType7 <|-- DeedTypeInfillType
+TextType7 <|-- DeedPartyInfillType
+TextType7 <|-- DeedExtentInfillType
+TextType7 <|-- DeedDateInfillType
+TextType7 <|-- ChargePartyInfillType
+TextType7 <|-- AmountInfillType
+Q1RegisterEntryType --> "EntryNumber" TextType7
+Q1RegisterEntryType --> "EntryDate" TextType7
+Q1RegisterEntryType --> "EntryType" TextType7
+Q1OCRegisterDataType --> "PropertyRegister" Q1RegisterType
+Q1OCRegisterDataType --> "ProprietorshipRegister" Q1RegisterType
+Q1OCRegisterDataType --> "ChargesRegister" Q1RegisterType
+Q1UnilateralNoticeDetailsType --> "UnilateralNotice" Q1EntryDetailsType
+Q1UnilateralNoticeDetailsType --> "UnilateralNoticeBeneficiary" Q1EntryDetailsType
+Q1EntryDetailsType --> "EntryNumber" TextType7
+Q1EntryDetailsType --> "EntryText" TextType7
+Q1EntryDetailsType --> "RegistrationDate" DateType7
+DateType7 <|-- DateInfillType
+DateType7 <|-- ChargeDateInfillType
+Q2TextType6 <|-- TitleNumberInfillType
+Q1DocumentEntryType --> "DocumentType" DocumentCodeType
+Q1DocumentEntryType --> "DocumentDate" TextType7
+Q1DocumentEntryType --> "PlanOnlyIndicator" IndicatorType8
+Q1DocumentEntryType --> "FiledUnder" TextType7
+Q1DocumentEntryType --> "RegisterDescription" TextType7
+Q1HomeRightsType --> "ChangeOfAddressIndicator" IndicatorType8
+Q1HomeRightsType --> "HomeRightsEntryDetails" Q1EntryDetailsType
+Q1HomeRightsType --> "ChangeOfAddressEntryDetails" Q1EntryDetailsType
+Q1AgreedNoticeType --> "AgreedNoticeType" AgreedNoticeTypeCodeType
+Q1AgreedNoticeType --> "EntryDetails" Q1EntryDetailsType
+Q1SubChargeDetailsType --> "ChargeDate" DateType7
+Q1SubChargeDetailsType --> "RegisteredCharge" Q1ChargeType
+Q1SubChargeDetailsType --> "ChargeProprietor" Q1ChargeProprietorType
+Q1ChargeType --> "MultipleTitleIndicator" TextType7
+Q1ChargeType --> "EntryDetails" Q1EntryDetailsType
+Q1ChargeProprietorType --> "EntryDetails" Q1EntryDetailsType
+Q1PartyType --> "CharityDetails" Q1CharityDetailsType
+Q1PartyType --> "TradingName" TextType7
+Q1PartyType --> "PartyNumber" TextType7
+Q1PartyType --> "PartyDescription" TextType7
+Q1OrganizationType --> "Name" OrganisationNameTextType1
+Q1OrganizationType --> "CompanyRegistrationNumber" CompanyRegistrationNumberTextType
+Q1PrivateIndividualType --> "Name" Q1NameType
+Q1NameType --> "ForenamesName" TextType7
+Q1NameType --> "SurnameName" TextType7
+Q1AddressType2 --> "PostcodeZone" Q1PostcodeZoneType1
+Q1AddressType2 --> "AddressLine" AddressLineType
+Q1PostcodeZoneType1 --> "Postcode" TextType7
+Q1CharityDetailsType --> "CharityType" CharityCodeType
+CharityCodeType --> "Value" CharityCodeContentType
+Q1ChargeDetailsType --> "ChargeID" TextType7
+Q1ChargeDetailsType --> "ChargeDate" DateType7
+Q1ChargeDetailsType --> "RegisteredCharge" Q1ChargeType
+Q1ChargeDetailsType --> "ChargeProprietor" Q1ChargeProprietorType
+RestrictionCodeType --> "Value" RestrictionCodeContentType
+Q1RestrictionType --> "RestrictionTypeCode" RestrictionCodeType
+Q1RestrictionType --> "ChargeID" TextType7
+Q1RestrictionType --> "EntryDetails" Q1EntryDetailsType
+Q1RestrictionEntryType --> "Item" Q1RestrictionType
+Q1RestrictionEntryType --> "ItemElementName" ItemChoiceType1
+Q1LeaseType --> "LeaseTerm" LeaseTermTextType
+Q1LeaseType --> "LeaseDate" TextType7
+Q1LeaseType --> "Rent" RentAmountTextType
+Q1LeaseType --> "EntryDetails" Q1EntryDetailsType
+Q1ProprietorshipType --> "CurrentProprietorshipDate" DateType7
+Q1RegisterEntryIndicatorsType --> "AgreedNoticeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "BankruptcyIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "CautionIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "CCBIIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "ChargeeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "ChargeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "ChargeRelatedRestrictionIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "ChargeRestrictionIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "CreditorsNoticeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "DeathOfProprietorIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "DeedOfPostponementIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "DiscountChargeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "EquitableChargeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "GreenOutEntryIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "HomeRightsChangeOfAddressIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "HomeRightsIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "LeaseHoldTitleIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "MultipleChargeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "NonChargeRestrictionIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "NotedChargeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "PricePaidIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "PropertyDescriptionNotesIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "RentChargeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "RightOfPreEmptionIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "ScheduleOfLeasesIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "SubChargeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "UnidentifiedEntryIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "UnilateralNoticeBeneficiaryIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "UnilateralNoticeIndicator" IndicatorType8
+Q1RegisterEntryIndicatorsType --> "VendorsLienIndicator" IndicatorType8
+Q1TitleRegistrationDetailsType --> "DistrictName" DistrictNameTextType
+Q1TitleRegistrationDetailsType --> "AdministrativeArea" AdministrativeAreaTextType
+Q1TitleRegistrationDetailsType --> "LandRegistryOfficeName" LandRegistryOfficeNameTextType
+Q1TitleRegistrationDetailsType --> "LatestEditionDate" DateType7
+Q1TitleRegistrationDetailsType --> "RegistrationDate" DateType7
+ClassOfTitleCodeType --> "Value" ClassOfTitleCodeContentType
+Q1TitleType3 --> "TitleNumber" Q2TextType6
+Q1TitleType3 --> "ClassOfTitleCode" ClassOfTitleCodeType
+Q1TitleType3 --> "CommonholdIndicator" IndicatorType8
+Q1TitleType3 --> "TitleRegistrationDetails" Q1TitleRegistrationDetailsType
+Q1PricePaidEntryType --> "MultipleTitleIndicator" MultipleTitleCodeType
+Q1PricePaidEntryType --> "EntryDetails" Q1EntryDetailsType
+Q1OCSummaryDataType --> "OfficialCopyDateTime" DateTimeType6
+Q1OCSummaryDataType --> "EditionDate" DateType7
+Q1OCSummaryDataType --> "PricePaidEntry" Q1PricePaidEntryType
+Q1OCSummaryDataType --> "Title" Q1TitleType3
+Q1OCSummaryDataType --> "RegisterEntryIndicators" Q1RegisterEntryIndicatorsType
+Q1OCSummaryDataType --> "Proprietorship" Q1ProprietorshipType
+Q1AttachmentType3 --> "EmbeddedFileBinaryObject" BinaryObjectType3
+Q1AttachmentType3 --> "Title" TextType7
+Q1AttachmentType3 --> "Description" TextType7
+Q1AttachmentType3 --> "Date" DateType7
+Q1AttachmentType3 --> "CopyrightNotices" TextType7
+Q1MessageDetailsType6 --> "Description" TextType7
+Q1ResultsType6 --> "MessageDetails" Q1MessageDetailsType6
+Q1ResultsType6 --> "ExternalReference" Q1ExternalReferenceType15
+Q1ResultsType6 --> "ActualPrice" Q1ActualPriceType3
+Q1ResultsType6 --> "Attachment" Q1AttachmentType3
+Q1ResultsType6 --> "OCSummaryData" Q1OCSummaryDataType
+Q1ResultsType6 --> "OCRegisterData" Q1OCRegisterDataType
+Q1ExternalReferenceType15 --> "Reference" TextType7
+Q1ExternalReferenceType15 --> "AllocatedBy" TextType7
+Q1ExternalReferenceType15 --> "Description" TextType7
+Q1ActualPriceType3 --> "GrossPriceAmount" AmountType9
+Q1ActualPriceType3 --> "NetPriceAmount" AmountType9
+Q1ActualPriceType3 --> "VATAmount" AmountType9
+Q1ValidationErrorsType6 --> "Code" TextType7
+Q1ValidationErrorsType6 --> "Description" TextType7
+Q1RejectionResponseType6 --> "Reason" TextType7
+Q1RejectionResponseType6 --> "Code" TextType7
+Q1RejectionResponseType6 --> "OtherDescription" TextType7
+Q1RejectionType6 --> "ExternalReference" Q1ExternalReferenceType15
+Q1RejectionType6 --> "ActualPrice" Q1ActualPriceType3
+Q1RejectionType6 --> "RejectionResponse" Q1RejectionResponseType6
+Q1AcknowledgementDetailsType6 --> "UniqueID" IdentifierType6
+Q1AcknowledgementDetailsType6 --> "ExpectedResponseDateTime" DateTimeType6
+Q1AcknowledgementDetailsType6 --> "MessageDescription" TextType7
+Q1AcknowledgementType6 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType6
+ProductResponseCodeType6 --> "Value" ProductResponseCodeContentType6
+Q1GatewayResponseType6 --> "TypeCode" ProductResponseCodeType6
+Q1GatewayResponseType6 --> "Acknowledgement" Q1AcknowledgementType6
+Q1GatewayResponseType6 --> "Rejection" Q1RejectionType6
+Q1GatewayResponseType6 --> "Results" Q1ResultsType6
+ResponseOCWithSummaryV2_1Type --> "GatewayResponse" Q1GatewayResponseType6
+Q1TitleKnownOfficialCopyType1 --> "ContinueIfTitleIsClosedAndContinuedIndicator" IndicatorType7
+Q1TitleKnownOfficialCopyType1 --> "NotifyIfPendingFirstRegistrationIndicator" IndicatorType7
+Q1TitleKnownOfficialCopyType1 --> "NotifyIfPendingApplicationIndicator" IndicatorType7
+Q1TitleKnownOfficialCopyType1 --> "SendBackDatedIndicator" IndicatorType7
+Q1TitleKnownOfficialCopyType1 --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType7
+Q1TitleKnownOfficialCopyType1 --> "IncludeTitlePlanIndicator" IndicatorType7
+Q1CustomerReferenceType6 --> "AllocatedBy" Q3TextType7
+Q1CustomerReferenceType6 --> "Description" Q3TextType7
+Q1ExternalReferenceType14 --> "AllocatedBy" Q3TextType7
+Q1ExternalReferenceType14 --> "Description" Q3TextType7
+Q1ExpectedPriceType5 --> "GrossPriceAmount" AmountType8
+Q1ExpectedPriceType5 --> "NetPriceAmount" AmountType8
+Q1ExpectedPriceType5 --> "VATAmount" AmountType8
+Q1SubjectPropertyType4 --> "TitleNumber" Q2TextType5
+Q1ProductType8 --> "SubjectProperty" Q1SubjectPropertyType4
+Q1ProductType8 --> "ExpectedPrice" Q1ExpectedPriceType5
+Q1ProductType8 --> "ExternalReference" Q1ExternalReferenceType14
+Q1ProductType8 --> "CustomerReference" Q1CustomerReferenceType6
+Q1ProductType8 --> "TitleKnownOfficialCopy" Q1TitleKnownOfficialCopyType1
+Q1IdentifierType9 --> "MessageID" Q1TextType8
+RequestOCWithSummaryV2_0Type --> "ID" Q1IdentifierType9
+RequestOCWithSummaryV2_0Type --> "Product" Q1ProductType8
+ResultCodeType2 --> "Value" ResultCodeContentType2
+Q1AttachmentType2 --> "EmbeddedFileBinaryObject" BinaryObjectType2
+Q1AttachmentType2 --> "Title" TextType6
+Q1AttachmentType2 --> "Description" TextType6
+Q1AttachmentType2 --> "Date" DateType6
+Q1AttachmentType2 --> "CopyrightNotices" TextType6
+Q1MessageDetailsType5 --> "Description" TextType6
+Q1ResultsType5 --> "MessageDetails" Q1MessageDetailsType5
+Q1ResultsType5 --> "ExternalReference" Q1ExternalReferenceType13
+Q1ResultsType5 --> "ActualPrice" Q1ActualPriceType2
+Q1ResultsType5 --> "Attachment" Q1AttachmentType2
+Q1ResultsType5 --> "ResultTypeCode" ResultCodeType2
+Q1ResultsType5 --> "HMLRReference" Q1HMLRReferenceType2
+Q1ExternalReferenceType13 --> "Reference" TextType6
+Q1ExternalReferenceType13 --> "AllocatedBy" TextType6
+Q1ExternalReferenceType13 --> "Description" TextType6
+Q1ActualPriceType2 --> "GrossPriceAmount" AmountType7
+Q1ActualPriceType2 --> "NetPriceAmount" AmountType7
+Q1ActualPriceType2 --> "VATAmount" AmountType7
+Q1HMLRReferenceType2 --> "Reference" HMLRReferenceTextType
+Q1HMLRReferenceType2 --> "AllocatedBy" OrganisationNameTextType
+Q1HMLRReferenceType2 --> "Description" DescriptionTextType
+Q1ValidationErrorsType5 --> "Code" TextType6
+Q1ValidationErrorsType5 --> "Description" TextType6
+Q1RejectionResponseType5 --> "Reason" TextType6
+Q1RejectionResponseType5 --> "Code" TextType6
+Q1RejectionResponseType5 --> "OtherDescription" TextType6
+Q1RejectionType5 --> "ExternalReference" Q1ExternalReferenceType13
+Q1RejectionType5 --> "ActualPrice" Q1ActualPriceType2
+Q1RejectionType5 --> "RejectionResponse" Q1RejectionResponseType5
+Q1AcknowledgementDetailsType5 --> "UniqueID" IdentifierType5
+Q1AcknowledgementDetailsType5 --> "ExpectedResponseDateTime" DateTimeType5
+Q1AcknowledgementDetailsType5 --> "MessageDescription" TextType6
+Q1AcknowledgementType5 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType5
+Q1AcknowledgementType5 --> "HMLRReference" Q1HMLRReferenceType2
+ProductResponseCodeType5 --> "Value" ProductResponseCodeContentType5
+Q1GatewayResponseType5 --> "TypeCode" ProductResponseCodeType5
+Q1GatewayResponseType5 --> "Acknowledgement" Q1AcknowledgementType5
+Q1GatewayResponseType5 --> "Rejection" Q1RejectionType5
+Q1GatewayResponseType5 --> "Results" Q1ResultsType5
+ResponseTitleKnownOfficialCopyV2_0Type --> "GatewayResponse" Q1GatewayResponseType5
+Q1DXDetailsType4 --> "DXNumber" Q3TextType6
+Q1DXDetailsType4 --> "ExchangeName" Q3TextType6
+Q1AlternativePostalAddressType4 --> "Postcode" Q3TextType6
+Q1AlternativeDespatchDetailsType4 --> "AlternativeDespatchAddress" Q1AlternativeDespatchAddressType2
+OfficialCopyCodeType --> "Value" OfficialCopyCodeContentType
+RequestedOfficialCopyCodeType --> "Value" RequestedOfficialCopyCodeContentType
+Q1TitleKnownOfficialCopyType --> "RequestedOfficialCopyCode" RequestedOfficialCopyCodeType
+Q1TitleKnownOfficialCopyType --> "OfficialCopyTypeCode" OfficialCopyCodeType
+Q1TitleKnownOfficialCopyType --> "ContinueIfTitleIsClosedAndContinuedIndicator" IndicatorType6
+Q1TitleKnownOfficialCopyType --> "NotifyIfPendingFirstRegistrationIndicator" IndicatorType6
+Q1TitleKnownOfficialCopyType --> "NotifyIfPendingApplicationIndicator" IndicatorType6
+Q1TitleKnownOfficialCopyType --> "SendBackDatedIndicator" IndicatorType6
+Q1TitleKnownOfficialCopyType --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType6
+Q1CommunicationType4 --> "Telephone" Q3TextType6
+Q1ContactType4 --> "Name" Q3TextType6
+Q1ContactType4 --> "Communication" Q1CommunicationType4
+Q1ExpectedPriceType4 --> "GrossPriceAmount" AmountType6
+Q1ExpectedPriceType4 --> "NetPriceAmount" AmountType6
+Q1ExpectedPriceType4 --> "VATAmount" AmountType6
+TenureCodeType1 --> "Value" TenureCodeContentType1
+Q1SubjectPropertyType3 --> "TitleNumber" Q2TextType4
+Q1SubjectPropertyType3 --> "TenureTypeCode" TenureCodeType1
+Q1CustomerReferenceType5 --> "AllocatedBy" Q3TextType6
+Q1CustomerReferenceType5 --> "Description" Q3TextType6
+Q1ExternalReferenceType12 --> "AllocatedBy" Q3TextType6
+Q1ExternalReferenceType12 --> "Description" Q3TextType6
+TypeOfDocumentCodeType --> "Value" TypeOfDocumentCodeContentType
+Q1DocumentDetailsType --> "TypeOfDocumentCode" TypeOfDocumentCodeType
+Q1DocumentDetailsType --> "DateOfDocumentDate" DateType5
+Q1DocumentDetailsType --> "TitleNumberFiledUnder" Q2TextType4
+Q1DocumentDetailsType --> "AdditionalInformation" Q3TextType6
+Q1ProductType7 --> "ExternalReference" Q1ExternalReferenceType12
+Q1ProductType7 --> "CustomerReference" Q1CustomerReferenceType5
+Q1ProductType7 --> "SubjectProperty" Q1SubjectPropertyType3
+Q1ProductType7 --> "ExpectedPrice" Q1ExpectedPriceType4
+Q1ProductType7 --> "TitleKnownOfficialCopy" Q1TitleKnownOfficialCopyType
+Q1ProductType7 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType4
+Q1IdentifierType8 --> "MessageID" Q1TextType7
+RequestTitleKnownOfficialCopyV2_1Type --> "ID" Q1IdentifierType8
+RequestTitleKnownOfficialCopyV2_1Type --> "Product" Q1ProductType7
+Q1DXDetailsType3 --> "DXNumber" Q3TextType5
+Q1DXDetailsType3 --> "ExchangeName" Q3TextType5
+Q1AlternativePostalAddressType3 --> "Postcode" Q3TextType5
+Q1AlternativeDespatchDetailsType3 --> "AlternativeDespatchAddress" Q1AlternativeDespatchAddressType1
+Q1NonStandardNamesToSearchType1 --> "SearchTypeCode" ComplexCodeType1
+Q1NonStandardNamesToSearchType1 --> "FromYear" Q3TextType5
+Q1NonStandardNamesToSearchType1 --> "ToYear" Q3TextType5
+Q1StandardNamesToSearchType1 --> "SearchTypeCode" StandardCodeType1
+Q1StandardNamesToSearchType1 --> "Name" StandardNameType1
+Q1StandardNamesToSearchType1 --> "FromYear" Q3TextType5
+Q1StandardNamesToSearchType1 --> "ToYear" Q3TextType5
+Q1LandChargesFullSearchType1 --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType5
+Q1CommunicationType3 --> "Telephone" Q3TextType5
+Q1ContactType3 --> "Name" Q3TextType5
+Q1ContactType3 --> "Communication" Q1CommunicationType3
+Q1ExpectedPriceType3 --> "GrossPriceAmount" AmountType5
+Q1ExpectedPriceType3 --> "NetPriceAmount" AmountType5
+Q1ExpectedPriceType3 --> "VATAmount" AmountType5
+Q1CustomerReferenceType4 --> "AllocatedBy" Q3TextType5
+Q1CustomerReferenceType4 --> "Description" Q3TextType5
+Q1ExternalReferenceType11 --> "AllocatedBy" Q3TextType5
+Q1ExternalReferenceType11 --> "Description" Q3TextType5
+Q1ProductType6 --> "ExternalReference" Q1ExternalReferenceType11
+Q1ProductType6 --> "CustomerReference" Q1CustomerReferenceType4
+Q1ProductType6 --> "ExpectedPrice" Q1ExpectedPriceType3
+Q1ProductType6 --> "Contact" Q1ContactType3
+Q1ProductType6 --> "LandChargesFullSearch" Q1LandChargesFullSearchType1
+Q1ProductType6 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType3
+Q1IdentifierType7 --> "MessageID" Q1TextType6
+RequestLandChargesFullSearchV2_1Type --> "ID" Q1IdentifierType7
+RequestLandChargesFullSearchV2_1Type --> "Product" Q1ProductType6
+Q1DXDetailsType2 --> "DXNumber" Q3TextType4
+Q1DXDetailsType2 --> "ExchangeName" Q3TextType4
+Q1AlternativePostalAddressType2 --> "Postcode" Q3TextType4
+Q1NonStandardNamesToSearchType --> "SearchTypeCode" ComplexCodeType
+Q1NonStandardNamesToSearchType --> "FromYear" Q3TextType4
+Q1NonStandardNamesToSearchType --> "ToYear" Q3TextType4
+Q1StandardNamesToSearchType --> "SearchTypeCode" StandardCodeType
+Q1StandardNamesToSearchType --> "Name" StandardNameType
+Q1StandardNamesToSearchType --> "FromYear" Q3TextType4
+Q1StandardNamesToSearchType --> "ToYear" Q3TextType4
+Q1LandChargesFullSearchType --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType4
+Q1CommunicationType2 --> "Telephone" Q3TextType4
+Q1ContactType2 --> "Name" Q3TextType4
+Q1ContactType2 --> "Communication" Q1CommunicationType2
+Q1ExpectedPriceType2 --> "GrossPriceAmount" AmountType4
+Q1ExpectedPriceType2 --> "NetPriceAmount" AmountType4
+Q1ExpectedPriceType2 --> "VATAmount" AmountType4
+Q1CustomerReferenceType3 --> "AllocatedBy" Q3TextType4
+Q1CustomerReferenceType3 --> "Description" Q3TextType4
+Q1ExternalReferenceType10 --> "AllocatedBy" Q3TextType4
+Q1ExternalReferenceType10 --> "Description" Q3TextType4
+Q1ProductType5 --> "ExternalReference" Q1ExternalReferenceType10
+Q1ProductType5 --> "CustomerReference" Q1CustomerReferenceType3
+Q1ProductType5 --> "ExpectedPrice" Q1ExpectedPriceType2
+Q1ProductType5 --> "Contact" Q1ContactType2
+Q1ProductType5 --> "LandChargesFullSearch" Q1LandChargesFullSearchType
+Q1ProductType5 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType2
+Q1IdentifierType6 --> "MessageID" Q1TextType5
+RequestLandChargesFullSearchV2_0Type --> "ID" Q1IdentifierType6
+RequestLandChargesFullSearchV2_0Type --> "Product" Q1ProductType5
+ResultCodeType1 --> "Value" ResultCodeContentType1
+Q1AttachmentType1 --> "EmbeddedFileBinaryObject" BinaryObjectType1
+Q1AttachmentType1 --> "Title" TextType5
+Q1AttachmentType1 --> "Description" TextType5
+Q1AttachmentType1 --> "Date" DateType4
+Q1AttachmentType1 --> "CopyrightNotices" TextType5
+Q1MessageDetailsType4 --> "Description" TextType5
+Q1ResultsType4 --> "MessageDetails" Q1MessageDetailsType4
+Q1ResultsType4 --> "ExternalReference" Q1ExternalReferenceType9
+Q1ResultsType4 --> "HMLRReference" Q1HMLRReferenceType1
+Q1ResultsType4 --> "ActualPrice" Q1ActualPriceType1
+Q1ResultsType4 --> "Attachment" Q1AttachmentType1
+Q1ResultsType4 --> "ResultTypeCode" ResultCodeType1
+Q1ExternalReferenceType9 --> "Reference" TextType5
+Q1ExternalReferenceType9 --> "AllocatedBy" TextType5
+Q1ExternalReferenceType9 --> "Description" TextType5
+Q1HMLRReferenceType1 --> "Reference" TextType5
+Q1HMLRReferenceType1 --> "AllocatedBy" TextType5
+Q1HMLRReferenceType1 --> "Description" TextType5
+Q1ActualPriceType1 --> "GrossPriceAmount" AmountType3
+Q1ActualPriceType1 --> "NetPriceAmount" AmountType3
+Q1ActualPriceType1 --> "VATAmount" AmountType3
+Q1ValidationErrorsType4 --> "Code" TextType5
+Q1ValidationErrorsType4 --> "Description" TextType5
+Q1RejectionResponseType4 --> "Reason" TextType5
+Q1RejectionResponseType4 --> "Code" TextType5
+Q1RejectionResponseType4 --> "OtherDescription" TextType5
+Q1RejectionType4 --> "ExternalReference" Q1ExternalReferenceType9
+Q1RejectionType4 --> "ActualPrice" Q1ActualPriceType1
+Q1RejectionType4 --> "RejectionResponse" Q1RejectionResponseType4
+Q1AcknowledgementDetailsType4 --> "UniqueID" IdentifierType4
+Q1AcknowledgementDetailsType4 --> "ExpectedResponseDateTime" DateTimeType4
+Q1AcknowledgementDetailsType4 --> "MessageDescription" TextType5
+Q1AcknowledgementType4 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType4
+Q1AcknowledgementType4 --> "HMLRReference" Q1HMLRReferenceType1
+ProductResponseCodeType4 --> "Value" ProductResponseCodeContentType4
+Q1GatewayResponseType4 --> "TypeCode" ProductResponseCodeType4
+Q1GatewayResponseType4 --> "Acknowledgement" Q1AcknowledgementType4
+Q1GatewayResponseType4 --> "Rejection" Q1RejectionType4
+Q1GatewayResponseType4 --> "Results" Q1ResultsType4
+LandChargesFullSearchResponseV2_0Type --> "GatewayResponse" Q1GatewayResponseType4
+Q1SubjectPropertyType2 --> "Address" Q1AddressType1
+Q1CustomerReferenceType2 --> "AllocatedBy" TextType4
+Q1CustomerReferenceType2 --> "Description" TextType4
+Q1ExternalReferenceType8 --> "AllocatedBy" TextType4
+Q1ExternalReferenceType8 --> "Description" TextType4
+Q1ProductType4 --> "ExternalReference" Q1ExternalReferenceType8
+Q1ProductType4 --> "CustomerReference" Q1CustomerReferenceType2
+Q1ProductType4 --> "SubjectProperty" Q1SubjectPropertyType2
+Q1IdentifierType5 --> "MessageID" Q1TextType4
+RequestSearchByPropertyDescriptionV2_0Type --> "ID" Q1IdentifierType5
+RequestSearchByPropertyDescriptionV2_0Type --> "Product" Q1ProductType4
+Q1PostcodeZoneType --> "Postcode" TextType3
+Q1AddressType --> "BuildingName" TextType3
+Q1AddressType --> "SubBuildingName" TextType3
+Q1AddressType --> "BuildingNumber" TextType3
+Q1AddressType --> "StreetName" TextType3
+Q1AddressType --> "CityName" TextType3
+Q1AddressType --> "PostcodeZone" Q1PostcodeZoneType
+TenureCodeType --> "Value" TenureCodeContentType
+Q1TenureInformationType --> "TenureTypeCode" TenureCodeType
+Q1TitleType2 --> "TitleNumber" TextType3
+Q1TitleType2 --> "Description" TextType3
+Q1TitleType2 --> "TenureInformation" Q1TenureInformationType
+Q1TitleType2 --> "Address" Q1AddressType
+Q1MessageDetailsType3 --> "Description" TextType3
+Q1ResultsType3 --> "MessageDetails" Q1MessageDetailsType3
+Q1ResultsType3 --> "ExternalReference" Q1ExternalReferenceType7
+Q1ExternalReferenceType7 --> "Reference" TextType3
+Q1ExternalReferenceType7 --> "AllocatedBy" TextType3
+Q1ExternalReferenceType7 --> "Description" TextType3
+Q1ValidationErrorsType3 --> "Code" TextType3
+Q1ValidationErrorsType3 --> "Description" TextType3
+Q1RejectionResponseType3 --> "Reason" TextType3
+Q1RejectionResponseType3 --> "Code" TextType3
+Q1RejectionResponseType3 --> "OtherDescription" TextType3
+Q1RejectionType3 --> "ExternalReference" Q1ExternalReferenceType7
+Q1RejectionType3 --> "RejectionResponse" Q1RejectionResponseType3
+Q1AcknowledgementDetailsType3 --> "UniqueID" IdentifierType3
+Q1AcknowledgementDetailsType3 --> "ExpectedResponseDateTime" DateTimeType3
+Q1AcknowledgementDetailsType3 --> "MessageDescription" TextType3
+Q1AcknowledgementType3 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType3
+ProductResponseCodeType3 --> "Value" ProductResponseCodeContentType3
+Q1GatewayResponseType3 --> "TypeCode" ProductResponseCodeType3
+Q1GatewayResponseType3 --> "Acknowledgement" Q1AcknowledgementType3
+Q1GatewayResponseType3 --> "Rejection" Q1RejectionType3
+Q1GatewayResponseType3 --> "Results" Q1ResultsType3
+ResponseSearchByPropertyDescriptionV2_0Type --> "GatewayResponse" Q1GatewayResponseType3
+Q1SubjectPropertyType1 --> "TitleNumber" Q2TextType3
+Q1SubjectPropertyType1 --> "ContinueIfTitleIsClosedAndContinuedIndicator" IndicatorType3
+Q1SubjectPropertyType1 --> "ChargeDate" DateType3
+Q1ExternalReferenceType6 --> "AllocatedBy" Q3TextType3
+Q1ExternalReferenceType6 --> "Description" Q3TextType3
+Q1ProductType3 --> "ExternalReference" Q1ExternalReferenceType6
+Q1ProductType3 --> "SubjectProperty" Q1SubjectPropertyType1
+Q1IdentifierType4 --> "MessageID" Q1TextType3
+RequestDischargeActivityV1_0Type --> "ID" Q1IdentifierType4
+RequestDischargeActivityV1_0Type --> "Product" Q1ProductType3
+DischargeActivityType --> "DischargeDate" DateType2
+TextType2 <|-- LenderNameType
+Q1MessageDetailsType2 --> "Description" TextType2
+Q1TitleType1 --> "TitleNumber" Q2TextType2
+Q1ResultsType2 --> "ResultDateTime" DateTimeType2
+Q1ResultsType2 --> "ExternalReference" Q1ExternalReferenceType5
+Q1ResultsType2 --> "Title" Q1TitleType1
+Q1ResultsType2 --> "DischargeCount" Q1DischargeCountType
+Q1ResultsType2 --> "MessageDetails" Q1MessageDetailsType2
+Q1ExternalReferenceType5 --> "Reference" TextType2
+Q1ExternalReferenceType5 --> "AllocatedBy" TextType2
+Q1ExternalReferenceType5 --> "Description" TextType2
+Q1ValidationErrorsType2 --> "Code" TextType2
+Q1ValidationErrorsType2 --> "Description" TextType2
+Q1RejectionResponseType2 --> "Reason" TextType2
+Q1RejectionResponseType2 --> "Code" TextType2
+Q1RejectionResponseType2 --> "OtherDescription" TextType2
+Q1RejectionType2 --> "ExternalReference" Q1ExternalReferenceType5
+Q1RejectionType2 --> "RejectionResponse" Q1RejectionResponseType2
+Q1AcknowledgementDetailsType2 --> "UniqueID" IdentifierType2
+Q1AcknowledgementDetailsType2 --> "ExpectedResponseDateTime" DateTimeType2
+Q1AcknowledgementDetailsType2 --> "MessageDescription" TextType2
+Q1AcknowledgementType2 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType2
+ProductResponseCodeType2 --> "Value" ProductResponseCodeContentType2
+Q1GatewayResponseType2 --> "TypeCode" ProductResponseCodeType2
+Q1GatewayResponseType2 --> "Acknowledgement" Q1AcknowledgementType2
+Q1GatewayResponseType2 --> "Rejection" Q1RejectionType2
+Q1GatewayResponseType2 --> "Results" Q1ResultsType2
+ResponseDischargeActivityV1_0Type --> "GatewayResponse" Q1GatewayResponseType2
+Q1DXDetailsType1 --> "DXNumber" Q3TextType2
+Q1DXDetailsType1 --> "ExchangeName" Q3TextType2
+Q1AlternativePostalAddressType1 --> "Postcode" Q3TextType2
+Q1AlternativeDespatchDetailsType1 --> "AlternativeDespatchAddress" Q1AlternativeDespatchAddressType
+Q1BankruptcySearchComplexNamePartyType1 --> "ComplexName" ComplexNameTextType1
+Q1BankruptcySearchPrivateIndividualPartyType1 --> "SurnameName" Q1SurnameTextType1
+Q1BankruptcySearchPrivateIndividualPartyType1 --> "ForenamesName" Q1ForenamesTextType1
+Q1LandChargesBankruptcySearchType1 --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType2
+Q1CommunicationType1 --> "Telephone" Q3TextType2
+Q1ContactType1 --> "Name" Q3TextType2
+Q1ContactType1 --> "Communication" Q1CommunicationType1
+Q1ExpectedPriceType1 --> "GrossPriceAmount" AmountType2
+Q1ExpectedPriceType1 --> "NetPriceAmount" AmountType2
+Q1ExpectedPriceType1 --> "VATAmount" AmountType2
+Q1CustomerReferenceType1 --> "AllocatedBy" Q3TextType2
+Q1CustomerReferenceType1 --> "Description" Q3TextType2
+Q1ExternalReferenceType4 --> "AllocatedBy" Q3TextType2
+Q1ExternalReferenceType4 --> "Description" Q3TextType2
+Q1ProductType2 --> "ExternalReference" Q1ExternalReferenceType4
+Q1ProductType2 --> "CustomerReference" Q1CustomerReferenceType1
+Q1ProductType2 --> "ExpectedPrice" Q1ExpectedPriceType1
+Q1ProductType2 --> "Contact" Q1ContactType1
+Q1ProductType2 --> "LandChargesBankruptcySearch" Q1LandChargesBankruptcySearchType1
+Q1ProductType2 --> "AlternativeDespatchDetails" Q1AlternativeDespatchDetailsType1
+Q1IdentifierType3 --> "MessageID" Q1TextType2
+RequestLandChargesBankruptcySearchV2_1Type --> "ID" Q1IdentifierType3
+RequestLandChargesBankruptcySearchV2_1Type --> "Product" Q1ProductType2
+Q1DXDetailsType --> "DXNumber" Q3TextType1
+Q1DXDetailsType --> "ExchangeName" Q3TextType1
+Q1AlternativePostalAddressType --> "Postcode" Q3TextType1
+Q1BankruptcySearchComplexNamePartyType --> "ComplexName" ComplexNameTextType
+Q1BankruptcySearchPrivateIndividualPartyType --> "SurnameName" Q1SurnameTextType
+Q1BankruptcySearchPrivateIndividualPartyType --> "ForenamesName" Q1ForenamesTextType
+Q1LandChargesBankruptcySearchType --> "ContinueIfActualFeeExceedsExpectedFeeIndicator" IndicatorType1
+Q1CommunicationType --> "Telephone" Q3TextType1
+Q1ContactType --> "Name" Q3TextType1
+Q1ContactType --> "Communication" Q1CommunicationType
+Q1ExpectedPriceType --> "GrossPriceAmount" AmountType1
+Q1ExpectedPriceType --> "NetPriceAmount" AmountType1
+Q1ExpectedPriceType --> "VATAmount" AmountType1
+Q1CustomerReferenceType --> "AllocatedBy" Q3TextType1
+Q1CustomerReferenceType --> "Description" Q3TextType1
+Q1ExternalReferenceType3 --> "AllocatedBy" Q3TextType1
+Q1ExternalReferenceType3 --> "Description" Q3TextType1
+Q1ProductType1 --> "ExternalReference" Q1ExternalReferenceType3
+Q1ProductType1 --> "CustomerReference" Q1CustomerReferenceType
+Q1ProductType1 --> "ExpectedPrice" Q1ExpectedPriceType
+Q1ProductType1 --> "Contact" Q1ContactType
+Q1ProductType1 --> "LandChargesBankruptcySearch" Q1LandChargesBankruptcySearchType
+Q1ProductType1 --> "AlternativeDespatchAddress" Q1AlternativeDespatchDetailsType
+Q1IdentifierType2 --> "MessageID" Q1TextType1
+RequestLandChargesBankruptcySearchV2_0Type --> "ID" Q1IdentifierType2
+RequestLandChargesBankruptcySearchV2_0Type --> "Product" Q1ProductType1
+ResultCodeType --> "Value" ResultCodeContentType
+Q1AttachmentType --> "EmbeddedFileBinaryObject" BinaryObjectType
+Q1AttachmentType --> "Title" TextType1
+Q1AttachmentType --> "Description" TextType1
+Q1AttachmentType --> "Date" DateType1
+Q1AttachmentType --> "CopyrightNotices" TextType1
+Q1HMLRReferenceType --> "Reference" TextType1
+Q1HMLRReferenceType --> "AllocatedBy" TextType1
+Q1HMLRReferenceType --> "Description" TextType1
+Q1MessageDetailsType1 --> "Description" TextType1
+Q1ResultsType1 --> "MessageDetails" Q1MessageDetailsType1
+Q1ResultsType1 --> "ExternalReference" Q1ExternalReferenceType2
+Q1ResultsType1 --> "HMLRReference" Q1HMLRReferenceType
+Q1ResultsType1 --> "ActualPrice" Q1ActualPriceType
+Q1ResultsType1 --> "Attachment" Q1AttachmentType
+Q1ResultsType1 --> "ResultTypeCode" ResultCodeType
+Q1ExternalReferenceType2 --> "Reference" TextType1
+Q1ExternalReferenceType2 --> "AllocatedBy" TextType1
+Q1ExternalReferenceType2 --> "Description" TextType1
+Q1ActualPriceType --> "GrossPriceAmount" AmountType
+Q1ActualPriceType --> "NetPriceAmount" AmountType
+Q1ActualPriceType --> "VATAmount" AmountType
+Q1ValidationErrorsType1 --> "Code" TextType1
+Q1ValidationErrorsType1 --> "Description" TextType1
+Q1RejectionResponseType1 --> "Reason" TextType1
+Q1RejectionResponseType1 --> "Code" TextType1
+Q1RejectionResponseType1 --> "OtherDescription" TextType1
+Q1RejectionType1 --> "ExternalReference" Q1ExternalReferenceType2
+Q1RejectionType1 --> "ActualPrice" Q1ActualPriceType
+Q1RejectionType1 --> "RejectionResponse" Q1RejectionResponseType1
+Q1AcknowledgementDetailsType1 --> "UniqueID" IdentifierType1
+Q1AcknowledgementDetailsType1 --> "ExpectedResponseDateTime" DateTimeType1
+Q1AcknowledgementDetailsType1 --> "MessageDescription" TextType1
+Q1AcknowledgementType1 --> "AcknowledgementDetails" Q1AcknowledgementDetailsType1
+ProductResponseCodeType1 --> "Value" ProductResponseCodeContentType1
+Q1GatewayResponseType1 --> "TypeCode" ProductResponseCodeType1
+Q1GatewayResponseType1 --> "Acknowledgement" Q1AcknowledgementType1
+Q1GatewayResponseType1 --> "Rejection" Q1RejectionType1
+Q1GatewayResponseType1 --> "Results" Q1ResultsType1
+ResponseLandChargesBankruptcySearchV2_0Type --> "GatewayResponse" Q1GatewayResponseType1
+Q1SubjectPropertyType --> "TitleNumber" Q2TextType1
+Q1SubjectPropertyType --> "ContinueIfTitleIsClosedAndContinuedIndicator" IndicatorType
+Q1ExternalReferenceType1 --> "AllocatedBy" Q3TextType
+Q1ExternalReferenceType1 --> "Description" Q3TextType
+Q1ProductType --> "ExternalReference" Q1ExternalReferenceType1
+Q1IdentifierType1 --> "MessageID" Q1TextType
+RequestApplicationEnquiryV1_0Type --> "ID" Q1IdentifierType1
+RequestApplicationEnquiryV1_0Type --> "Product" Q1ProductType
+CorrespondenceDetailsType --> "CorrespondenceType" CorrespondenceContentType
+CorrespondenceDetailsType --> "Item" DateType
+CorrespondenceDetailsType --> "ItemElementName" ItemChoiceType
+CorrespondenceDetailsType --> "ExpiresOnDate" DateType
+ApplicationProgressType --> "Description" TextType
+PriorityPeriodType --> "PriorityStartDate" DateType
+PriorityPeriodType --> "PriorityEndDate" DateType
+NewTitleDetailsType --> "TitleNumber" Q2TextType
+NewTitleDetailsType --> "CompletedDate" DateType
+ParentTitleDetailsType --> "TitleNumber" Q2TextType
+Q1ApplicationEnquiryType --> "ApplicationType" ApplicationTypeContentType
+Q1ApplicationEnquiryType --> "PriorityTime" TimeType
+Q1ApplicationEnquiryType --> "Applicant" TextType
+Q1ApplicationEnquiryType --> "ApplicationProgress" ApplicationProgressType
+Q1ApplicationEnquiryType --> "ApplicationReceivedBy" ApplicationReceivedByContentType
+Q1ApplicationEnquiryType --> "SearchInterest" SearchInterestType
+Q1TitleType --> "TitleNumber" Q2TextType
+RecentApplicationType --> "EndReason" EndReasonContentType
+RecentApplicationType --> "EndDate" DateType
+Q1MessageDetailsType --> "Description" TextType
+Q1MessageDetailsType --> "RecentApplication" RecentApplicationType
+Q1ResultsType --> "ResultDateTime" DateTimeType
+Q1ResultsType --> "MessageDetails" Q1MessageDetailsType
+Q1ResultsType --> "ExternalReference" Q1ExternalReferenceType
+Q1ResultsType --> "Title" Q1TitleType
+Q1ExternalReferenceType --> "Reference" TextType
+Q1ExternalReferenceType --> "AllocatedBy" TextType
+Q1ExternalReferenceType --> "Description" TextType
+Q1ValidationErrorsType --> "Code" TextType
+Q1ValidationErrorsType --> "Description" TextType
+Q1RejectionResponseType --> "Reason" TextType
+Q1RejectionResponseType --> "Code" TextType
+Q1RejectionResponseType --> "OtherDescription" TextType
+Q1RejectionType --> "ExternalReference" Q1ExternalReferenceType
+Q1RejectionType --> "RejectionResponse" Q1RejectionResponseType
+Q1AcknowledgementDetailsType --> "UniqueID" IdentifierType
+Q1AcknowledgementDetailsType --> "ExpectedResponseDateTime" DateTimeType
+Q1AcknowledgementDetailsType --> "MessageDescription" TextType
+Q1AcknowledgementType --> "AcknowledgementDetails" Q1AcknowledgementDetailsType
+ProductResponseCodeType --> "Value" ProductResponseCodeContentType
+Q1GatewayResponseType --> "TypeCode" ProductResponseCodeType
+Q1GatewayResponseType --> "Acknowledgement" Q1AcknowledgementType
+Q1GatewayResponseType --> "Rejection" Q1RejectionType
+Q1GatewayResponseType --> "Results" Q1ResultsType
+ResponseApplicationEnquiryV1_0Type --> "GatewayResponse" Q1GatewayResponseType
+ApplicationEnquiryV1_0PollServiceClient +-- EndpointConfiguration
+ApplicationEnquiryV1_0ServiceClient +-- EndpointConfiguration
+BankruptcySearchV2_0PollServiceClient +-- EndpointConfiguration
+BankruptcySearchV2_0ServiceClient +-- EndpointConfiguration
+BankruptcySearchV2_1PollServiceClient +-- EndpointConfiguration
+BankruptcySearchV2_1ServiceClient +-- EndpointConfiguration
+DischargeActivityV1_0PollServiceClient +-- EndpointConfiguration
+DischargeActivityV1_0ServiceClient +-- EndpointConfiguration
+PropertyDescriptionEnquiryV2_0PollServiceClient +-- EndpointConfiguration
+PropertyDescriptionEnquiryV2_0ServiceClient +-- EndpointConfiguration
+FullSearchV2_0PollServiceClient +-- EndpointConfiguration
+FullSearchV2_0ServiceClient +-- EndpointConfiguration
+FullSearchV2_1PollServiceClient +-- EndpointConfiguration
+FullSearchV2_1ServiceClient +-- EndpointConfiguration
+OC1TitleKnownV2_1ServiceClient +-- EndpointConfiguration
+OCWithSummaryV2_1ServiceClient +-- EndpointConfiguration
+OfficialSearchOfPartV2_0PollServiceClient +-- EndpointConfiguration
+OfficialSearchOfPartV2_0ServiceClient +-- EndpointConfiguration
+OfficialSearchOfPartV2_1PollServiceClient +-- EndpointConfiguration
+OfficialSearchOfPartV2_1ServiceClient +-- EndpointConfiguration
+OfficialSearchV2_0PollServiceClient +-- EndpointConfiguration
+OfficialSearchV2_0ServiceClient +-- EndpointConfiguration
+OfficialSearchV2_1ServiceClient +-- EndpointConfiguration
+SearchOfIndexMapV2_0PollServiceClient +-- EndpointConfiguration
+SearchOfIndexMapV2_0ServiceClient +-- EndpointConfiguration
+@enduml

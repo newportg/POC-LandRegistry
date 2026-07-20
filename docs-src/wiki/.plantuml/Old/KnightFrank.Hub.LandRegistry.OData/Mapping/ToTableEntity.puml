@@ -1,0 +1,6 @@
+@startuml
+class ToTableEntity {
+    + ToTableEntity()
+}
+Profile <|-- ToTableEntity
+@enduml

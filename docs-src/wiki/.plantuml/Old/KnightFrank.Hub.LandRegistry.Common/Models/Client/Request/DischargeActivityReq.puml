@@ -1,0 +1,12 @@
+@startuml
+class DischargeActivityReq {
+}
+class DischargeActivityReq_Property {
+    + TitleNumber : string <<get>> <<set>>
+    + ContinueIfTitleIsClosedAndContinuedIndicator : bool <<get>> <<set>> = false
+}
+DischargeActivityReq o-> "RequestType" RequestTypes
+DischargeActivityReq --> "Identity" Identity
+DischargeActivityReq --> "Property" DischargeActivityReq_Property
+DischargeActivityReq_Property --> "ChargeDate" DateTime
+@enduml

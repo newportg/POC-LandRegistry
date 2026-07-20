@@ -1,0 +1,12 @@
+@startuml
+class FromLCFullSearch {
+    + FromLCFullSearch()
+}
+class LCFullSearchMessageDetailConverter {
+    + Convert(source:Q1ResultsType4, destination:MessageDetails, context:ResolutionContext) : MessageDetails
+}
+class "ITypeConverter`2"<T1,T2> {
+}
+Profile <|-- FromLCFullSearch
+"ITypeConverter`2" "<Q1ResultsType4,MessageDetails>" <|-- LCFullSearchMessageDetailConverter
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+class ValidateObjectAttribute {
+}
+class CompositeValidationResult {
+    + CompositeValidationResult(errorMessage:string)
+    + CompositeValidationResult(errorMessage:string, memberNames:IEnumerable<string>)
+    + AddResult(validationResult:ValidationResult) : void
+}
+class ValidationResults <<static>> {
+    + {static} PrintResults(results:IEnumerable<ValidationResult>, indentationLevel:Int32) : string
+    + {static} SetIndentation(indentationLevel:int) : int
+}
+class OnlyOnePropertyAttribute {
+    + OnlyOnePropertyAttribute(propertyList:string[])
+    + <<override>> IsValid(value:object) : bool
+}
+class "IEnumerable`1"<T> {
+}
+ValidationAttribute <|-- ValidateObjectAttribute
+ValidationResult <|-- CompositeValidationResult
+CompositeValidationResult --> "Results<ValidationResult>" "IEnumerable`1"
+ValidationAttribute <|-- OnlyOnePropertyAttribute
+@enduml

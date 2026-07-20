@@ -1,0 +1,32 @@
+@startuml
+class SecurityHeader {
+    + SecurityHeader(username:string, password:string, created:DateTime)
+    + <<override>> Name : string <<get>> = "Security"
+    + <<override>> Namespace : string <<get>> = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+}
+class SoapSecurityHeader {
+    + SoapSecurityHeader(username:string, password:string, nonce:string, created:string)
+    + <<override>> Name : string <<get>>
+    + <<override>> Namespace : string <<get>>
+}
+class Password {
+    + Type : string <<get>> <<set>>
+    + Text : string <<get>> <<set>>
+}
+class Nonce {
+    + EncodingType : string <<get>> <<set>>
+    + Text : string <<get>> <<set>>
+}
+class UsernameToken {
+    + Username : string <<get>> <<set>>
+    + Created : string <<get>> <<set>>
+    + Id : string <<get>> <<set>>
+}
+MessageHeader <|-- SecurityHeader
+MessageHeader <|-- SoapSecurityHeader
+SecurityHeader +-- Password
+SecurityHeader +-- Nonce
+SecurityHeader +-- UsernameToken
+UsernameToken --> "Password" Password
+UsernameToken --> "Nonce" Nonce
+@enduml

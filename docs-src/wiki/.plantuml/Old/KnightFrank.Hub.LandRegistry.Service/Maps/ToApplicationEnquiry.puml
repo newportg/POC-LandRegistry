@@ -1,0 +1,9 @@
+@startuml
+class ToApplicationEnquiry {
+    + ToApplicationEnquiry()
+    + Item(request:Request) : object
+    + ApplicationReference(request:Request) : object
+    + Property(request:Request) : object
+}
+Profile <|-- ToApplicationEnquiry
+@enduml

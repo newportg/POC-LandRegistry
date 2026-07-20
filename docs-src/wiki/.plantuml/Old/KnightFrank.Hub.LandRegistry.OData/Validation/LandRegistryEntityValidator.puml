@@ -1,0 +1,8 @@
+@startuml
+class LandRegistryEntityValidator {
+    + LandRegistryEntityValidator()
+}
+class "AbstractValidator`1"<T> {
+}
+"AbstractValidator`1" "<LandRegistryEntity>" <|-- LandRegistryEntityValidator
+@enduml

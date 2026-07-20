@@ -1,0 +1,8 @@
+@startuml
+class HMLRBGMessageInspector {
+    + HMLRBGMessageInspector(username:string, password:string, logger:ILogger<LandRegistrySvc>)
+    + AfterReceiveReply(reply:Message, correlationState:object) : void
+    + BeforeSendRequest(request:Message, channel:IClientChannel) : object
+}
+IClientMessageInspector <|-- HMLRBGMessageInspector
+@enduml

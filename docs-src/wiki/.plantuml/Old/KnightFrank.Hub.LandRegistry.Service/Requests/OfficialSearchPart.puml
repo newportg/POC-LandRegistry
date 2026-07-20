@@ -1,0 +1,28 @@
+@startuml
+class OfficialSearchPartFactory {
+    + OfficialSearchPartFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class PollOfficialSearchPartFactory {
+    + PollOfficialSearchPartFactory(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> GetService() : LandRegistry
+}
+class OfficialSearchPart {
+    + OfficialSearchPart(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+class PollOfficialSearchPart {
+    + PollOfficialSearchPart(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<override>> Validate() : void
+    + <<override>> Map(landRegistryDto:LandRegistryDto) : void
+    + <<override>> <<async>> Request() : Task
+    + <<override>> Response() : LandRegistryDto
+}
+ServiceFactory <|-- OfficialSearchPartFactory
+ServiceFactory <|-- PollOfficialSearchPartFactory
+LandRegistry <|-- OfficialSearchPart
+LandRegistry <|-- PollOfficialSearchPart
+@enduml

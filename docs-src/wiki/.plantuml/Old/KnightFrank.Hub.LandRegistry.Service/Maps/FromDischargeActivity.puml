@@ -1,0 +1,12 @@
+@startuml
+class FromDischargeActivity {
+    + FromDischargeActivity()
+}
+class DischargeActivityMessageDetailConverter {
+    + Convert(source:Q1ResultsType2, destination:MessageDetails, context:ResolutionContext) : MessageDetails
+}
+class "ITypeConverter`2"<T1,T2> {
+}
+Profile <|-- FromDischargeActivity
+"ITypeConverter`2" "<Q1ResultsType2,MessageDetails>" <|-- DischargeActivityMessageDetailConverter
+@enduml

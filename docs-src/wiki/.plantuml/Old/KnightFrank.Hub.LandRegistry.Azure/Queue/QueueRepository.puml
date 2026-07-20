@@ -1,0 +1,12 @@
+@startuml
+class QueueRepository <<sealed>> {
+    + QueueRepository(queue:QueueClient)
+    + AddMessageAsync(message:string, queueName:string) : Task
+}
+class DynamicQueueRepository <<sealed>> {
+    + DynamicQueueRepository(connectionString:string)
+    + AddMessageAsync(message:string, queueName:string) : Task
+}
+IQueueRepository <|-- QueueRepository
+IQueueRepository <|-- DynamicQueueRepository
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+class Bootstrapper <<static>> {
+    + {static} AddQueueServices(services:IServiceCollection, connectionString:string, queueName:string) : IServiceCollection
+    + {static} AddBlobStorageServices(services:IServiceCollection, connectionString:string, blobContainerName:string) : IServiceCollection
+    + {static} AddTableStorageServices(services:IServiceCollection, connectionString:string, tableName:string) : IServiceCollection
+}
+@enduml

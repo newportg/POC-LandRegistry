@@ -1,0 +1,9 @@
+@startuml
+class AuthorizationHeader {
+    + AuthorizationHeader()
+    + {static} GetSharedKey(verb:HttpMethod, req:IFlurlRequest, storageAcct:string, acctKey:string) : AuthenticationHeaderValue
+    + {static} GetTableSharedKey(verb:HttpMethod, req:IFlurlRequest, storageAcct:string, acctKey:string) : AuthenticationHeaderValue
+    + {static} FindHeader(header:string, req:IFlurlRequest, includeName:bool) : string
+    + {static} GetCanonicalizedHeaders(req:IFlurlRequest) : string
+}
+@enduml

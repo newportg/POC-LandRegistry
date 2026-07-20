@@ -1,0 +1,14 @@
+@startuml
+class SearchByPropertyDescriptionReq {
+}
+class SearchByPropertyDescriptionReq_Property {
+    + BuildingName : string <<get>> <<set>>
+    + BuildingNumber : string <<get>> <<set>>
+    + StreetName : string <<get>> <<set>>
+    + CityName : string <<get>> <<set>>
+    + PostcodeZone : string <<get>> <<set>>
+}
+SearchByPropertyDescriptionReq o-> "RequestType" RequestTypes
+SearchByPropertyDescriptionReq --> "Identity" Identity
+SearchByPropertyDescriptionReq --> "Property" SearchByPropertyDescriptionReq_Property
+@enduml

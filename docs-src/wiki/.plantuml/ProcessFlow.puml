@@ -1,0 +1,106 @@
+@startuml
+
+start
+  fork
+    : Get Title;
+    Group Hub
+      :Hub : User requests Title;
+      :Hub : Create Message;    
+    EndGroup
+'    fork
+        Group Service Bus
+          :Bus : Pass Service Request;
+        EndGroup  
+'    endfork
+  fork again
+    : Ad-Hoc API Request;
+  fork again
+    : Webhook Request from Nimbus;
+    :SVC : Download Documents from Nimbus;
+        split
+          :SVC : Save Documents into Document Management System;
+          :SVC : Update Title Object in Datastore;
+          :SVC : Log Success;
+        split again
+          -[hidden]->
+          #Pink:Error\nFail; <<input>>
+          :SVC : Update Title Object\nin Datastore;
+          :SVC : Log Failure;
+        split again
+          -[hidden]->
+          #LightCoral:Exception\nFail; <<input>>
+          :SVC : Log Failure;
+        end split
+
+          :SVC : Create Response Message;
+          fork
+            :SVC : Send Message to Service Bus;
+          end fork        
+        stop
+  end fork
+
+
+Group Service
+  :SVC : Validate Request against Schema;
+ 
+  if( Service Bus Request \n    or POST request) then (Yes)
+    :SVC : Create request Object in Datastore;
+
+    Group try-catch 
+      split
+        Group LandRegistry 
+          if (Request includes a Title No.) then (yes)
+            :SVC : Call Land Registry Title Document Service \n(OfficialSearchTitleKnown);
+          else (no)
+            :SVC : Call Land Registry Find Service \n(SearchByPropertyDescription);
+            :SVC : Call Land Registry Title Document Service \n(OfficialSearchTitleKnown);
+          endif 
+        end Group
+
+        split
+          :Svc : Save Documents into Document Management System;
+          :SVC : Update Title Object in Datastore;
+          :SVC : Log Success;
+        split again
+          -[hidden]->
+          #Pink:Error\nFail; <<input>>
+          :SVC : Update Title Object\nin Datastore;
+          :SVC : Log Failure;
+        split again
+          -[hidden]->
+          #LightCoral:Exception\nFail; <<input>>
+          :SVC : Log Failure;
+        end split
+
+        split again
+        Group Nimbus
+          if (Request includes a Title No.) then (yes)
+            :SVC : Call Nimbus Docs Check-Availability Service;
+          else (no)
+            :SVC : Call Nimbus Search Address Service);
+            :SVC : Call Nimbus Docs Check-Availability Service;
+            :SVC : Call Nimbus Docs Purchase Service;
+          endif 
+        end Group
+      end split
+
+
+
+      :SVC : Create Response Message;
+      fork
+        :SVC : Send Message to Service Bus;
+      fork again
+        :SVC : Return Http response;
+      end fork
+    EndGroup
+  else (No)
+    :SVC : Process Request;
+    :SVC : Get Information from DataStore;
+    :SVC : Get Documents from Document Management;
+    :SVC : Return Response;
+  endif
+EndGroup
+
+stop
+
+@enduml

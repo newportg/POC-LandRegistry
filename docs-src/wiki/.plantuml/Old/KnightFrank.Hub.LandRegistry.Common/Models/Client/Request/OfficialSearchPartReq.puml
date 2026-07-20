@@ -1,0 +1,53 @@
+@startuml
+class OfficialSearchPartReq {
+}
+class OfficialSearchPartReq_Property {
+    + ExpectedPrice : decimal <<get>> <<set>>
+    + TitleNumber : string <<get>> <<set>>
+}
+enum PriorityType {
+    Purchase= 10,
+    Lease= 20,
+    Charge= 30,
+}
+class OfficialSearchPartReq_PrioritySearch {
+    + PropertyDescription : string <<get>> <<set>>
+    + ContinueIfFeeExceeds : bool <<get>> <<set>> = false
+    + ContinueIfNameMismatch : bool <<get>> <<set>> = false
+    + PropreietorOrFirstApplicant : string <<get>> <<set>>
+    + ApplicantNames : string <<get>> <<set>>
+}
+class OfficialSearchPartReq_PropertyIdentification {
+    + PropertyDescription : string <<get>> <<set>>
+}
+class OfficialSearchPartReq_TitlePlan {
+    + TitlePlanNumber : string <<get>> <<set>>
+    + Reference : string <<get>> <<set>>
+}
+class OfficialSearchPartReq_EstatePlan {
+    + PlotDetails : string <<get>> <<set>>
+}
+class OfficialSearchPartReq_PlanAttachment {
+    + Title : string <<get>> <<set>>
+    + Date : string <<get>> <<set>>
+    + Description : string <<get>> <<set>>
+    + CopyrightNotices : string <<get>> <<set>>
+}
+class OfficialSearchPartReq_TimeshareDetails {
+    + TimeshareLease : bool <<get>> <<set>> = false
+    + TimePeriod : string <<get>> <<set>>
+}
+OfficialSearchPartReq o-> "RequestType" RequestTypes
+OfficialSearchPartReq --> "Identity" Identity
+OfficialSearchPartReq --> "Property" OfficialSearchPartReq_Property
+OfficialSearchPartReq --> "PrioritySearch" OfficialSearchPartReq_PrioritySearch
+OfficialSearchPartReq_PrioritySearch --> "PriorityType" PriorityType
+OfficialSearchPartReq_PrioritySearch --> "PropertyIdentification" OfficialSearchPartReq_PropertyIdentification
+OfficialSearchPartReq_PrioritySearch --> "SearchFrom" DateTime
+OfficialSearchPartReq_PrioritySearch --> "TimeshareDetails" OfficialSearchPartReq_TimeshareDetails
+OfficialSearchPartReq_PropertyIdentification --> "TitlePlan" OfficialSearchPartReq_TitlePlan
+OfficialSearchPartReq_PropertyIdentification --> "EstatePlan" OfficialSearchPartReq_EstatePlan
+OfficialSearchPartReq_PropertyIdentification --> "PlanAttachment" OfficialSearchPartReq_PlanAttachment
+OfficialSearchPartReq_EstatePlan --> "ApprovalDate" DateTime
+OfficialSearchPartReq_PlanAttachment --> "BinaryObject" BinaryObjectType
+@enduml

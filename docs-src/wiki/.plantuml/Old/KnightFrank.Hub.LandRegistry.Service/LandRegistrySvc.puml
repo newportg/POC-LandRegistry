@@ -1,0 +1,11 @@
+@startuml
+class LandRegistrySvc {
+    + LandRegistrySvc(mapper:IMapper, logger:ILogger<LandRegistrySvc>)
+    + <<async>> FindProperty(request:LandRegistryDto) : Task<LandRegistryDto>
+    + GetServiceFactory(request:LandRegistryDto) : ServiceFactory
+    + KeyVault(key:string) : X509Certificate2?
+    + VerifyCertificate(certificateBytes:byte[]) : bool
+    + {static} CalculateExpirationTime(expiryDate:DateTime) : string
+}
+ILandRegistrySvc <|-- LandRegistrySvc
+@enduml

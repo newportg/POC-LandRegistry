@@ -1,0 +1,35 @@
+@startuml
+
+    actor "Timer Trigger" as Timer
+    actor "Calling System" as User
+    database "Persistent Storage" as Storage
+    actor "Service Handler" as Client
+    participant "Persistent Storage" as Storage
+    actor "Land Registry" as LR
+
+    Timer -> Client: Trigger to check outstanding requests
+    Client -> Storage: Request to retrieve outstanding requests
+
+    Client -> LR: Request "Application Enquiry" outstanding requests
+    LR --> Client: Return outstanding requests
+    Client -> Storage: Update outstanding requests
+    Storage --> Client: Acknowledgment of storage   
+
+    group Outstanding
+        Client --> Storage : Update outstanding request status to 'In Progress'
+        Storage --> Client : Acknowledgment of storage
+    end
+    group Success
+        Client --> LR: Request Title Information using the TitleKnown Request
+        LR --> Client: Return Title Information
+        Client -> Storage: Store Title Information
+        Storage --> Client: Acknowledgment of storage
+    end
+    group Error
+        Client --> User : Notify Calling System, requesting any missing information
+        Client --> Storage: Update outstanding request with error status
+        Storage --> Client: Acknowledgment of storage
+        Client --> Logger: Log error for missing information
+    end
+
+@enduml

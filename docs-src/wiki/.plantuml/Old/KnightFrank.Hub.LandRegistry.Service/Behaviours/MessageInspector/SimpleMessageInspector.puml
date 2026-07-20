@@ -1,0 +1,7 @@
+@startuml
+class SimpleMessageInspector {
+    + AfterReceiveReply(reply:System.ServiceModel.Channels.Message, correlationState:object) : void
+    + BeforeSendRequest(request:System.ServiceModel.Channels.Message, channel:IClientChannel) : object
+}
+IClientMessageInspector <|-- SimpleMessageInspector
+@enduml

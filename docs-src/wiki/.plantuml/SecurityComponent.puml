@@ -1,0 +1,36 @@
+@startuml 
+!include <C4/C4_Component>
+!include <azure/AzureCommon>
+!include <azure/Compute/AzureFunction>
+!include <azure/Web/AzureAPIManagement>
+!include <azure/Integration/AzureServiceBusTopic>
+!include <azure/Identity/all>
+
+'LAYOUT_LEFT_RIGHT()
+
+        AzureAppRegistration(reg, "", "Application Registration")
+        AzureActiveDirectory(ad, "Active Directory", "Entra")
+        AzureManagedIdentity(miapp, "Managed Identity", "route")
+
+
+        AzureAPIManagement(apimI, "apim-shared-env-ne", "Internal Interface")
+        AzureFunction(aFunc, "Function", "Http/Sbus Trigger")
+        
+        Container_Boundary(sec, "Security Component", "Validates Calling service and users") {
+            Component( mi, "Validate Managed Identity", "")
+            Component( us, "Validate User and check claims", "")
+
+        }
+
+        apimI -> aFunc
+        aFunc -> sec
+
+        reg -down-> ad
+        ad -down-> miapp
+
+        apimI .up.> miapp : Validate
+        mi .up.> miapp : Validate
+        us .up.> ad : Validate
+
+
+@enduml

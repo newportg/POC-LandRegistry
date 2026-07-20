@@ -1,0 +1,6 @@
+@startuml
+class SearchByPropertyDescriptionReqToDTO {
+    + SearchByPropertyDescriptionReqToDTO()
+}
+Profile <|-- SearchByPropertyDescriptionReqToDTO
+@enduml

@@ -1,0 +1,10 @@
+@startuml
+class ValidationException {
+    + ValidationException()
+    + ValidationException(failures:List<ValidationFailure>)
+}
+class "IDictionary`2"<T1,T2> {
+}
+Exception <|-- ValidationException
+ValidationException --> "Failures<string,string[]>" "IDictionary`2"
+@enduml

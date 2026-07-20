@@ -1,0 +1,151 @@
+@startuml
+
+class Response{
+    Status : string
+    Acknowledgement : Acknowledgement[]
+    Rejection : Rejection[]
+    Results : Results[]
+}
+
+class Acknowledgement{
+    UniqueMessageID : GUID
+    ExpectedResponseDateTime : DateTime
+    MessageDescription : string,
+    HMLRReference : string
+}
+
+class Rejection{
+    ExternalReference : ExternalReference
+    RejectionResponse : RejectionResponse[]
+}
+
+class RejectionResponse{
+    Reason : string
+    Code : string
+    Error : Error[]
+}
+
+class Error{
+    Code : string
+    Description : string
+}
+
+class ExternalReference{
+    Reference : string
+    AllocatedBy : string[]
+    Description : string[]
+}
+
+class Results{
+    MessageDetails : MessageDetails
+    ExternalReference : ExternalReference
+}
+
+
+abstract class MessageDetails{
+}
+
+' class ApplicationEnquiryMessageDetails extends MessageDetails{
+'     Title" : Title[]
+'     ResultDateTime : DateTime,
+'     Description : string
+'     RecentApplications : RecentApplications[]
+' }
+
+class EnquiryByPropertyDescriptionMessageDetails extends MessageDetails{
+    Description : string,
+    Titles: Title[]
+}
+
+class TitleOfficalCopyMessageDetails extends MessageDetails{
+    HMLRReference : string
+    ResultTypeCode : ResultTypeCode,
+    ActualPrice : decimal,
+    Attachment : Attachment[],
+    Description : string
+}   
+
+enum ResultTypeCode {
+    0 : Other,
+    10,
+    20,
+    30,
+    40,
+    50
+}
+
+class Attachment{
+    Title: string,
+    Description: string,
+    Date: DateTime,
+    CopyrightNotice: string,
+    EmbeddedFileBinaryObject : EmbeddedFileBinaryObject
+}
+
+class EmbeddedFileBinaryObject{
+    FileName : string,
+    Formate : string,
+    MimeCode : string,
+    EncodingCode : string,
+    CharacterSetCode : string,
+    BinaryObject : base64Binary
+}
+
+class Title{
+    TitleNumber : string
+    Description : string[]
+    TenureInformation : TenureTypeCode
+    Address : Address
+}
+
+enum TenureTypeCode {
+    0 : Other,
+    10 : Freehold,
+    20 : Leasehold,
+    30 : Commonhold,
+    40 : Feuhold,
+    100 : Mixed,
+    110 : Unknown,
+    120 : Unavailable,
+    130 : Caution Against First Registration,
+    140 : Rent Charge,
+    150 : Franchise,
+    160 : Profit A Prendre In Gross,
+    170 : Manor
+}
+
+class Address{
+    BuildingName : string
+    SubBuildingName : string
+    BuildingNumber : string
+    StreetName : string
+    CityName : string
+    PostCodeZone : string
+}
+
+' class RecentApplications{
+'     EndReason : string,
+'     EndDate : DateTime,
+' }
+
+Response "1" -- "0..*" Acknowledgement
+Response "1" -- "0..*" Rejection    
+Response "1" -- "0..*" Results
+Rejection "1" -- "0..*" RejectionResponse
+RejectionResponse "1" -- "0..*" Error
+Rejection "1" -- "1" ExternalReference
+
+Results "1" -- "1" MessageDetails
+Results "1" -- "1" ExternalReference
+
+Title "1" -- "1" TenureTypeCode
+Title "1" -- "1" Address
+
+
+EnquiryByPropertyDescriptionMessageDetails "1" -- "0..*" Title
+
+TitleOfficalCopyMessageDetails "1" -- "0..*" Attachment
+TitleOfficalCopyMessageDetails "1" -- "1" ResultTypeCode
+Attachment "1" -- "1" EmbeddedFileBinaryObject
+
+@enduml

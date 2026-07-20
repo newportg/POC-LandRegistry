@@ -1,0 +1,7 @@
+@startuml
+class SearchByPropertyDescription {
+    + <<async>> Run(req:HttpRequest) : Task<IActionResult>
+}
+class "ILogger`1"<T> {
+}
+@enduml
